@@ -1,0 +1,139 @@
+{
+  "roles": [
+    "CEO",
+    "CTO",
+    "COO",
+    "CFO",
+    "ProjectManager",
+    "ProductManager",
+    "HRManager",
+    "ScrumMaster",
+    "FrontendDeveloper",
+    "BackendDeveloper",
+    "MobileDeveloper",
+    "DevOpsEngineer",
+    "QAEngineer",
+    "UIDesigner",
+    "SystemArchitect",
+    "SalesManager",
+    "MarketingManager",
+    "ContentCreator",
+    "CustomerSuccessManager",
+    "CustomerSupport",
+    "TechnicalSupport",
+    "Client",
+    "Partner"
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "name": "Salar",
+      "role": "CEO"
+    },
+    {
+      "id": 2,
+      "name": "Reza",
+      "role": "ProjectManager"
+    },
+    {
+      "id": 3,
+      "name": "Ali",
+      "role": "FrontendDeveloper"
+    },
+    {
+      "id": 4,
+      "name": "Sara",
+      "role": "UIDesigner"
+    }
+  ],
+
+  "projects": [
+    {
+      "id": 1,
+      "title": "Company Website",
+      "managerId": 2,
+      "status": "in-progress",
+      "members": [2, 3, 4]
+    }
+  ],
+
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Design Landing Page",
+      "projectId": 1,
+      "assignedTo": 4,
+      "status": "in-progress"
+    },
+    {
+      "id": 2,
+      "title": "Implement Landing Page UI",
+      "projectId": 1,
+      "assignedTo": 3,
+      "status": "pending"
+    }
+  ],
+
+  "dashboards": [
+    {
+      "role": "CEO",
+      "widgets": ["stats", "allProjects", "employees", "finances"]
+    },
+    {
+      "role": "CTO",
+      "widgets": ["architecture", "serverStatus", "techTeams"]
+    },
+    {
+      "role": "ProjectManager",
+      "widgets": ["projects", "tasks", "teamProgress"]
+    },
+    {
+      "role": "FrontendDeveloper",
+      "widgets": ["myTasks", "commits", "designFiles"]
+    },
+    {
+      "role": "BackendDeveloper",
+      "widgets": ["apiDocs", "myTasks", "serverLogs"]
+    },
+    {
+      "role": "UIDesigner",
+      "widgets": ["figmaLinks", "designReviews", "tasks"]
+    },
+    {
+      "role": "QAEngineer",
+      "widgets": ["testCases", "bugs", "assignments"]
+    },
+    {
+      "role": "Client",
+      "widgets": ["projectStatus", "deliveries", "invoices"]
+    }
+  ],
+
+  "permissions": [
+    {
+      "role": "CEO",
+      "access": ["all"]
+    },
+    {
+      "role": "ProjectManager",
+      "access": ["projects", "tasks", "team"]
+    },
+    {
+      "role": "FrontendDeveloper",
+      "access": ["tasks", "projects"]
+    },
+    {
+      "role": "UIDesigner",
+      "access": ["designs", "tasks"]
+    },
+    {
+      "role": "QAEngineer",
+      "access": ["bugs", "tasks"]
+    },
+    {
+      "role": "Client",
+      "access": ["projectStatus"]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* ---------- Theme Variables ---------- */
+:root {
+  --background: #eeeeee;
+  --foreground: #111111;
+  --bg-primary: #00cc85;
+
+  /* overlay مخصوص مودال / منوی فول‌اسکرین */
+  --overlay: #eeeeee;
+}
+
+.dark {
+  --background: #111111;
+  --foreground: #eeeeee;
+
+  --overlay: #111111;
+}
+
+/* ---------- Base ---------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---------- Utilities ---------- */
+.btn {
+  background-color: var(--bg-primary);
+  color: #111111;
+}
+
+.border {
+  border-color: rgba(0, 0, 0, 0.1);
+}
