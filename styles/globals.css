@@ -1,38 +1,130 @@
 @import "tailwindcss";
 
-/* ---------- Theme Variables ---------- */
-:root {
-  --background: #eeeeee;
-  --foreground: #111111;
-  --bg-primary: #00cc85;
-
-  /* overlay مخصوص مودال / منوی فول‌اسکرین */
-  --overlay: #eeeeee;
+@theme {
+  /* primary RAW */
+  --primary-50: #f8f9fa;
+  --primary-100: #eeeeee;
+  --primary-200: #e2e4e7;
+  --primary-300: #cfd3d8;
+  --primary-400: #9aa0a6;
+  --primary-500: #6b7280;
+  --primary-600: #4b5563;
+  --primary-700: #374151;
+  --primary-800: #1f2933;
+  --primary-900: #0b0d14;
 }
 
+/* ======================================================
+   SEMANTIC SCALE – LIGHT MODE
+   (LOW NUMBER = DARK)
+====================================================== */
+@theme {
+  /* primary (INVERTED) */
+  --color-primary-100: var(--primary-900);
+  --color-primary-200: var(--primary-800);
+  --color-primary-300: var(--primary-700);
+  --color-primary-400: var(--primary-600);
+  --color-primary-500: var(--primary-500);
+  --color-primary-600: var(--primary-400);
+  --color-primary-700: var(--primary-300);
+  --color-primary-800: var(--primary-200);
+  --color-primary-900: var(--primary-100);
+
+  /* GLOBAL */
+  --color-background: var(--color-primary-900);
+  --color-foreground: var(--color-primary-100);
+
+  /* gradinet */
+
+  --gradient-primary: linear-gradient(135deg, #00b37d, #008a8c);
+
+  --color-gradient: var(--gradient-primary)
+
+  --gradient-overlay: linear-gradient(
+    132deg,
+    #ffffff9c 0%,
+    #d4d8e89f 52%,
+    #b9cdf78e 57%,
+    #bbcdf797 60%,
+    #d4d8e8a7 65%,
+    #ffffff9c 100%
+  );
+
+  --circle-color: rgb(34, 33, 33);
+}
+
+/* ======================================================
+   DARK MODE (SEMANTIC RESET – NOT RAW)
+====================================================== */
 .dark {
-  --background: #111111;
-  --foreground: #eeeeee;
+  /* PRIMARY (NORMAL) */
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+  --color-primary-500: var(--primary-500);
+  --color-primary-600: var(--primary-600);
+  --color-primary-700: var(--primary-700);
+  --color-primary-800: var(--primary-800);
+  --color-primary-900: var(--primary-900);
 
-  --overlay: #111111;
+
+  --color-background: var(--color-primary-900);
+  --color-foreground: var(--color-primary-100);
+
+  --gradient-overlay: linear-gradient(
+    132deg,
+    #000000 0%,
+    #040710 52%,
+    #0c1220 57%,
+    #0c1220 60%,
+    #0c1220 65%,
+    #000000 100%
+  );
+
+  --circle-color: rgb(255, 255, 255);
 }
 
-/* ---------- Base ---------- */
+/* ======================================================
+   BASE
+====================================================== */
 html,
 body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-bg {
+  background: var(--gradient-primary);
+}
+
+.gradient-bg-glasses {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 179, 125, 0.46),
+    rgba(0, 138, 140, 0.31)
+  );
 }
 
 /* ---------- Utilities ---------- */
 .btn {
-  background-color: var(--bg-primary);
-  color: #111111;
+  background: var(--gradient-primary);
+  color: #f9f9f9;
 }
 
-.border {
-  border-color: rgba(0, 0, 0, 0.1);
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-200px) translateX(50px);
+  }
 }

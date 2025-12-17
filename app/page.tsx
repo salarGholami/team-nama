@@ -1,5 +1,7 @@
+"use client";
+
+import LandingPage from "@/components/ui/LandingPage";
+
 export default function Home() {
-  return (
-    <div className="w-full">Welcome to the Public Home Page</div>
-  );
+  return <LandingPage />;
 }

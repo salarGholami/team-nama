@@ -1,10 +1,7 @@
-// import Footer from "@/components/layout/footer";
-import type { ReactNode } from "react";
-
-interface AuthLayoutProps {
-  children: ReactNode;
-}
-
-export default function AuthLayout({ children }: AuthLayoutProps) {
-  return <section className="min-h-screen">{children}</section>;
+export default function AuthLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <div className="relative h-screen w-full">{children}</div>;
 }

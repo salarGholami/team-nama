@@ -6,12 +6,13 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "../ui/ThemeToggle";
+import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
   { href: "/", label: "خانه" },
   { href: "/about", label: "درباره ما" },
-  { href: "/comments", label: " نظرات" },
-  { href: "/features", label: " ویژگی ها" },
+  { href: "/comments", label: "نظرات" },
+  { href: "/features", label: "ویژگی ها" },
   { href: "/services", label: "سرویس ها" },
 ];
 
@@ -19,11 +20,23 @@ export default function Navbar() {
   const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // جلوگیری از اسکرول صفحه وقتی منو باز است
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
     return () => {
       document.body.style.overflow = "";
     };
@@ -33,107 +46,172 @@ export default function Navbar() {
 
   const isDark = (resolvedTheme ?? theme) === "dark";
 
+  // بک‌گراند نوار بالا بر اساس اسکرول و تم
+  const bgClass = scrolled
+    ? isDark
+      ? "bg-neutral-900/95 shadow-xl"
+      : "bg-white/95 shadow-xl"
+    : "bg-transparent";
+
   return (
     <>
-      {/* NAVBAR */}
-      <header className="sticky top-0 z-50 border-b shadow-2xl backdrop-blur">
-        <nav className="mx-auto max-w-7xl flex items-center px-4 py-3">
-          {/* Left: Logo + Menu */}
-          <div className="flex items-center gap-8">
-            {/* Logo */}
+      {/* نوار بالا - حالت شناور روی صفحه */}
+      <header
+        className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300 ${bgClass}`}
+      >
+        <nav className="mx-auto max-w-7xl flex items-center justify-between px-4 py-4">
+          {/* لوگو و لینک‌های دسکتاپ */}
+          <div className="flex items-center gap-10">
             <Link href="/" className="flex items-center">
               <Image
                 src={isDark ? "/logos/logo-light.png" : "/logos/logo-dark.png"}
-                alt="Logo"
+                alt="تیم نما"
                 width={120}
                 height={40}
-                className="w-24 h-auto"
+                className="w-28 h-auto transition-all"
                 priority
               />
             </Link>
 
-            {/* Desktop menu (بغل لوگو) */}
-            <nav className="hidden md:flex items-center gap-6 font-bold">
+            {/* لینک‌های دسکتاپ */}
+            <div className="hidden md:flex items-center gap-8 font-semibold">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="transition hover:text-primary"
+                  className="text-foreground/80 hover:text-primary transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
-            </nav>
+            </div>
           </div>
 
-          {/* Spacer */}
-          <div className="flex-1" />
-
-          {/* Right actions */}
+          {/* دکمه‌های چپ در دسکتاپ */}
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/login"
-              className="btn px-4 py-1 rounded-lg font-bold whitespace-nowrap"
+              className="px-5 py-2 btn rounded-lg bg-primary text-primary-foreground font-bold text-sm hover:opacity-90 transition"
             >
               ورود / ثبت‌نام
             </Link>
             <ThemeToggle />
           </div>
 
-          {/* Mobile menu button */}
+          {/* منوی موبایل */}
           <button
             onClick={() => setOpen(true)}
-            className="md:hidden p-2"
-            aria-label="Open menu"
+            className="md:hidden p-2 rounded-lg hover:bg-accent transition"
+            aria-label="باز کردن منو"
           >
             <Menu size={28} />
           </button>
         </nav>
       </header>
 
-      {/* MOBILE FULLSCREEN MENU */}
-      {open && (
-        <div className="fixed inset-0 z-[999] flex flex-col">
-          <div className="flex items-center justify-between px-4 py-4 border-b">
-            <Link href="/" className="flex items-center">
-              <Image
-                src={isDark ? "/logos/logo-light.png" : "/logos/logo-dark.png"}
-                alt="Logo"
-                width={120}
-                height={40}
-                className="w-24 h-auto"
-              />
-            </Link>
-
-            <button onClick={() => setOpen(false)} aria-label="Close menu">
-              <X size={28} />
-            </button>
-          </div>
-
-          <div className="flex-1 flex flex-col items-center justify-center gap-8 text-xl font-bold">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="hover:text-primary transition"
-              >
-                {link.label}
-              </Link>
-            ))}
-
-            <Link
-              href="/login"
+      {/* منوی موبایل */}
+      <AnimatePresence>
+        {open && (
+          <>
+            {/* اوورلی */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 z-[998]  backdrop-blur-md"
               onClick={() => setOpen(false)}
-              className="btn px-6 py-2 rounded-xl"
-            >
-              ورود / ثبت‌نام
-            </Link>
+            />
 
-            <ThemeToggle />
-          </div>
-        </div>
-      )}
+            {/* پنل منو */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+              className="fixed inset-y-0 right-0 z-[999] w-full max-w-sm shadow-2xl"
+            >
+              <div className="h-full flex flex-col bg-background border-l border-border">
+                {/* هدر منو */}
+                <div className="flex items-center justify-between px-6 py-5 border-b border-border">
+                  <Link href="/" onClick={() => setOpen(false)}>
+                    <Image
+                      src={
+                        isDark
+                          ? "/logos/logo-light.png"
+                          : "/logos/logo-dark.png"
+                      }
+                      alt="تیم نما"
+                      width={130}
+                      height={44}
+                      className="h-11 w-auto"
+                      priority
+                    />
+                  </Link>
+
+                  <button
+                    onClick={() => setOpen(false)}
+                    className="p-2 rounded-lg hover:bg-accent transition"
+                    aria-label="بستن منو"
+                  >
+                    <X size={28} className="text-foreground/70" />
+                  </button>
+                </div>
+
+                {/* لینک‌ها */}
+                <div className="flex-1 flex flex-col px-8 py-12 gap-6 overflow-y-auto">
+                  {NAV_LINKS.map((link, index) => (
+                    <motion.div
+                      key={link.href}
+                      initial={{ opacity: 0, x: 50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 50 }}
+                      transition={{
+                        delay: index * 0.1,
+                        duration: 0.4,
+                        ease: "easeOut",
+                      }}
+                    >
+                      <Link
+                        href={link.href}
+                        onClick={() => setOpen(false)}
+                        className="block text-xl font-semibold text-foreground hover:text-primary transition-colors duration-200 py-2"
+                      >
+                        {link.label}
+                      </Link>
+                    </motion.div>
+                  ))}
+
+                  {/* دکمه ورود + تم */}
+                  <motion.div
+                    className="mt-auto w-full space-y-6 border-t border-border pt-8"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 30 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
+                  >
+                    <Link
+                      href="/login"
+                      onClick={() => setOpen(false)}
+                      className="block btn w-full text-center px-8 py-3 rounded-xl bg-primary text-primary-foreground font-bold text-lg hover:opacity-90 transition shadow-lg"
+                    >
+                      ورود / ثبت‌ نام
+                    </Link>
+
+                    <div className="flex justify-center">
+                      <ThemeToggle />
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 }

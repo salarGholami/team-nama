@@ -14,10 +14,12 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
       <body className={inter.className}>
-        <AppProviders>
-          <Navbar />
-          {children}
-        </AppProviders>
+        <div className="relative h-screen w-full flex justify-center items-center">
+          <AppProviders>
+            <Navbar />
+            {children}
+          </AppProviders>
+        </div>
       </body>
     </html>
   );
