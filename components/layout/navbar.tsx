@@ -49,7 +49,7 @@ export default function Navbar() {
   // بک‌گراند نوار بالا بر اساس اسکرول و تم
   const bgClass = scrolled
     ? isDark
-      ? "bg-neutral-900/95 shadow-xl"
+      ? "bg-neutral-900/5 shadow-xl"
       : "bg-white/95 shadow-xl"
     : "bg-transparent";
 

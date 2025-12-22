@@ -93,6 +93,8 @@ body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+
 }
 
 .gradient-text {
@@ -109,7 +111,7 @@ body {
 .gradient-bg-glasses {
   background: linear-gradient(
     135deg,
-    rgba(0, 179, 125, 0.46),
+    rgba(0, 179, 125, 0.313),
     rgba(0, 138, 140, 0.31)
   );
 }

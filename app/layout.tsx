@@ -3,8 +3,14 @@ import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import { AppProviders } from "@/providers/AppProviders";
 import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata = {
+  title: "نام سیستم شما",
+  description: "توضیح مختصر سیستم",
+};
 
 export default function RootLayout({
   children,
@@ -13,13 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
-      <body className={inter.className}>
-        <div className="relative h-screen w-full flex justify-center items-center">
-          <AppProviders>
-            <Navbar />
-            {children}
-          </AppProviders>
-        </div>
+      <body
+        className={`${inter.className} min-h-screen flex flex-col bg-background text-foreground`}
+      >
+        <AppProviders>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </AppProviders>
       </body>
     </html>
   );

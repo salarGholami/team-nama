@@ -5,18 +5,18 @@ import { Button } from "../ui/button";
 // components/forms/login-form.tsx
 export default function LoginForm() {
   return (
-    <form className=" overflow-hidden   w-full flex justify-center items-center">
+    <form className="overflow-hidden w-full flex justify-center items-center">
       <div className="flex flex-col w-full p-4 gap-4 border rounded-xl shadow-2xl">
         {/* title */}
         <div className="flex w-full">
           <div className="flex flex-col">
-            <span className="text-3xl flex gap-4">
-              <span> ورود به سیستم</span>
-              <span className="flex justify-center items-center">
+            <div className="flex flex-col gap-4">
+              <span className="flex items-center gap-4 text-3xl">
                 <Code className="gradient-bg w-10 h-10 p-1 rounded-xl text-white" />
+                <span> ورود به سیستم</span>
               </span>
-            </span>
-            <span className="text-primary-400">به پنل مدیریت خوش امدید</span>
+              <span className="text-primary-400">به پنل مدیریت خوش امدید</span>
+            </div>
           </div>
         </div>
         {/* email */}
