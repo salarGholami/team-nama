@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import { AppProviders } from "@/providers/AppProviders";
 import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,10 +15,11 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
       <body className={inter.className}>
-        <div className="relative h-screen w-full flex justify-center items-center">
+        <div className="min-h-screen flex flex-col">
           <AppProviders>
             <Navbar />
             {children}
+            <Footer />
           </AppProviders>
         </div>
       </body>

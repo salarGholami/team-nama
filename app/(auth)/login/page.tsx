@@ -3,13 +3,13 @@ import { Check, KeySquare, Mail } from "lucide-react";
 
 export default function LoginPage() {
   return (
-    <div className="max-w-7xl mx-auto flex mt-32">
+    <div className="max-w-7xl mx-auto flex mt-32 mb-8">
       <div className="grid grid-cols-12 gap-8 mx-2 md:mx-8 w-full">
         <div className="col-span-12 md:col-span-12 lg:col-span-4">
           <LoginForm />
         </div>
 
-        <div className="hidden lg:grid lg:col-span-8 gap-4">
+        <div className="hidden lg:grid lg:col-span-8 gap-8">
           <DemoAccount />
           <SystemFeatures />
         </div>
