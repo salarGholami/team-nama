@@ -1,4 +1,4 @@
-import { Code } from "lucide-react";
+import { Code, LogIn } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
@@ -53,7 +53,10 @@ export default function LoginForm() {
           </div>
         </div>
         {/* btn */}
-        <Button className="btn font-semibold py-2 rounded-full cursor-pointer hover:opacity-90">
+        <Button
+          className="btn font-semibold rounded-md"
+          icon={<LogIn size={20} />}
+        >
           ورود به سیستم
         </Button>
         {/* new register */}
