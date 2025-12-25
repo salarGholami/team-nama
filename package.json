@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint .",
+    "json": "json-server --watch data/db.json --port 4000"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.90.12",

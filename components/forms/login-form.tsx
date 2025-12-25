@@ -1,4 +1,4 @@
-import { Code, LogIn } from "lucide-react";
+import { Code, LogIn, UserLock } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
@@ -12,7 +12,7 @@ export default function LoginForm() {
           <div className="flex flex-col">
             <span className=" flex flex-col gap-4">
               <span className="flex justify-center items-center gap-4">
-                <Code className="gradient-bg w-10 h-10 p-1 rounded-xl text-white" />
+                <UserLock className="gradient-bg w-10 h-10 p-1 rounded-xl text-white" />
                 <span className="text-3xl">ورود به سیستم</span>
               </span>
               <span className="text-primary-400 ">به پنل مدیریت خوش آمدید</span>

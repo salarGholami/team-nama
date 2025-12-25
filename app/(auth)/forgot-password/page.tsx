@@ -1,7 +1,11 @@
-export default function ForgotPasswordPage() {
+import ForgotPasswordForm from "@/components/forms/ForgotPassword-form";
+
+const ForgotPasswordPage = () => {
   return (
-    <div className="max-w-7xl mx-auto h-screen w-screen flex items-center">
-      <h1>Forgot Password Form</h1>
+    <div className="max-w-xl mx-auto flex mt-32 mb-8 overflow-hidden">
+      <ForgotPasswordForm />
     </div>
   );
-}
+};
+
+export default ForgotPasswordPage;
