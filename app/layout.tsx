@@ -1,5 +1,6 @@
 // app/layout.tsx
 import "@/styles/globals.css";
+import "swiper/css";
 import { Inter } from "next/font/google";
 import { AppProviders } from "@/providers/AppProviders";
 import Navbar from "@/components/layout/navbar";
