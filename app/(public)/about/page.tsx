@@ -1,8 +1,9 @@
+import AboutUs from "@/components/ui/AboutUs";
+
 export default function AboutPage() {
   return (
     <div>
-      <h1>About Page</h1>
-      {/* محتوای صفحه */}
+      <AboutUs />
     </div>
   );
 }
