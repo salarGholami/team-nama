@@ -1,51 +1,63 @@
 {
   "roles": [
-    "CEO",
-    "CTO",
-    "COO",
-    "CFO",
-    "ProjectManager",
-    "ProductManager",
-    "HRManager",
-    "ScrumMaster",
-    "FrontendDeveloper",
-    "BackendDeveloper",
-    "MobileDeveloper",
-    "DevOpsEngineer",
-    "QAEngineer",
-    "UIDesigner",
-    "SystemArchitect",
-    "SalesManager",
-    "MarketingManager",
-    "ContentCreator",
-    "CustomerSuccessManager",
-    "CustomerSupport",
-    "TechnicalSupport",
-    "Client",
-    "Partner"
+    { "id": "CEO", "title": "مدیرعامل" },
+    { "id": "CTO", "title": "مدیر فنی" },
+    { "id": "COO", "title": "مدیر عملیات" },
+    { "id": "CFO", "title": "مدیر مالی" },
+    { "id": "ProjectManager", "title": "مدیر پروژه" },
+    { "id": "ProductManager", "title": "مدیر محصول" },
+    { "id": "HRManager", "title": "مدیر منابع انسانی" },
+    { "id": "ScrumMaster", "title": "اسکرام مستر" },
+    { "id": "FrontendDeveloper", "title": "توسعه‌دهنده فرانت‌اند" },
+    { "id": "BackendDeveloper", "title": "توسعه‌دهنده بک‌اند" },
+    { "id": "MobileDeveloper", "title": "توسعه‌دهنده موبایل" },
+    { "id": "DevOpsEngineer", "title": "DevOps Engineer" },
+    { "id": "QAEngineer", "title": "تستر نرم‌افزار" },
+    { "id": "UIDesigner", "title": "طراح رابط کاربری" },
+    { "id": "SystemArchitect", "title": "معمار سیستم" },
+    { "id": "SalesManager", "title": "مدیر فروش" },
+    { "id": "MarketingManager", "title": "مدیر بازاریابی" },
+    { "id": "ContentCreator", "title": "تولیدکننده محتوا" },
+    { "id": "CustomerSuccessManager", "title": "مدیر موفقیت مشتری" },
+    { "id": "CustomerSupport", "title": "پشتیبانی مشتری" },
+    { "id": "TechnicalSupport", "title": "پشتیبانی فنی" },
+    { "id": "Client", "title": "مشتری" },
+    { "id": "Partner", "title": "همکار تجاری" }
   ],
 
   "users": [
-    {
-      "id": 1,
-      "name": "Salar",
-      "role": "CEO"
-    },
+    { "id": 1, "name": "Salar", "email": "salar@corp.com", "roleId": "CEO" },
     {
       "id": 2,
       "name": "Reza",
-      "role": "ProjectManager"
+      "email": "reza@corp.com",
+      "roleId": "ProjectManager"
     },
     {
       "id": 3,
       "name": "Ali",
-      "role": "FrontendDeveloper"
+      "email": "ali@corp.com",
+      "roleId": "FrontendDeveloper"
     },
     {
       "id": 4,
       "name": "Sara",
-      "role": "UIDesigner"
-    }
+      "email": "sara@corp.com",
+      "roleId": "UIDesigner"
+    },
+    {
+      "id": 5,
+      "name": "Nima",
+      "email": "nima@corp.com",
+      "roleId": "BackendDeveloper"
+    },
+    {
+      "id": 6,
+      "name": "Maryam",
+      "email": "maryam@corp.com",
+      "roleId": "QAEngineer"
+    },
+    { "id": 7, "name": "Omid", "email": "omid@client.com", "roleId": "Client" }
   ],
 
   "projects": [
@@ -53,9 +65,19 @@
       "id": 1,
       "title": "Company Website",
       "managerId": 2,
-      "status": "in-progress",
-      "members": [2, 3, 4]
-    }
+      "status": "in-progress"
+    },
+    { "id": 2, "title": "Mobile App", "managerId": 2, "status": "planning" }
+  ],
+
+  "projectMembers": [
+    { "id": 1, "projectId": 1, "userId": 2 },
+    { "id": 2, "projectId": 1, "userId": 3 },
+    { "id": 3, "projectId": 1, "userId": 4 },
+    { "id": 4, "projectId": 1, "userId": 5 },
+    { "id": 5, "projectId": 1, "userId": 6 },
+    { "id": 6, "projectId": 2, "userId": 3 },
+    { "id": 7, "projectId": 2, "userId": 5 }
   ],
 
   "tasks": [
@@ -68,72 +90,79 @@
     },
     {
       "id": 2,
-      "title": "Implement Landing Page UI",
+      "title": "Implement UI",
       "projectId": 1,
       "assignedTo": 3,
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "title": "Setup API",
+      "projectId": 1,
+      "assignedTo": 5,
+      "status": "in-progress"
+    },
+    {
+      "id": 4,
+      "title": "Test Landing Page",
+      "projectId": 1,
+      "assignedTo": 6,
+      "status": "pending"
+    },
+    {
+      "id": 5,
+      "title": "Design Mobile UI",
+      "projectId": 2,
+      "assignedTo": 4,
       "status": "pending"
     }
   ],
 
   "dashboards": [
     {
-      "role": "CEO",
+      "roleId": "CEO",
       "widgets": ["stats", "allProjects", "employees", "finances"]
     },
     {
-      "role": "CTO",
+      "roleId": "CTO",
       "widgets": ["architecture", "serverStatus", "techTeams"]
     },
     {
-      "role": "ProjectManager",
+      "roleId": "ProjectManager",
       "widgets": ["projects", "tasks", "teamProgress"]
     },
     {
-      "role": "FrontendDeveloper",
+      "roleId": "FrontendDeveloper",
       "widgets": ["myTasks", "commits", "designFiles"]
     },
     {
-      "role": "BackendDeveloper",
+      "roleId": "BackendDeveloper",
       "widgets": ["apiDocs", "myTasks", "serverLogs"]
     },
     {
-      "role": "UIDesigner",
+      "roleId": "UIDesigner",
       "widgets": ["figmaLinks", "designReviews", "tasks"]
     },
+    { "roleId": "QAEngineer", "widgets": ["testCases", "bugs", "assignments"] },
     {
-      "role": "QAEngineer",
-      "widgets": ["testCases", "bugs", "assignments"]
-    },
-    {
-      "role": "Client",
+      "roleId": "Client",
       "widgets": ["projectStatus", "deliveries", "invoices"]
     }
   ],
 
   "permissions": [
+    { "roleId": "CEO", "access": ["all"] },
     {
-      "role": "CEO",
-      "access": ["all"]
+      "roleId": "CTO",
+      "access": ["servers", "architecture", "projects", "users"]
     },
-    {
-      "role": "ProjectManager",
-      "access": ["projects", "tasks", "team"]
-    },
-    {
-      "role": "FrontendDeveloper",
-      "access": ["tasks", "projects"]
-    },
-    {
-      "role": "UIDesigner",
-      "access": ["designs", "tasks"]
-    },
-    {
-      "role": "QAEngineer",
-      "access": ["bugs", "tasks"]
-    },
-    {
-      "role": "Client",
-      "access": ["projectStatus"]
-    }
+    { "roleId": "ProjectManager", "access": ["projects", "tasks", "team"] },
+    { "roleId": "ProductManager", "access": ["projects", "roadmap"] },
+    { "roleId": "FrontendDeveloper", "access": ["tasks", "projects"] },
+    { "roleId": "BackendDeveloper", "access": ["tasks", "projects", "api"] },
+    { "roleId": "UIDesigner", "access": ["designs", "tasks"] },
+    { "roleId": "QAEngineer", "access": ["bugs", "tasks"] },
+    { "roleId": "Client", "access": ["projectStatus", "invoices"] },
+    { "roleId": "Partner", "access": ["projects", "deliveries"] }
   ]
 }

@@ -119,7 +119,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 z-[998]  backdrop-blur-md"
+              className="fixed inset-0 z-20  backdrop-blur-md"
               onClick={() => setOpen(false)}
             />
 
@@ -133,7 +133,7 @@ export default function Navbar() {
                 stiffness: 300,
                 damping: 30,
               }}
-              className="fixed inset-y-0 right-0 z-[999] w-full max-w-sm shadow-2xl"
+              className="fixed inset-y-0 right-0 z-50 w-full max-w-sm shadow-2xl"
             >
               <div className="h-full flex flex-col bg-background border-l border-border">
                 {/* هدر منو */}

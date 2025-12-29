@@ -1,4 +1,4 @@
-import { Code } from "lucide-react";
+import { Code, LogIn, UserLock } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
@@ -35,7 +35,7 @@ export default function LoginForm() {
             <input
               id="password"
               type="password"
-              placeholder="ایمیل را وارد کن"
+              placeholder="رمز را وارد کن"
               className="bg-primary-700 rounded-md py-2 px-4"
             />
           </div>
@@ -43,7 +43,7 @@ export default function LoginForm() {
         {/* forgot-password */}
         <div className="flex justify-between ">
           <div className="text-sm">
-            <Link href="/forgot-password">فراوموشی رمز عبور؟</Link>
+            <Link href="/forgot-password">فراموشی رمز عبور؟</Link>
           </div>
           <div className="text-sm text-primary-400">
             <div className="gap-2 flex">
@@ -53,7 +53,10 @@ export default function LoginForm() {
           </div>
         </div>
         {/* btn */}
-        <Button className="btn font-semibold py-2 rounded-full cursor-pointer hover:opacity-90">
+        <Button
+          className="btn font-semibold rounded-md"
+          icon={<LogIn size={20} />}
+        >
           ورود به سیستم
         </Button>
         {/* new register */}
