@@ -1,0 +1,44 @@
+[
+  {
+    "role": "admin",
+    "label": "مدیر کل",
+    "email": "admin@techcompany.com",
+    "password": "admin123"
+  },
+  {
+    "role": "admin-manager",
+    "label": "مدیر فروش",
+    "email": "sales@techcompany.com",
+    "password": "sales123"
+  },
+  {
+    "role": "employee",
+    "label": "کارمند",
+    "email": "employee@techcompany.com",
+    "password": "emp123"
+  },
+  {
+    "role": "hr",
+    "label": "حسابداری",
+    "email": "hr@techcompany.com",
+    "password": "hr123"
+  },
+  {
+    "role": "client",
+    "label": "مشتری نمونه",
+    "email": "client@techcompany.com",
+    "password": "client123"
+  },
+  {
+    "role": "frontend",
+    "label": "فرانت‌اند",
+    "email": "frontend@gmail.com",
+    "password": "Frontend@123"
+  },
+  {
+    "role": "backend",
+    "label": "بک‌اند",
+    "email": "backend@gmail.com",
+    "password": "Backend@123"
+  }
+]

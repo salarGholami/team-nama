@@ -1,14 +1,11 @@
-"use client";
-
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
-import LandingPage from "@/components/ui/LandingPage";
 
-export default function Home() {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="">
+    <div>
       <Navbar />
-      <LandingPage />
+      {children}
       <Footer />
     </div>
   );

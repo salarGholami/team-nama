@@ -1,10 +1,9 @@
 // app/layout.tsx
 import "@/styles/globals.css";
 import "swiper/css";
+
 import { Inter } from "next/font/google";
 import { AppProviders } from "@/providers/AppProviders";
-import Navbar from "@/components/layout/navbar";
-import Footer from "@/components/layout/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +16,7 @@ export default function RootLayout({
     <html lang="fa" dir="rtl" suppressHydrationWarning>
       <body className={inter.className}>
         <div className="min-h-screen flex flex-col">
-          <AppProviders>
-            <Navbar />
-            {children}
-            <Footer />
-          </AppProviders>
+          <AppProviders>{children}</AppProviders>
         </div>
       </body>
     </html>

@@ -26,38 +26,186 @@
   ],
 
   "users": [
-    { "id": 1, "name": "Salar", "email": "salar@corp.com", "roleId": "CEO" },
+    {
+      "id": 1,
+      "name": "Salar",
+      "email": "salar@corp.com",
+      "roleId": "CEO",
+      "phone": "09121234567",
+      "department": "مدیریت",
+      "joinDate": "1400-01-01",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Salar"
+    },
     {
       "id": 2,
       "name": "Reza",
       "email": "reza@corp.com",
-      "roleId": "ProjectManager"
+      "roleId": "ProjectManager",
+      "phone": "09127654321",
+      "department": "پروژه",
+      "joinDate": "1401-03-15",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Reza"
     },
     {
       "id": 3,
       "name": "Ali",
       "email": "ali@corp.com",
-      "roleId": "FrontendDeveloper"
+      "roleId": "FrontendDeveloper",
+      "phone": "09131111111",
+      "department": "توسعه",
+      "joinDate": "1401-06-20",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Ali"
     },
     {
       "id": 4,
       "name": "Sara",
       "email": "sara@corp.com",
-      "roleId": "UIDesigner"
+      "roleId": "UIDesigner",
+      "phone": "09132222222",
+      "department": "طراحی",
+      "joinDate": "1401-09-10",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sara"
     },
     {
       "id": 5,
       "name": "Nima",
       "email": "nima@corp.com",
-      "roleId": "BackendDeveloper"
+      "roleId": "BackendDeveloper",
+      "phone": "09133333333",
+      "department": "توسعه",
+      "joinDate": "1402-01-05",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Nima"
     },
     {
       "id": 6,
       "name": "Maryam",
       "email": "maryam@corp.com",
-      "roleId": "QAEngineer"
+      "roleId": "QAEngineer",
+      "phone": "09134444444",
+      "department": "تست",
+      "joinDate": "1402-02-14",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Maryam"
     },
-    { "id": 7, "name": "Omid", "email": "omid@client.com", "roleId": "Client" }
+    {
+      "id": 7,
+      "name": "Omid",
+      "email": "omid@client.com",
+      "roleId": "Client",
+      "phone": "09135555555",
+      "department": "کلاینت",
+      "joinDate": "1402-03-20",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Omid"
+    },
+    {
+      "id": 8,
+      "name": "فاطمه احمدی",
+      "email": "fateme.ahmadi@corp.com",
+      "roleId": "HRManager",
+      "phone": "09136666666",
+      "department": "منابع انسانی",
+      "joinDate": "1401-04-10",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Fateme"
+    },
+    {
+      "id": 9,
+      "name": "محمد علی سلیمانی",
+      "email": "m.soleimani@corp.com",
+      "roleId": "CTO",
+      "phone": "09137777777",
+      "department": "فناوری",
+      "joinDate": "1400-06-15",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Mohammad"
+    },
+    {
+      "id": 10,
+      "name": "لیلا قاسمی",
+      "email": "leila.ghasemi@corp.com",
+      "roleId": "ProductManager",
+      "phone": "09138888888",
+      "department": "محصول",
+      "joinDate": "1401-07-22",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Leila"
+    },
+    {
+      "id": 11,
+      "name": "حسن رسولی",
+      "email": "hassan.rasouli@corp.com",
+      "roleId": "DevOpsEngineer",
+      "phone": "09139999999",
+      "department": "سرورها",
+      "joinDate": "1402-01-30",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Hassan"
+    },
+    {
+      "id": 12,
+      "name": "شیرین محمودی",
+      "email": "shirin.mahmudi@corp.com",
+      "roleId": "MobileDeveloper",
+      "phone": "09140000000",
+      "department": "توسعه",
+      "joinDate": "1402-02-10",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Shirin"
+    },
+    {
+      "id": 13,
+      "name": "علی اکبر ملکی",
+      "email": "aliakbar.maleki@corp.com",
+      "roleId": "SalesManager",
+      "phone": "09141111111",
+      "department": "فروش",
+      "joinDate": "1401-08-05",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Aliakbar"
+    },
+    {
+      "id": 14,
+      "name": "نیلوفر ایزدی",
+      "email": "nilofar.izadi@corp.com",
+      "roleId": "MarketingManager",
+      "phone": "09142222222",
+      "department": "بازاریابی",
+      "joinDate": "1401-09-12",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Nilofar"
+    },
+    {
+      "id": 15,
+      "name": "میلاد عباسی",
+      "email": "milad.abbasi@corp.com",
+      "roleId": "ScrumMaster",
+      "phone": "09143333333",
+      "department": "پروژه",
+      "joinDate": "1402-03-01",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Milad"
+    },
+    {
+      "id": 16,
+      "name": "زهره نژادی",
+      "email": "zahra.nejadi@corp.com",
+      "roleId": "CustomerSupport",
+      "phone": "09144444444",
+      "department": "پشتیبانی",
+      "joinDate": "1402-04-15",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Zahra"
+    },
+    {
+      "id": 17,
+      "name": "کامران ظهیری",
+      "email": "kamran.zahiri@corp.com",
+      "roleId": "SystemArchitect",
+      "phone": "09145555555",
+      "department": "معماری",
+      "joinDate": "1400-10-20",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Kamran"
+    },
+    {
+      "id": 18,
+      "name": "سونیا اصفهانی",
+      "email": "sonia.isfahani@corp.com",
+      "roleId": "ContentCreator",
+      "phone": "09146666666",
+      "department": "محتوا",
+      "joinDate": "1402-05-10",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sonia"
+    }
   ],
 
   "projects": [

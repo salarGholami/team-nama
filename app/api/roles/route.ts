@@ -1,4 +1,4 @@
-// app/api/auth/me/route.ts
+// app/api/roles/route.ts
 import { NextResponse } from "next/server";
 import { readFile } from "fs/promises";
 import path from "path";
@@ -10,7 +10,13 @@ async function readDB() {
 }
 
 export async function GET() {
-  const db = await readDB();
-  const user = Array.isArray(db.users) && db.users.length ? db.users[0] : {};
-  return NextResponse.json({ user });
+  try {
+    const db = await readDB();
+    return NextResponse.json({ roles: db.roles || [] }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed to fetch roles" },
+      { status: 500 }
+    );
+  }
 }
