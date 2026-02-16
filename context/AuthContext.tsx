@@ -1,47 +1,27 @@
 "use client";
 
-import { createContext, useState, ReactNode, useEffect } from "react";
-import { getUser } from "@/services/user.service";
+import { createContext, useContext, useState, useEffect } from "react";
+import type { SessionUser } from "@/types/session";
 
-type User = any;
-
-interface AuthContextType {
-  user: User | null;
-  setUser: (user: User | null) => void;
-  isLoading: boolean;
+interface AuthContextValue {
+  user: SessionUser | null;
 }
 
-export const AuthContext = createContext<AuthContextType>({
-  user: null,
-  setUser: () => {},
-  isLoading: true,
-});
+const AuthContext = createContext<AuthContextValue>({ user: null });
 
-export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+  const [user, setUser] = useState<SessionUser | null>(null);
 
   useEffect(() => {
-    let mounted = true;
-    (async () => {
-      try {
-        const res = await getUser();
-        const found = res?.user ?? res;
-        if (mounted) setUser(found ?? null);
-      } catch (e) {
-        if (mounted) setUser(null);
-      } finally {
-        if (mounted) setIsLoading(false);
-      }
-    })();
-    return () => {
-      mounted = false;
-    };
+    fetch("/api/auth/me")
+      .then((res) => res.json())
+      .then((data) => setUser(data.user))
+      .catch(() => setUser(null));
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, setUser, isLoading }}>
-      {children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
   );
-}
+};
+
+export const useAuth = () => useContext(AuthContext);

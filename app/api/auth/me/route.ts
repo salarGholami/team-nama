@@ -1,16 +1,12 @@
-// app/api/auth/me/route.ts
 import { NextResponse } from "next/server";
-import { readFile } from "fs/promises";
-import path from "path";
-
-async function readDB() {
-  const p = path.join(process.cwd(), "data", "db.json");
-  const raw = await readFile(p, "utf8");
-  return JSON.parse(raw);
-}
+import { getServerSession } from "@/lib/auth/session";
 
 export async function GET() {
-  const db = await readDB();
-  const user = Array.isArray(db.users) && db.users.length ? db.users[0] : {};
-  return NextResponse.json({ user });
+  const session = await getServerSession();
+
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  return NextResponse.json(session);
 }

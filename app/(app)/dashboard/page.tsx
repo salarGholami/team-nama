@@ -1,23 +1,20 @@
-// app/(app)/dashboard/page.tsx
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+import { getServerSession } from "@/lib/auth/session";
 
-export default async function DashboardRoot() {
-  const cookieStore = await cookies();
-  const token = cookieStore.get("token")?.value;
+export default async function DashboardPage() {
+  const session = await getServerSession();
 
-  if (!token) {
-    redirect("/login");
+  if (!session) {
+    return <p>Not logged in</p>;
   }
 
-  let role = "employee";
-  try {
-    const payload = JSON.parse(atob(token));
-    role = payload.role || "employee";
-  } catch {
-    redirect("/login");
-  }
+  // دسترسی به رول
+  const userRole = session.roleId;
 
-  // ریدایرکت به داشبورد مخصوص نقش
-  redirect(`/dashboard/${role}`);
+  return (
+    <div className="h-full w-full">
+      <div className="bg-green-800">
+        <p >Your role: {userRole}</p>
+      </div>
+    </div>
+  );
 }

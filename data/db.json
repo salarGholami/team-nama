@@ -25,11 +25,323 @@
     { "id": "Partner", "title": "همکار تجاری" }
   ],
 
+  "links": {
+    "CEO": [
+      { "label": "داشبورد", "href": "/dashboard/CEO", "icon": "Home" },
+      {
+        "label": "همه کاربران",
+        "icon": "Users",
+        "children": [
+          {
+            "label": "مشتری‌ها",
+            "href": "/dashboard/CEO/Users/Customers"
+          },
+          {
+            "label": "کارمندان",
+            "href": "/dashboard/CEO/Users/Employees"
+          }
+        ]
+      },
+      {
+        "label": "درخواست ها",
+        "icon": "Radio",
+        "children": [
+          {
+            "label": "درخواست وام",
+            "href": "/dashboard/CEO/Request/Users/Employees/LoanRequest"
+          },
+          {
+            "label": "درخواست افزایش حقوق",
+            "href": "/dashboard/CEO/Request/Users/Employees/SalaryIncreaseRequset"
+          },
+          {
+            "label": "درخواست مرخصی ",
+            "href": "/dashboard/CEO/Request/Users/Employees/LeaveRequest"
+          }
+        ]
+      },
+      {
+        "label": "گزارشات",
+        "href": "/dashboard/CEO/Reports",
+        "icon": "BarChart3"
+      },
+      {
+        "label": "رول ها و دسترسی دادن",
+        "href": "/dashboard/CEO/Roles&Access",
+        "icon": "UserRoundCog"
+      },
+      {
+        "label": "تنظیمات",
+        "href": "/dashboard/CEO/Settings",
+        "icon": "Settings"
+      }
+    ],
+    "CTO": [
+      { "label": "داشبورد", "href": "/dashboard/cto", "icon": "Home" },
+      {
+        "label": "معماری سیستم",
+        "href": "/dashboard/cto/architecture",
+        "icon": "Settings"
+      },
+      {
+        "label": "سرورها",
+        "href": "/dashboard/cto/servers",
+        "icon": "BarChart3"
+      },
+      {
+        "label": "تیم‌های فنی",
+        "href": "/dashboard/cto/teams",
+        "icon": "Users"
+      }
+    ],
+    "COO": [
+      { "label": "داشبورد", "href": "/dashboard/coo", "icon": "Home" },
+      {
+        "label": "عملیات",
+        "href": "/dashboard/coo/operations",
+        "icon": "BarChart3"
+      }
+    ],
+    "CFO": [
+      { "label": "داشبورد", "href": "/dashboard/cfo", "icon": "Home" },
+      { "label": "مالی", "href": "/dashboard/cfo/finance", "icon": "Settings" }
+    ],
+    "ProjectManager": [
+      { "label": "داشبورد", "href": "/dashboard/pm", "icon": "Home" },
+      {
+        "label": "پروژه‌ها",
+        "href": "/dashboard/pm/projects",
+        "icon": "FileText"
+      },
+      {
+        "label": "وظایف تیم",
+        "href": "/dashboard/pm/tasks",
+        "icon": "FileText"
+      },
+      {
+        "label": "پیشرفت تیم",
+        "href": "/dashboard/pm/team-progress",
+        "icon": "BarChart3"
+      }
+    ],
+    "ProductManager": [
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/product-manager",
+        "icon": "Home"
+      },
+      {
+        "label": "پروژه‌ها",
+        "href": "/dashboard/product-manager/projects",
+        "icon": "FileText"
+      },
+      {
+        "label": "نقشه راه محصول",
+        "href": "/dashboard/product-manager/roadmap",
+        "icon": "BarChart3"
+      }
+    ],
+    "HRManager": [
+      { "label": "داشبورد", "href": "/dashboard/hr", "icon": "Home" },
+      {
+        "label": "کارمندان",
+        "href": "/dashboard/hr/employees",
+        "icon": "Users"
+      }
+    ],
+    "ScrumMaster": [
+      { "label": "داشبورد", "href": "/dashboard/scrum-master", "icon": "Home" },
+      {
+        "label": "پروژه‌ها",
+        "href": "/dashboard/scrum-master/projects",
+        "icon": "FileText"
+      },
+      {
+        "label": "وظایف تیم",
+        "href": "/dashboard/scrum-master/tasks",
+        "icon": "FileText"
+      }
+    ],
+    "FrontendDeveloper": [
+      { "label": "داشبورد", "href": "/dashboard/frontend", "icon": "Home" },
+      {
+        "label": "وظایف من",
+        "href": "/dashboard/frontend/tasks",
+        "icon": "FileText"
+      },
+      {
+        "label": "کامیت‌ها",
+        "href": "/dashboard/frontend/commits",
+        "icon": "BarChart3"
+      },
+      {
+        "label": "فایل‌های طراحی",
+        "href": "/dashboard/frontend/design-files",
+        "icon": "Settings"
+      }
+    ],
+    "BackendDeveloper": [
+      { "label": "داشبورد", "href": "/dashboard/backend", "icon": "Home" },
+      {
+        "label": "وظایف من",
+        "href": "/dashboard/backend/tasks",
+        "icon": "FileText"
+      },
+      {
+        "label": "API Docs",
+        "href": "/dashboard/backend/api",
+        "icon": "FileText"
+      },
+      {
+        "label": "سرورها",
+        "href": "/dashboard/backend/server-logs",
+        "icon": "BarChart3"
+      }
+    ],
+    "MobileDeveloper": [
+      { "label": "داشبورد", "href": "/dashboard/mobile", "icon": "Home" },
+      {
+        "label": "وظایف من",
+        "href": "/dashboard/mobile/tasks",
+        "icon": "FileText"
+      }
+    ],
+    "DevOpsEngineer": [
+      { "label": "داشبورد", "href": "/dashboard/devops", "icon": "Home" },
+      {
+        "label": "سرورها",
+        "href": "/dashboard/devops/servers",
+        "icon": "BarChart3"
+      }
+    ],
+    "QAEngineer": [
+      { "label": "داشبورد", "href": "/dashboard/qa", "icon": "Home" },
+      {
+        "label": "Test Cases",
+        "href": "/dashboard/qa/test-cases",
+        "icon": "FileText"
+      },
+      { "label": "Bugs", "href": "/dashboard/qa/bugs", "icon": "BarChart3" },
+      {
+        "label": "Assignments",
+        "href": "/dashboard/qa/assignments",
+        "icon": "FileText"
+      }
+    ],
+    "UIDesigner": [
+      { "label": "داشبورد", "href": "/dashboard/ui-designer", "icon": "Home" },
+      {
+        "label": "Figma",
+        "href": "/dashboard/ui-designer/figma-links",
+        "icon": "FileText"
+      },
+      {
+        "label": "مرور طراحی‌ها",
+        "href": "/dashboard/ui-designer/design-reviews",
+        "icon": "BarChart3"
+      },
+      {
+        "label": "وظایف من",
+        "href": "/dashboard/ui-designer/tasks",
+        "icon": "FileText"
+      }
+    ],
+    "SystemArchitect": [
+      { "label": "داشبورد", "href": "/dashboard/architect", "icon": "Home" },
+      {
+        "label": "معماری سیستم",
+        "href": "/dashboard/architect/architecture",
+        "icon": "Settings"
+      }
+    ],
+    "SalesManager": [
+      { "label": "داشبورد", "href": "/dashboard/sales", "icon": "Home" },
+      {
+        "label": "پروژه‌ها",
+        "href": "/dashboard/sales/projects",
+        "icon": "FileText"
+      }
+    ],
+    "MarketingManager": [
+      { "label": "داشبورد", "href": "/dashboard/marketing", "icon": "Home" },
+      {
+        "label": "کمپین‌ها",
+        "href": "/dashboard/marketing/campaigns",
+        "icon": "BarChart3"
+      }
+    ],
+    "ContentCreator": [
+      { "label": "داشبورد", "href": "/dashboard/content", "icon": "Home" },
+      {
+        "label": "محتوا",
+        "href": "/dashboard/content/projects",
+        "icon": "FileText"
+      }
+    ],
+    "CustomerSuccessManager": [
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/customer-success",
+        "icon": "Home"
+      },
+      {
+        "label": "پروژه‌ها",
+        "href": "/dashboard/customer-success/projects",
+        "icon": "FileText"
+      }
+    ],
+    "CustomerSupport": [
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/customer-support",
+        "icon": "Home"
+      },
+      {
+        "label": "پشتیبانی مشتری",
+        "href": "/dashboard/customer-support/tickets",
+        "icon": "FileText"
+      }
+    ],
+    "TechnicalSupport": [
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/technical-support",
+        "icon": "Home"
+      },
+      {
+        "label": "پشتیبانی فنی",
+        "href": "/dashboard/technical-support/tickets",
+        "icon": "FileText"
+      }
+    ],
+    "Client": [
+      { "label": "داشبورد", "href": "/dashboard/client", "icon": "Home" },
+      {
+        "label": "وضعیت پروژه‌ها",
+        "href": "/dashboard/client/project-status",
+        "icon": "BarChart3"
+      },
+      {
+        "label": "صورتحساب‌ها",
+        "href": "/dashboard/client/invoices",
+        "icon": "FileText"
+      }
+    ],
+    "Partner": [
+      { "label": "داشبورد", "href": "/dashboard/partner", "icon": "Home" },
+      {
+        "label": "تحویل‌ها",
+        "href": "/dashboard/partner/deliveries",
+        "icon": "FileText"
+      }
+    ]
+  },
   "users": [
     {
       "id": 1,
       "name": "Salar",
       "email": "salar@corp.com",
+      "password": "salar123",
       "roleId": "CEO",
       "phone": "09121234567",
       "department": "مدیریت",
@@ -40,6 +352,7 @@
       "id": 2,
       "name": "Reza",
       "email": "reza@corp.com",
+      "password": "reza123",
       "roleId": "ProjectManager",
       "phone": "09127654321",
       "department": "پروژه",
@@ -50,6 +363,7 @@
       "id": 3,
       "name": "Ali",
       "email": "ali@corp.com",
+      "password": "ali123",
       "roleId": "FrontendDeveloper",
       "phone": "09131111111",
       "department": "توسعه",
@@ -60,6 +374,7 @@
       "id": 4,
       "name": "Sara",
       "email": "sara@corp.com",
+      "password": "sara123",
       "roleId": "UIDesigner",
       "phone": "09132222222",
       "department": "طراحی",
@@ -70,6 +385,7 @@
       "id": 5,
       "name": "Nima",
       "email": "nima@corp.com",
+      "password": "nima123",
       "roleId": "BackendDeveloper",
       "phone": "09133333333",
       "department": "توسعه",
@@ -80,6 +396,7 @@
       "id": 6,
       "name": "Maryam",
       "email": "maryam@corp.com",
+      "password": "maryam123",
       "roleId": "QAEngineer",
       "phone": "09134444444",
       "department": "تست",
@@ -90,6 +407,7 @@
       "id": 7,
       "name": "Omid",
       "email": "omid@client.com",
+      "password": "omid123",
       "roleId": "Client",
       "phone": "09135555555",
       "department": "کلاینت",
@@ -98,18 +416,9 @@
     },
     {
       "id": 8,
-      "name": "فاطمه احمدی",
-      "email": "fateme.ahmadi@corp.com",
-      "roleId": "HRManager",
-      "phone": "09136666666",
-      "department": "منابع انسانی",
-      "joinDate": "1401-04-10",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Fateme"
-    },
-    {
-      "id": 9,
       "name": "محمد علی سلیمانی",
       "email": "m.soleimani@corp.com",
+      "password": "mohammad123",
       "roleId": "CTO",
       "phone": "09137777777",
       "department": "فناوری",
@@ -117,9 +426,10 @@
       "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Mohammad"
     },
     {
-      "id": 10,
+      "id": 9,
       "name": "لیلا قاسمی",
       "email": "leila.ghasemi@corp.com",
+      "password": "leila123",
       "roleId": "ProductManager",
       "phone": "09138888888",
       "department": "محصول",
@@ -127,9 +437,21 @@
       "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Leila"
     },
     {
+      "id": 10,
+      "name": "سونیا اصفهانی",
+      "email": "sonia.isfahani@corp.com",
+      "password": "sonia123",
+      "roleId": "ContentCreator",
+      "phone": "09146666666",
+      "department": "محتوا",
+      "joinDate": "1402-05-10",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sonia"
+    },
+    {
       "id": 11,
       "name": "حسن رسولی",
       "email": "hassan.rasouli@corp.com",
+      "password": "hassan123",
       "roleId": "DevOpsEngineer",
       "phone": "09139999999",
       "department": "سرورها",
@@ -140,6 +462,7 @@
       "id": 12,
       "name": "شیرین محمودی",
       "email": "shirin.mahmudi@corp.com",
+      "password": "shirin123",
       "roleId": "MobileDeveloper",
       "phone": "09140000000",
       "department": "توسعه",
@@ -150,6 +473,7 @@
       "id": 13,
       "name": "علی اکبر ملکی",
       "email": "aliakbar.maleki@corp.com",
+      "password": "aliakbar123",
       "roleId": "SalesManager",
       "phone": "09141111111",
       "department": "فروش",
@@ -160,6 +484,7 @@
       "id": 14,
       "name": "نیلوفر ایزدی",
       "email": "nilofar.izadi@corp.com",
+      "password": "nilofar123",
       "roleId": "MarketingManager",
       "phone": "09142222222",
       "department": "بازاریابی",
@@ -170,6 +495,7 @@
       "id": 15,
       "name": "میلاد عباسی",
       "email": "milad.abbasi@corp.com",
+      "password": "milad123",
       "roleId": "ScrumMaster",
       "phone": "09143333333",
       "department": "پروژه",
@@ -180,6 +506,7 @@
       "id": 16,
       "name": "زهره نژادی",
       "email": "zahra.nejadi@corp.com",
+      "password": "zahra123",
       "roleId": "CustomerSupport",
       "phone": "09144444444",
       "department": "پشتیبانی",
@@ -190,6 +517,7 @@
       "id": 17,
       "name": "کامران ظهیری",
       "email": "kamran.zahiri@corp.com",
+      "password": "kamran123",
       "roleId": "SystemArchitect",
       "phone": "09145555555",
       "department": "معماری",
@@ -200,6 +528,7 @@
       "id": 18,
       "name": "سونیا اصفهانی",
       "email": "sonia.isfahani@corp.com",
+      "password": "sonia123",
       "roleId": "ContentCreator",
       "phone": "09146666666",
       "department": "محتوا",
@@ -207,7 +536,6 @@
       "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sonia"
     }
   ],
-
   "projects": [
     {
       "id": 1,

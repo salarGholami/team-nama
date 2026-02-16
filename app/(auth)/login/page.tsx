@@ -1,9 +1,10 @@
 // app/login/page.tsx
 "use client";
 
-import LoginForm from "@/components/forms/login-form";
+import { useRef } from "react";
+import LoginForm, { LoginFormHandle } from "@/components/forms/login-form";
 import { Check, KeySquare, Mail } from "lucide-react";
-import demoAccounts from "@/data/demo-accounts.json";
+import db from "@/data/db.json"; // JSON شما
 
 const systemFeatures = [
   "داشبورد اختصاصی برای هر نقش کاربری",
@@ -14,16 +15,31 @@ const systemFeatures = [
   "پشتیبانی کامل از زبان فارسی و تقویم شمسی",
 ];
 
+// تبدیل کاربران JSON به حساب‌های آزمایشی و حذف موارد تکراری
+const demoAccounts = Array.from(
+  new Map(db.users.map((user) => [`${user.id}-${user.roleId}`, user])).values()
+).map((user) => ({
+  role: user.roleId,
+  label: `${user.roleId} (${user.name})`,
+  email: user.email,
+  password: user.password,
+  id: user.id,
+}));
+
 export default function LoginPage() {
+  const formRef = useRef<LoginFormHandle | null>(null);
+
   return (
     <div className="max-w-7xl mx-auto flex mt-32 mb-8">
       <div className="grid grid-cols-12 gap-8 mx-2 md:mx-8 w-full">
+        {/* فرم لاگین */}
         <div className="col-span-12 md:col-span-12 lg:col-span-4">
-          <LoginForm demoAccounts={demoAccounts} />
+          <LoginForm ref={formRef} demoAccounts={demoAccounts} />
         </div>
 
+        {/* بخش اطلاعات سمت راست برای دسکتاپ */}
         <div className="hidden lg:grid lg:col-span-8 gap-8">
-          <DemoAccountSection accounts={demoAccounts} />
+          <DemoAccountSection accounts={demoAccounts} formRef={formRef} />
           <SystemFeaturesSection features={systemFeatures} />
         </div>
       </div>
@@ -31,7 +47,13 @@ export default function LoginPage() {
   );
 }
 
-function DemoAccountSection({ accounts }: { accounts: typeof demoAccounts }) {
+function DemoAccountSection({
+  accounts,
+  formRef,
+}: {
+  accounts: typeof demoAccounts;
+  formRef: React.RefObject<LoginFormHandle | null>;
+}) {
   return (
     <section className="border overflow-hidden shadow-2xl rounded-xl backdrop-blur-sm">
       <div className="p-4">
@@ -44,9 +66,9 @@ function DemoAccountSection({ accounts }: { accounts: typeof demoAccounts }) {
       <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
         {accounts.map((account) => (
           <button
-            key={account.role}
+            key={`${account.id}-${account.role}`} // یکتا
             onClick={() =>
-              (LoginForm as any).quickLogin?.(account.email, account.password)
+              formRef.current?.quickLogin(account.email, account.password)
             }
             className="bg-primary-800 rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] text-right p-4 cursor-pointer"
           >

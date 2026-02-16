@@ -1,11 +1,7 @@
-// app/layout.tsx
-import "@/styles/globals.css";
-import "swiper/css";
-
-import { Inter } from "next/font/google";
+// app/layout.tsx 
 import { AppProviders } from "@/providers/AppProviders";
-
-const inter = Inter({ subsets: ["latin"] });
+import "../styles/globals.css";
+import { ThemeProvider } from "next-themes";
 
 export default function RootLayout({
   children,
@@ -14,10 +10,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
-      <body className={inter.className}>
-        <div className="min-h-screen flex flex-col">
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <AppProviders>{children}</AppProviders>
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );

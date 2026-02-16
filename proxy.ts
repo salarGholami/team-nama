@@ -1,4 +1,3 @@
-// proxy.ts
 import { NextRequest, NextResponse } from "next/server";
 
 const PUBLIC_PATHS = [
@@ -14,10 +13,10 @@ const PUBLIC_PATHS = [
 ] as const;
 
 export function proxy(request: NextRequest) {
-  const pathname = request.nextUrl.pathname;
+  const { pathname } = request.nextUrl;
   const token = request.cookies.get("token")?.value;
 
-  // مسیرهای عمومی — همه اجازه دارن
+  // مسیرهای عمومی
   if (PUBLIC_PATHS.includes(pathname as any)) {
     if (token && pathname === "/") {
       return NextResponse.redirect(new URL("/dashboard", request.url));
@@ -25,45 +24,39 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // اگر مسیر با /dashboard شروع بشه
+  // مسیرهای داشبورد
   if (pathname.startsWith("/dashboard")) {
     if (!token) {
-      // لاگین نشده → برو لاگین
       const loginUrl = new URL("/login", request.url);
       loginUrl.searchParams.set("callbackUrl", pathname);
       return NextResponse.redirect(loginUrl);
     }
 
-    // توکن هست → نقش رو بگیر
-    let role = "employee"; // پیش‌فرض
+    let role = "employee";
+
     try {
-      const payload = JSON.parse(atob(token));
-      role = payload.role || "employee";
+      const payload = JSON.parse(Buffer.from(token, "base64").toString());
+      role = payload.role ?? "employee";
     } catch {
-      // توکن نامعتبر → لاگین
       return NextResponse.redirect(new URL("/login", request.url));
     }
 
-    // اگر دقیقاً /dashboard باشه → به داشبورد نقش خودش ببر
+    // /dashboard → /dashboard/{role}
     if (pathname === "/dashboard") {
       return NextResponse.redirect(new URL(`/dashboard/${role}`, request.url));
     }
 
-    // اگر مسیر با نقش مطابقت نداشته باشه → به داشبورد خودش ببر
+    // جلوگیری از دسترسی به نقش دیگر
     if (!pathname.startsWith(`/dashboard/${role}`)) {
       return NextResponse.redirect(new URL(`/dashboard/${role}`, request.url));
     }
 
-    // همه چیز درست → اجازه بده
     return NextResponse.next();
   }
 
-  // بقیه مسیرها (مثل /tasks, /settings) — اگر توکن باشه اجازه بده
-  if (token) {
-    return NextResponse.next();
-  }
+  // سایر مسیرها
+  if (token) return NextResponse.next();
 
-  // اگر توکن نباشه و مسیر محافظت‌شده باشه → لاگین
   return NextResponse.redirect(new URL("/login", request.url));
 }
 
