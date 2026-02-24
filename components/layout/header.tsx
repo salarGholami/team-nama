@@ -1,5 +1,6 @@
 import { logout } from "@/app/(app)/dashboard/_actions/logout";
-import { BellDot, CircleUser, LogOut } from "lucide-react";
+import { CircleUser, LogOut } from "lucide-react";
+import ThemeToggle from "../ui/ThemeToggle";
 
 export default async function Header() {
   return (
@@ -9,7 +10,7 @@ export default async function Header() {
       </div>
 
       <div className="flex items-center gap-4">
-        <BellDot className="hover:scale-110 cursor-pointer" size={22} />
+        <ThemeToggle/>
         <form action={logout}>
           <button
             type="submit"

@@ -11,7 +11,7 @@
     { "id": "FrontendDeveloper", "title": "توسعه‌دهنده فرانت‌اند" },
     { "id": "BackendDeveloper", "title": "توسعه‌دهنده بک‌اند" },
     { "id": "MobileDeveloper", "title": "توسعه‌دهنده موبایل" },
-    { "id": "DevOpsEngineer", "title": "DevOps Engineer" },
+    { "id": "DevOpsEngineer", "title": "توسعه دهنده DevOps" },
     { "id": "QAEngineer", "title": "تستر نرم‌افزار" },
     { "id": "UIDesigner", "title": "طراح رابط کاربری" },
     { "id": "SystemArchitect", "title": "معمار سیستم" },
@@ -24,21 +24,20 @@
     { "id": "Client", "title": "مشتری" },
     { "id": "Partner", "title": "همکار تجاری" }
   ],
-
   "links": {
     "CEO": [
-      { "label": "داشبورد", "href": "/dashboard/CEO", "icon": "Home" },
+      { "label": "داشبورد", "href": "/dashboard/ceo", "icon": "Home" },
       {
         "label": "همه کاربران",
         "icon": "Users",
         "children": [
           {
             "label": "مشتری‌ها",
-            "href": "/dashboard/CEO/Users/Customers"
+            "href": "/dashboard/ceo/users/customers"
           },
           {
             "label": "کارمندان",
-            "href": "/dashboard/CEO/Users/Employees"
+            "href": "/dashboard/ceo/users/employees"
           }
         ]
       },
@@ -48,31 +47,31 @@
         "children": [
           {
             "label": "درخواست وام",
-            "href": "/dashboard/CEO/Request/Users/Employees/LoanRequest"
+            "href": "/dashboard/ceo/request/users/employees/loanRequest"
           },
           {
             "label": "درخواست افزایش حقوق",
-            "href": "/dashboard/CEO/Request/Users/Employees/SalaryIncreaseRequset"
+            "href": "/dashboard/ceo/request/users/employees/salaryIncreaseRequset"
           },
           {
             "label": "درخواست مرخصی ",
-            "href": "/dashboard/CEO/Request/Users/Employees/LeaveRequest"
+            "href": "/dashboard/ceo/request/users/employees/leaveRequest"
           }
         ]
       },
       {
         "label": "گزارشات",
-        "href": "/dashboard/CEO/Reports",
+        "href": "/dashboard/ceo/reports",
         "icon": "BarChart3"
       },
       {
         "label": "رول ها و دسترسی دادن",
-        "href": "/dashboard/CEO/Roles&Access",
+        "href": "/dashboard/ceo/roles&access",
         "icon": "UserRoundCog"
       },
       {
         "label": "تنظیمات",
-        "href": "/dashboard/CEO/Settings",
+        "href": "/dashboard/ceo/settings",
         "icon": "Settings"
       }
     ],
@@ -526,14 +525,83 @@
     },
     {
       "id": 18,
-      "name": "سونیا اصفهانی",
-      "email": "sonia.isfahani@corp.com",
-      "password": "sonia123",
-      "roleId": "ContentCreator",
-      "phone": "09146666666",
-      "department": "محتوا",
-      "joinDate": "1402-05-10",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sonia"
+      "name": "احمد رضایی",
+      "email": "ahmad.rezaei@client.com",
+      "password": "ahmad123",
+      "roleId": "Client",
+      "phone": "09152345678",
+      "department": "کلاینت",
+      "joinDate": "1403-01-15",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=AhmadR"
+    },
+    {
+      "id": 19,
+      "name": "فاطمه کریمی",
+      "email": "fateme.karimi@client.com",
+      "password": "fateme123",
+      "roleId": "Client",
+      "phone": "09153456789",
+      "department": "کلاینت",
+      "joinDate": "1403-02-01",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=FatemeK"
+    },
+    {
+      "id": 20,
+      "name": "حسین احمدی",
+      "email": "hossein.ahmadi@client.com",
+      "password": "hossein123",
+      "roleId": "Client",
+      "phone": "09154567890",
+      "department": "کلاینت",
+      "joinDate": "1403-02-20",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=HosseinA"
+    },
+    {
+      "id": 21,
+      "name": "مینا صادقی",
+      "email": "mina.sadeghi@client.com",
+      "password": "mina123",
+      "roleId": "Client",
+      "phone": "09155678901",
+      "department": "کلاینت",
+      "joinDate": "1403-03-05",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=MinaS"
+    },
+    {
+      "id": 22,
+      "name": "پوریا نجفی",
+      "email": "pouria.najafi@client.com",
+      "password": "pouria123",
+      "roleId": "Client",
+      "phone": "09156789012",
+      "department": "کلاینت",
+      "joinDate": "1403-03-15",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=PouriaN"
+    }
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "type": "salaryIncrease",
+      "userId": 2,
+      "status": "pending",
+      "createdAt": "1405-12-28",
+      "details": {
+        "currentSalary": 12000000,
+        "requestedIncrease": 1500000,
+        "reason": "Performance bonus request"
+      }
+    },
+    {
+      "id": 2,
+      "type": "loanRequest",
+      "userId": 3,
+      "status": "pending",
+      "createdAt": "1405-12-28",
+      "details": {
+        "amount": 5000000,
+        "reason": "Personal emergency"
+      }
     }
   ],
   "projects": [
@@ -541,11 +609,291 @@
       "id": 1,
       "title": "Company Website",
       "managerId": 2,
-      "status": "in-progress"
+      "status": "in-progress",
+      "budget": 15000,
+      "createdAt": "2024-01-10",
+      "dueDate": "2024-04-15",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": 18
     },
-    { "id": 2, "title": "Mobile App", "managerId": 2, "status": "planning" }
+    {
+      "id": 2,
+      "title": "Mobile App",
+      "managerId": 2,
+      "status": "on-hold",
+      "budget": 8000,
+      "createdAt": "2024-01-25",
+      "dueDate": "2024-05-30",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 3,
+      "title": "CRM System",
+      "managerId": 2,
+      "status": "in-progress",
+      "budget": 2000,
+      "createdAt": "2024-02-05",
+      "dueDate": "2024-04-20",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 4,
+      "title": "Marketing Website",
+      "managerId": 9,
+      "status": "completed",
+      "budget": 5000,
+      "createdAt": "2024-02-18",
+      "dueDate": "2024-05-01",
+      "department": "بازاریابی",
+      "approvalStatus": "approved",
+      "clientId": 19
+    },
+    {
+      "id": 5,
+      "title": "Mobile Game",
+      "managerId": 12,
+      "status": "on-hold",
+      "budget": 12000,
+      "createdAt": "2024-03-02",
+      "dueDate": "2024-08-15",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 6,
+      "title": "Internal Dashboard",
+      "managerId": 2,
+      "status": "in-progress",
+      "budget": 7000,
+      "createdAt": "2024-03-20",
+      "dueDate": "2024-06-10",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 7,
+      "title": "E-commerce Platform",
+      "managerId": 3,
+      "status": "in-progress",
+      "budget": 25000,
+      "createdAt": "2024-04-01",
+      "dueDate": "2024-10-01",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": 20
+    },
+    {
+      "id": 8,
+      "title": "HR Management System",
+      "managerId": 4,
+      "status": "completed",
+      "budget": 9000,
+      "createdAt": "2024-04-15",
+      "dueDate": "2024-08-10",
+      "department": "منابع انسانی",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 9,
+      "title": "Analytics Dashboard",
+      "managerId": 5,
+      "status": "in-progress",
+      "budget": 13000,
+      "createdAt": "2024-05-03",
+      "dueDate": "2024-09-05",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 10,
+      "title": "Blog Platform",
+      "managerId": 6,
+      "status": "cancelled",
+      "budget": 4000,
+      "createdAt": "2024-05-18",
+      "dueDate": "2024-07-30",
+      "department": "بازاریابی",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 11,
+      "title": "Video Streaming App",
+      "managerId": 7,
+      "status": "in-progress",
+      "budget": 22000,
+      "createdAt": "2024-06-01",
+      "dueDate": "2024-11-20",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": 7
+    },
+    {
+      "id": 12,
+      "title": "Booking System",
+      "managerId": 8,
+      "status": "on-hold",
+      "budget": 11000,
+      "createdAt": "2024-06-12",
+      "dueDate": "2024-09-25",
+      "department": "توسعه",
+      "approvalStatus": "pending",
+      "clientId": null
+    },
+    {
+      "id": 13,
+      "title": "Social Media App",
+      "managerId": 9,
+      "status": "completed",
+      "budget": 18000,
+      "createdAt": "2024-07-01",
+      "dueDate": "2024-12-01",
+      "department": "بازاریابی",
+      "approvalStatus": "approved",
+      "clientId": 21
+    },
+    {
+      "id": 14,
+      "title": "Inventory Management",
+      "managerId": 10,
+      "status": "in-progress",
+      "budget": 9500,
+      "createdAt": "2024-07-15",
+      "dueDate": "2024-10-30",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 15,
+      "title": "Finance Tracker",
+      "managerId": 11,
+      "status": "in-progress",
+      "budget": 10500,
+      "createdAt": "2024-08-02",
+      "dueDate": "2024-11-10",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 16,
+      "title": "Online Learning Platform",
+      "managerId": 12,
+      "status": "on-hold",
+      "budget": 16000,
+      "createdAt": "2024-08-20",
+      "dueDate": "2025-02-15",
+      "department": "توسعه",
+      "approvalStatus": "pending",
+      "clientId": null
+    },
+    {
+      "id": 17,
+      "title": "Task Management App",
+      "managerId": 3,
+      "status": "completed",
+      "budget": 6000,
+      "createdAt": "2024-09-01",
+      "dueDate": "2024-11-25",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": 22
+    },
+    {
+      "id": 18,
+      "title": "Customer Support Tool",
+      "managerId": 4,
+      "status": "in-progress",
+      "budget": 7500,
+      "createdAt": "2024-09-18",
+      "dueDate": "2024-12-20",
+      "department": "پشتیبانی",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 19,
+      "title": "Marketing Automation",
+      "managerId": 5,
+      "status": "in-progress",
+      "budget": 14000,
+      "createdAt": "2024-10-05",
+      "dueDate": "2025-01-30",
+      "department": "بازاریابی",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 20,
+      "title": "Data Warehouse",
+      "managerId": 6,
+      "status": "on-hold",
+      "budget": 21000,
+      "createdAt": "2024-10-20",
+      "dueDate": "2025-04-01",
+      "department": "توسعه",
+      "approvalStatus": "pending",
+      "clientId": null
+    },
+    {
+      "id": 21,
+      "title": "IoT Platform",
+      "managerId": 7,
+      "status": "in-progress",
+      "budget": 23000,
+      "createdAt": "2024-11-01",
+      "dueDate": "2025-05-10",
+      "department": "توسعه",
+      "approvalStatus": "pending",
+      "clientId": null
+    },
+    {
+      "id": 22,
+      "title": "SEO Tool",
+      "managerId": 11,
+      "status": "completed",
+      "budget": 4700,
+      "createdAt": "2024-11-15",
+      "dueDate": "2025-01-10",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 23,
+      "title": "Payment Gateway",
+      "managerId": 9,
+      "status": "in-progress",
+      "budget": 12500,
+      "createdAt": "2024-12-01",
+      "dueDate": "2025-03-15",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 24,
+      "title": "Chat Application",
+      "managerId": 10,
+      "status": "on-hold",
+      "budget": 8500,
+      "createdAt": "2024-12-20",
+      "dueDate": "2025-03-30",
+      "department": "توسعه",
+      "approvalStatus": "pending",
+      "clientId": null
+    }
   ],
-
   "projectMembers": [
     { "id": 1, "projectId": 1, "userId": 2 },
     { "id": 2, "projectId": 1, "userId": 3 },
@@ -555,7 +903,6 @@
     { "id": 6, "projectId": 2, "userId": 3 },
     { "id": 7, "projectId": 2, "userId": 5 }
   ],
-
   "tasks": [
     {
       "id": 1,
@@ -593,7 +940,6 @@
       "status": "pending"
     }
   ],
-
   "dashboards": [
     {
       "roleId": "CEO",
@@ -625,7 +971,6 @@
       "widgets": ["projectStatus", "deliveries", "invoices"]
     }
   ],
-
   "permissions": [
     { "roleId": "CEO", "access": ["all"] },
     {

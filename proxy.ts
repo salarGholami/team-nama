@@ -16,7 +16,9 @@ export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const token = request.cookies.get("token")?.value;
 
-  // مسیرهای عمومی
+  // ---------------------------
+  // PUBLIC ROUTES
+  // ---------------------------
   if (PUBLIC_PATHS.includes(pathname as any)) {
     if (token && pathname === "/") {
       return NextResponse.redirect(new URL("/dashboard", request.url));
@@ -24,7 +26,9 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // مسیرهای داشبورد
+  // ---------------------------
+  // DASHBOARD ROUTES
+  // ---------------------------
   if (pathname.startsWith("/dashboard")) {
     if (!token) {
       const loginUrl = new URL("/login", request.url);
@@ -36,7 +40,7 @@ export function proxy(request: NextRequest) {
 
     try {
       const payload = JSON.parse(Buffer.from(token, "base64").toString());
-      role = payload.role ?? "employee";
+      role = (payload.role ?? "employee").toLowerCase(); // ⭐ مهم
     } catch {
       return NextResponse.redirect(new URL("/login", request.url));
     }
@@ -54,7 +58,9 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // سایر مسیرها
+  // ---------------------------
+  // OTHER ROUTES
+  // ---------------------------
   if (token) return NextResponse.next();
 
   return NextResponse.redirect(new URL("/login", request.url));
