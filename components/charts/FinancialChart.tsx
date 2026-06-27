@@ -27,8 +27,8 @@ type Breakpoint = "mobile" | "tablet" | "desktop";
 
 const POINTS: Record<Breakpoint, number> = {
   mobile: 2,
-  tablet: 2,
-  desktop: 5,
+  tablet: 4,
+  desktop: 6,
 };
 
 function detectBreakpoint(): Breakpoint {
@@ -56,13 +56,18 @@ const FinancialChart: FC<Props> = ({ data }) => {
     };
   }, []);
 
-  const visible = useMemo(() => data.slice(-POINTS[bp]), [data, bp]);
+  const visibleData = useMemo(() => {
+    if (!data || data.length === 0) return [];
+    return data.slice(-POINTS[bp]);
+  }, [data, bp]);
+
+  if (!data || data.length === 0) return null;
 
   return (
     <ChartContainer height={320}>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
-          data={visible}
+          data={visibleData}
           margin={{ top: 20, right: 26, left: 25, bottom: 12 }}
         >
           <XAxis
@@ -79,7 +84,7 @@ const FinancialChart: FC<Props> = ({ data }) => {
               backgroundColor: "var(--tooltip-bg)",
               border: "none",
               borderRadius: 8,
-              padding: "8px 12px", 
+              padding: "8px 12px",
             }}
             labelStyle={{ color: "var(--tooltip-text)", fontWeight: 600 }}
             formatter={(v: number | undefined) => v?.toLocaleString() ?? ""}

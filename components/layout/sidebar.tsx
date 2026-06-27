@@ -24,6 +24,7 @@ export default function Sidebar({ role }: SidebarProps) {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
   const [openMenus, setOpenMenus] = useState<Record<string, boolean>>({});
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems: NavItem[] =
     (db.links as Record<string, NavItem[]>)[role] ?? [];
@@ -38,17 +39,15 @@ export default function Sidebar({ role }: SidebarProps) {
   const normalize = (path: string) => path.replace(/\/+$/, "").toLowerCase();
 
   // ---------------------------
-  // ACTIVE DETECTION (CORRECT)
+  // ACTIVE DETECTION
   // ---------------------------
   const isItemActive = (item: NavItem): boolean => {
     const current = normalize(pathname);
 
-    // اگر group است → بررسی children
     if (item.children?.length) {
       return item.children.some(isItemActive);
     }
 
-    // اگر لینک ساده است → فقط exact match
     if (item.href) {
       return current === normalize(item.href);
     }
@@ -80,13 +79,12 @@ export default function Sidebar({ role }: SidebarProps) {
   }, [pathname, role]);
 
   // ---------------------------
-  // RENDER
+  // RENDER NAV ITEM
   // ---------------------------
   const renderNavItem = (item: NavItem) => {
     const Icon = (Icons as Record<string, any>)[item.icon];
     const active = isItemActive(item);
 
-    // ---------- GROUP ----------
     if (item.children?.length) {
       const isOpen = openMenus[item.label] || false;
 
@@ -98,8 +96,8 @@ export default function Sidebar({ role }: SidebarProps) {
             className={clsx(
               "flex items-center justify-between gap-2 rounded-lg px-4 py-2 w-full transition-colors",
               active
-                ? "bg-primary-700 text-white"
-                : "text-primary-300 hover:bg-primary-800",
+                ? "bg-primary-700 text-primary-300"
+                : "text-primary-300 hover:bg-primary-700",
             )}
           >
             <div className="flex items-center gap-2">
@@ -108,7 +106,6 @@ export default function Sidebar({ role }: SidebarProps) {
                 <span className="whitespace-nowrap">{item.label}</span>
               )}
             </div>
-
             {!collapsed &&
               (isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />)}
           </button>
@@ -130,16 +127,20 @@ export default function Sidebar({ role }: SidebarProps) {
       );
     }
 
-    // ---------- LINK ----------
     return (
-      <Link key={item.href} href={item.href!} className="relative block">
+      <Link
+        key={item.href}
+        href={item.href!}
+        onClick={() => setMobileOpen(false)} // <- بستن منو روی موبایل/تبلت
+        className="relative block"
+      >
         <motion.div
           layout
           className={clsx(
             "flex items-center gap-2 rounded-lg px-4 py-2 transition-colors relative",
             active
-              ? "bg-primary-700 text-white"
-              : "text-primary-300 hover:bg-primary-800",
+              ? "bg-primary-700 text-primary-300"
+              : "text-primary-300 hover:bg-primary-700",
           )}
         >
           {Icon && <Icon size={20} />}
@@ -150,12 +151,8 @@ export default function Sidebar({ role }: SidebarProps) {
           {active && (
             <motion.div
               layoutId="active-indicator"
-              className="absolute left-0 top-0 h-full w-1 bg-white rounded-r"
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 30,
-              }}
+              className="absolute left-0 top-0 h-full w-1 bg-primary-600 rounded-r"
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
             />
           )}
         </motion.div>
@@ -164,39 +161,98 @@ export default function Sidebar({ role }: SidebarProps) {
   };
 
   return (
-    <motion.aside
-      initial={false}
-      animate={{ width: collapsed ? 80 : 256 }}
-      transition={{ duration: 0.25, ease: "easeInOut" }}
-      className="h-screen bg-primary-900 text-white flex flex-col border-l border-primary-800"
-    >
-      {/* Header */}
-      <div className="flex items-center justify-between py-2 px-2 border-b border-primary-800">
-        {!collapsed && (
-          <span className="text-lg font-bold capitalize whitespace-nowrap">
-            {role}
-          </span>
-        )}
+    <>
+      {/* Desktop Sidebar */}
+      <motion.aside
+        initial={false}
+        animate={{ width: collapsed ? 80 : 256 }}
+        transition={{ duration: 0.25, ease: "easeInOut" }}
+        className="hidden lg:flex h-screen bg-primary-900 text-primary-300 flex-col border-l border-primary-800"
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between py-2 px-2 border-b border-primary-800">
+          {!collapsed && (
+            <span className="text-lg font-bold capitalize whitespace-nowrap">
+              {role}
+            </span>
+          )}
 
-        <button
-          type="button"
-          onClick={() => setCollapsed((prev) => !prev)}
-          className="px-4 py-2 rounded-md hover:bg-primary-800 transition"
-        >
-          {collapsed ? <Menu size={20} /> : <ChevronLeft size={20} />}
-        </button>
-      </div>
+          <button
+            type="button"
+            onClick={() => setCollapsed((prev) => !prev)}
+            className="px-4 py-2 rounded-md hover:bg-primary-800 transition"
+          >
+            {collapsed ? <Menu size={20} /> : <ChevronLeft size={20} />}
+          </button>
+        </div>
 
-      {/* Navigation */}
-      <nav className="p-2 space-y-2 overflow-y-auto">
-        {navItems.length ? (
-          navItems.map(renderNavItem)
-        ) : (
-          <span className="text-primary-400 text-sm">
-            No navigation available for this role.
-          </span>
+        {/* Navigation */}
+        <nav className="p-2 space-y-2 overflow-y-auto">
+          {navItems.length ? (
+            navItems.map(renderNavItem)
+          ) : (
+            <span className="text-primary-400 text-sm">
+              No navigation available for this role.
+            </span>
+          )}
+        </nav>
+      </motion.aside>
+
+      {/* Mobile/Tablet Sidebar */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            {/* Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileOpen(false)}
+              className="fixed inset-0 bg-black z-40"
+            />
+
+            {/* Sidebar Panel */}
+            <motion.aside
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "tween", duration: 0.25 }}
+              className="fixed inset-y-0 left-0 w-full max-w-sm bg-primary-900 text-primary-300 z-50 flex flex-col lg:hidden"
+            >
+              <div className="flex items-center justify-between py-2 px-2 border-b border-primary-800">
+                <span className="text-lg font-bold capitalize whitespace-nowrap">
+                  {role}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setMobileOpen(false)}
+                  className="px-4 py-2 rounded-md hover:bg-primary-800 transition"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+              </div>
+
+              <nav className="p-2 space-y-2 overflow-y-auto">
+                {navItems.length ? (
+                  navItems.map(renderNavItem)
+                ) : (
+                  <span className="text-primary-400 text-sm">
+                    No navigation available for this role.
+                  </span>
+                )}
+              </nav>
+            </motion.aside>
+          </>
         )}
-      </nav>
-    </motion.aside>
+      </AnimatePresence>
+
+      {/* Mobile/Tablet toggle button */}
+      <button
+        onClick={() => setMobileOpen(true)}
+        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-primary-900 rounded-md shadow-lg"
+      >
+        <Menu size={20} />
+      </button>
+    </>
   );
 }

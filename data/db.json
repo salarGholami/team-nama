@@ -345,7 +345,9 @@
       "phone": "09121234567",
       "department": "مدیریت",
       "joinDate": "1400-01-01",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Salar"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 2,
@@ -356,7 +358,9 @@
       "phone": "09127654321",
       "department": "پروژه",
       "joinDate": "1401-03-15",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Reza"
+      "avatar": "/images/avatar/empolyes/mina.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 3,
@@ -367,7 +371,9 @@
       "phone": "09131111111",
       "department": "توسعه",
       "joinDate": "1401-06-20",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Ali"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 4,
@@ -378,7 +384,9 @@
       "phone": "09132222222",
       "department": "طراحی",
       "joinDate": "1401-09-10",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sara"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false,
+      "workStatus": "on-leave"
     },
     {
       "id": 5,
@@ -389,7 +397,9 @@
       "phone": "09133333333",
       "department": "توسعه",
       "joinDate": "1402-01-05",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Nima"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 6,
@@ -400,7 +410,9 @@
       "phone": "09134444444",
       "department": "تست",
       "joinDate": "1402-02-14",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Maryam"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false,
+      "workStatus": "active"
     },
     {
       "id": 7,
@@ -411,8 +423,8 @@
       "phone": "09135555555",
       "department": "کلاینت",
       "joinDate": "1402-03-20",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Omid"
-    },
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false    },
     {
       "id": 8,
       "name": "محمد علی سلیمانی",
@@ -422,7 +434,9 @@
       "phone": "09137777777",
       "department": "فناوری",
       "joinDate": "1400-06-15",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Mohammad"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 9,
@@ -433,7 +447,9 @@
       "phone": "09138888888",
       "department": "محصول",
       "joinDate": "1401-07-22",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Leila"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false,
+      "workStatus": "active"  
     },
     {
       "id": 10,
@@ -444,7 +460,9 @@
       "phone": "09146666666",
       "department": "محتوا",
       "joinDate": "1402-05-10",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sonia"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true, 
+      "workStatus": "active"
     },
     {
       "id": 11,
@@ -455,7 +473,9 @@
       "phone": "09139999999",
       "department": "سرورها",
       "joinDate": "1402-01-30",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Hassan"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false,
+      "workStatus": "Fired"  
     },
     {
       "id": 12,
@@ -466,7 +486,9 @@
       "phone": "09140000000",
       "department": "توسعه",
       "joinDate": "1402-02-10",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Shirin"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false,
+      "workStatus": "on-leave"
     },
     {
       "id": 13,
@@ -477,7 +499,9 @@
       "phone": "09141111111",
       "department": "فروش",
       "joinDate": "1401-08-05",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Aliakbar"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 14,
@@ -488,7 +512,9 @@
       "phone": "09142222222",
       "department": "بازاریابی",
       "joinDate": "1401-09-12",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Nilofar"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 15,
@@ -499,7 +525,9 @@
       "phone": "09143333333",
       "department": "پروژه",
       "joinDate": "1402-03-01",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Milad"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 16,
@@ -510,7 +538,9 @@
       "phone": "09144444444",
       "department": "پشتیبانی",
       "joinDate": "1402-04-15",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Zahra"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 17,
@@ -521,7 +551,9 @@
       "phone": "09145555555",
       "department": "معماری",
       "joinDate": "1400-10-20",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Kamran"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false,  
+      "workStatus": "active"
     },
     {
       "id": 18,
@@ -532,7 +564,8 @@
       "phone": "09152345678",
       "department": "کلاینت",
       "joinDate": "1403-01-15",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=AhmadR"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true
     },
     {
       "id": 19,
@@ -543,7 +576,8 @@
       "phone": "09153456789",
       "department": "کلاینت",
       "joinDate": "1403-02-01",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=FatemeK"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true
     },
     {
       "id": 20,
@@ -554,7 +588,8 @@
       "phone": "09154567890",
       "department": "کلاینت",
       "joinDate": "1403-02-20",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=HosseinA"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true
     },
     {
       "id": 21,
@@ -565,7 +600,8 @@
       "phone": "09155678901",
       "department": "کلاینت",
       "joinDate": "1403-03-05",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=MinaS"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false
     },
     {
       "id": 22,
@@ -576,7 +612,8 @@
       "phone": "09156789012",
       "department": "کلاینت",
       "joinDate": "1403-03-15",
-      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=PouriaN"
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true
     }
   ],
   "requests": [
