@@ -5,13 +5,7 @@ import { useRouter } from "next/navigation";
 import { createEmployee } from "@/lib/actions/employees";
 import { Button } from "@/components/ui/button";
 import InputField from "@/components/ui/input-field";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"; // اگر داری
+import Select from "@/components/ui/Select";
 
 export default function EmployeeCreateForm() {
   const router = useRouter();
@@ -33,22 +27,16 @@ export default function EmployeeCreateForm() {
       <InputField label="ایمیل" name="email" type="email" required />
       <InputField label="شماره تلفن" name="phone" />
 
-      {/* اگر نقش و دپارتمان داری */}
-      <div>
-        <label className="block text-sm mb-1">نقش</label>
-        <Select name="roleId" required>
-          <SelectTrigger>
-            <SelectValue placeholder="انتخاب نقش" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="developer">توسعه‌دهنده</SelectItem>
-            <SelectItem value="designer">طراح</SelectItem>
-            {/* از دیتابیس بکش اگر داری */}
-          </SelectContent>
-        </Select>
-      </div>
-
-      {/* فیلدهای بیشتر مثل department, joinDate, ... */}
+      <Select
+        label="نقش"
+        value="employee"
+        onChange={() => undefined}
+        options={[
+          { label: "توسعه‌دهنده", value: "developer" },
+          { label: "طراح", value: "designer" },
+          { label: "کارمند", value: "employee" },
+        ]}
+      />
 
       {state?.error && (
         <div className="text-red-400 text-sm bg-red-950/40 p-3 rounded">
@@ -57,7 +45,7 @@ export default function EmployeeCreateForm() {
       )}
 
       <div className="flex justify-between pt-4">
-        <Button variant="ghost" type="button" onClick={() => router.back()}>
+        <Button type="button" onClick={() => router.back()}>
           انصراف
         </Button>
         <Button type="submit" disabled={isPending}>

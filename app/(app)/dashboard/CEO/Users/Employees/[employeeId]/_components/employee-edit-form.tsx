@@ -4,7 +4,7 @@ import { useActionState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import {
   updateEmployee,
-  type UpdateEmployeeState,
+  type EmployeeActionState,
 } from "@/lib/actions/employees";
 import type { Employee } from "@/types/employee";
 import { Button } from "@/components/ui/button";
@@ -18,9 +18,9 @@ export default function EmployeeEditForm({ employee }: Props) {
   const router = useRouter();
 
   const [state, formAction, isPending] = useActionState<
-    UpdateEmployeeState,
+    EmployeeActionState | undefined,
     FormData
-  >(updateEmployee, { success: undefined });
+  >(updateEmployee, undefined);
 
   useEffect(() => {
     if (state?.success) {
