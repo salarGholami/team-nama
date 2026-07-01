@@ -1,12 +1,7 @@
-// app/layout.tsx
-import "@/styles/globals.css";
-import "swiper/css";
-import { Inter } from "next/font/google";
+// app/layout.tsx 
 import { AppProviders } from "@/providers/AppProviders";
-import Navbar from "@/components/layout/navbar";
-import Footer from "@/components/layout/footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import "../styles/globals.css";
+import { ThemeProvider } from "next-themes";
 
 export const metadata = {
   title: "نام سیستم شما",
@@ -20,6 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
+<<<<<<< HEAD
       <body
         className={`${inter.className} min-h-screen flex flex-col bg-background text-foreground`}
       >
@@ -28,6 +24,17 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </AppProviders>
+=======
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <AppProviders>{children}</AppProviders>
+        </ThemeProvider>
+>>>>>>> feature/dashboard-ui
       </body>
     </html>
   );

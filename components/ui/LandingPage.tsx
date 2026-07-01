@@ -20,7 +20,6 @@ import { Button } from "./button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
-
 // Hero Cards
 const cards = [
   { id: 1, label: "توسعه وب", icon: <Code size={22} /> },
@@ -99,7 +98,6 @@ const featrue = [
   },
 ];
 
-
 const testimonials = [
   {
     name: "علی رضایی",
@@ -173,7 +171,7 @@ export default function LandingPage() {
 
             <div className="flex gap-4 pt-4">
               <Button
-                className="rounded-xl px-6 py-3 font-semibold btn"
+                className="rounded-xl px-6 py-3 font-semibold btn text-primary-900"
                 icon={<ArrowLeft size={20} />}
               >
                 شروع کنید
@@ -202,7 +200,7 @@ export default function LandingPage() {
                         : "bg-primary-800 border-white/10 text-primary-100"
                     }`}
                 >
-                  <span className="p-2 rounded-full transition-colors gradient-bg text-white">
+                  <span className="p-2 rounded-full transition-colors gradient-bg text-primary-900">
                     {card.icon}
                   </span>
                   <span className="font-semibold">{card.label}</span>
@@ -329,9 +327,7 @@ export default function LandingPage() {
                     </div>
 
                     {/* text */}
-                    <p className="leading-relaxed flex-1">
-                      “{t.text}”
-                    </p>
+                    <p className="leading-relaxed flex-1">“{t.text}”</p>
                   </div>
                 </div>
               </SwiperSlide>

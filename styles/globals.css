@@ -51,6 +51,9 @@
   );
 
   --circle-color: rgb(34, 33, 33);
+
+  --tooltip-bg: var(--color-primary-200);
+  --tooltip-text: var(--color-primary-700);
 }
 
 /* ======================================================
@@ -83,6 +86,9 @@
   );
 
   --circle-color: rgb(255, 255, 255);
+
+    --tooltip-bg: var(--color-primary-700);
+  --tooltip-text: var(--color-primary-200);
 }
 
 /* ======================================================
@@ -119,7 +125,7 @@ body {
 /* ---------- Utilities ---------- */
 .btn {
   background: var(--gradient-primary);
-  color: #f9f9f9;
+  /* color: #f9f9f9; */
 }
 
 @keyframes float {

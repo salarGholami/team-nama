@@ -11,7 +11,7 @@
     { "id": "FrontendDeveloper", "title": "توسعه‌دهنده فرانت‌اند" },
     { "id": "BackendDeveloper", "title": "توسعه‌دهنده بک‌اند" },
     { "id": "MobileDeveloper", "title": "توسعه‌دهنده موبایل" },
-    { "id": "DevOpsEngineer", "title": "DevOps Engineer" },
+    { "id": "DevOpsEngineer", "title": "توسعه دهنده DevOps" },
     { "id": "QAEngineer", "title": "تستر نرم‌افزار" },
     { "id": "UIDesigner", "title": "طراح رابط کاربری" },
     { "id": "SystemArchitect", "title": "معمار سیستم" },
@@ -24,52 +24,913 @@
     { "id": "Client", "title": "مشتری" },
     { "id": "Partner", "title": "همکار تجاری" }
   ],
-
+  "links": {
+    "CEO": [
+      { "label": "داشبورد", "href": "/dashboard/ceo", "icon": "Home" },
+      {
+        "label": "همه کاربران",
+        "icon": "Users",
+        "children": [
+          {
+            "label": "مشتری‌ها",
+            "href": "/dashboard/ceo/users/customers"
+          },
+          {
+            "label": "کارمندان",
+            "href": "/dashboard/ceo/users/employees"
+          }
+        ]
+      },
+      {
+        "label": "درخواست ها",
+        "icon": "Radio",
+        "children": [
+          {
+            "label": "درخواست وام",
+            "href": "/dashboard/ceo/request/users/employees/loanRequest"
+          },
+          {
+            "label": "درخواست افزایش حقوق",
+            "href": "/dashboard/ceo/request/users/employees/salaryIncreaseRequset"
+          },
+          {
+            "label": "درخواست مرخصی ",
+            "href": "/dashboard/ceo/request/users/employees/leaveRequest"
+          }
+        ]
+      },
+      {
+        "label": "گزارشات",
+        "href": "/dashboard/ceo/reports",
+        "icon": "BarChart3"
+      },
+      {
+        "label": "رول ها و دسترسی دادن",
+        "href": "/dashboard/ceo/roles&access",
+        "icon": "UserRoundCog"
+      },
+      {
+        "label": "تنظیمات",
+        "href": "/dashboard/ceo/settings",
+        "icon": "Settings"
+      }
+    ],
+    "CTO": [
+      { "label": "داشبورد", "href": "/dashboard/cto", "icon": "Home" },
+      {
+        "label": "معماری سیستم",
+        "href": "/dashboard/cto/architecture",
+        "icon": "Settings"
+      },
+      {
+        "label": "سرورها",
+        "href": "/dashboard/cto/servers",
+        "icon": "BarChart3"
+      },
+      {
+        "label": "تیم‌های فنی",
+        "href": "/dashboard/cto/teams",
+        "icon": "Users"
+      }
+    ],
+    "COO": [
+      { "label": "داشبورد", "href": "/dashboard/coo", "icon": "Home" },
+      {
+        "label": "عملیات",
+        "href": "/dashboard/coo/operations",
+        "icon": "BarChart3"
+      }
+    ],
+    "CFO": [
+      { "label": "داشبورد", "href": "/dashboard/cfo", "icon": "Home" },
+      { "label": "مالی", "href": "/dashboard/cfo/finance", "icon": "Settings" }
+    ],
+    "ProjectManager": [
+      { "label": "داشبورد", "href": "/dashboard/pm", "icon": "Home" },
+      {
+        "label": "پروژه‌ها",
+        "href": "/dashboard/pm/projects",
+        "icon": "FileText"
+      },
+      {
+        "label": "وظایف تیم",
+        "href": "/dashboard/pm/tasks",
+        "icon": "FileText"
+      },
+      {
+        "label": "پیشرفت تیم",
+        "href": "/dashboard/pm/team-progress",
+        "icon": "BarChart3"
+      }
+    ],
+    "ProductManager": [
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/product-manager",
+        "icon": "Home"
+      },
+      {
+        "label": "پروژه‌ها",
+        "href": "/dashboard/product-manager/projects",
+        "icon": "FileText"
+      },
+      {
+        "label": "نقشه راه محصول",
+        "href": "/dashboard/product-manager/roadmap",
+        "icon": "BarChart3"
+      }
+    ],
+    "HRManager": [
+      { "label": "داشبورد", "href": "/dashboard/hr", "icon": "Home" },
+      {
+        "label": "کارمندان",
+        "href": "/dashboard/hr/employees",
+        "icon": "Users"
+      }
+    ],
+    "ScrumMaster": [
+      { "label": "داشبورد", "href": "/dashboard/scrum-master", "icon": "Home" },
+      {
+        "label": "پروژه‌ها",
+        "href": "/dashboard/scrum-master/projects",
+        "icon": "FileText"
+      },
+      {
+        "label": "وظایف تیم",
+        "href": "/dashboard/scrum-master/tasks",
+        "icon": "FileText"
+      }
+    ],
+    "FrontendDeveloper": [
+      { "label": "داشبورد", "href": "/dashboard/frontend", "icon": "Home" },
+      {
+        "label": "وظایف من",
+        "href": "/dashboard/frontend/tasks",
+        "icon": "FileText"
+      },
+      {
+        "label": "کامیت‌ها",
+        "href": "/dashboard/frontend/commits",
+        "icon": "BarChart3"
+      },
+      {
+        "label": "فایل‌های طراحی",
+        "href": "/dashboard/frontend/design-files",
+        "icon": "Settings"
+      }
+    ],
+    "BackendDeveloper": [
+      { "label": "داشبورد", "href": "/dashboard/backend", "icon": "Home" },
+      {
+        "label": "وظایف من",
+        "href": "/dashboard/backend/tasks",
+        "icon": "FileText"
+      },
+      {
+        "label": "API Docs",
+        "href": "/dashboard/backend/api",
+        "icon": "FileText"
+      },
+      {
+        "label": "سرورها",
+        "href": "/dashboard/backend/server-logs",
+        "icon": "BarChart3"
+      }
+    ],
+    "MobileDeveloper": [
+      { "label": "داشبورد", "href": "/dashboard/mobile", "icon": "Home" },
+      {
+        "label": "وظایف من",
+        "href": "/dashboard/mobile/tasks",
+        "icon": "FileText"
+      }
+    ],
+    "DevOpsEngineer": [
+      { "label": "داشبورد", "href": "/dashboard/devops", "icon": "Home" },
+      {
+        "label": "سرورها",
+        "href": "/dashboard/devops/servers",
+        "icon": "BarChart3"
+      }
+    ],
+    "QAEngineer": [
+      { "label": "داشبورد", "href": "/dashboard/qa", "icon": "Home" },
+      {
+        "label": "Test Cases",
+        "href": "/dashboard/qa/test-cases",
+        "icon": "FileText"
+      },
+      { "label": "Bugs", "href": "/dashboard/qa/bugs", "icon": "BarChart3" },
+      {
+        "label": "Assignments",
+        "href": "/dashboard/qa/assignments",
+        "icon": "FileText"
+      }
+    ],
+    "UIDesigner": [
+      { "label": "داشبورد", "href": "/dashboard/ui-designer", "icon": "Home" },
+      {
+        "label": "Figma",
+        "href": "/dashboard/ui-designer/figma-links",
+        "icon": "FileText"
+      },
+      {
+        "label": "مرور طراحی‌ها",
+        "href": "/dashboard/ui-designer/design-reviews",
+        "icon": "BarChart3"
+      },
+      {
+        "label": "وظایف من",
+        "href": "/dashboard/ui-designer/tasks",
+        "icon": "FileText"
+      }
+    ],
+    "SystemArchitect": [
+      { "label": "داشبورد", "href": "/dashboard/architect", "icon": "Home" },
+      {
+        "label": "معماری سیستم",
+        "href": "/dashboard/architect/architecture",
+        "icon": "Settings"
+      }
+    ],
+    "SalesManager": [
+      { "label": "داشبورد", "href": "/dashboard/sales", "icon": "Home" },
+      {
+        "label": "پروژه‌ها",
+        "href": "/dashboard/sales/projects",
+        "icon": "FileText"
+      }
+    ],
+    "MarketingManager": [
+      { "label": "داشبورد", "href": "/dashboard/marketing", "icon": "Home" },
+      {
+        "label": "کمپین‌ها",
+        "href": "/dashboard/marketing/campaigns",
+        "icon": "BarChart3"
+      }
+    ],
+    "ContentCreator": [
+      { "label": "داشبورد", "href": "/dashboard/content", "icon": "Home" },
+      {
+        "label": "محتوا",
+        "href": "/dashboard/content/projects",
+        "icon": "FileText"
+      }
+    ],
+    "CustomerSuccessManager": [
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/customer-success",
+        "icon": "Home"
+      },
+      {
+        "label": "پروژه‌ها",
+        "href": "/dashboard/customer-success/projects",
+        "icon": "FileText"
+      }
+    ],
+    "CustomerSupport": [
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/customer-support",
+        "icon": "Home"
+      },
+      {
+        "label": "پشتیبانی مشتری",
+        "href": "/dashboard/customer-support/tickets",
+        "icon": "FileText"
+      }
+    ],
+    "TechnicalSupport": [
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/technical-support",
+        "icon": "Home"
+      },
+      {
+        "label": "پشتیبانی فنی",
+        "href": "/dashboard/technical-support/tickets",
+        "icon": "FileText"
+      }
+    ],
+    "Client": [
+      { "label": "داشبورد", "href": "/dashboard/client", "icon": "Home" },
+      {
+        "label": "وضعیت پروژه‌ها",
+        "href": "/dashboard/client/project-status",
+        "icon": "BarChart3"
+      },
+      {
+        "label": "صورتحساب‌ها",
+        "href": "/dashboard/client/invoices",
+        "icon": "FileText"
+      }
+    ],
+    "Partner": [
+      { "label": "داشبورد", "href": "/dashboard/partner", "icon": "Home" },
+      {
+        "label": "تحویل‌ها",
+        "href": "/dashboard/partner/deliveries",
+        "icon": "FileText"
+      }
+    ]
+  },
   "users": [
-    { "id": 1, "name": "Salar", "email": "salar@corp.com", "roleId": "CEO" },
+    {
+      "id": 1,
+      "name": "Salar",
+      "email": "salar@corp.com",
+      "password": "salar123",
+      "roleId": "CEO",
+      "phone": "09121234567",
+      "department": "مدیریت",
+      "joinDate": "1400-01-01",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
+    },
     {
       "id": 2,
       "name": "Reza",
       "email": "reza@corp.com",
-      "roleId": "ProjectManager"
+      "password": "reza123",
+      "roleId": "ProjectManager",
+      "phone": "09127654321",
+      "department": "پروژه",
+      "joinDate": "1401-03-15",
+      "avatar": "/images/avatar/empolyes/mina.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 3,
       "name": "Ali",
       "email": "ali@corp.com",
-      "roleId": "FrontendDeveloper"
+      "password": "ali123",
+      "roleId": "FrontendDeveloper",
+      "phone": "09131111111",
+      "department": "توسعه",
+      "joinDate": "1401-06-20",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 4,
       "name": "Sara",
       "email": "sara@corp.com",
-      "roleId": "UIDesigner"
+      "password": "sara123",
+      "roleId": "UIDesigner",
+      "phone": "09132222222",
+      "department": "طراحی",
+      "joinDate": "1401-09-10",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false,
+      "workStatus": "on-leave"
     },
     {
       "id": 5,
       "name": "Nima",
       "email": "nima@corp.com",
-      "roleId": "BackendDeveloper"
+      "password": "nima123",
+      "roleId": "BackendDeveloper",
+      "phone": "09133333333",
+      "department": "توسعه",
+      "joinDate": "1402-01-05",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 6,
       "name": "Maryam",
       "email": "maryam@corp.com",
-      "roleId": "QAEngineer"
+      "password": "maryam123",
+      "roleId": "QAEngineer",
+      "phone": "09134444444",
+      "department": "تست",
+      "joinDate": "1402-02-14",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false,
+      "workStatus": "active"
     },
-    { "id": 7, "name": "Omid", "email": "omid@client.com", "roleId": "Client" }
+    {
+      "id": 7,
+      "name": "Omid",
+      "email": "omid@client.com",
+      "password": "omid123",
+      "roleId": "Client",
+      "phone": "09135555555",
+      "department": "کلاینت",
+      "joinDate": "1402-03-20",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false    },
+    {
+      "id": 8,
+      "name": "محمد علی سلیمانی",
+      "email": "m.soleimani@corp.com",
+      "password": "mohammad123",
+      "roleId": "CTO",
+      "phone": "09137777777",
+      "department": "فناوری",
+      "joinDate": "1400-06-15",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
+    },
+    {
+      "id": 9,
+      "name": "لیلا قاسمی",
+      "email": "leila.ghasemi@corp.com",
+      "password": "leila123",
+      "roleId": "ProductManager",
+      "phone": "09138888888",
+      "department": "محصول",
+      "joinDate": "1401-07-22",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false,
+      "workStatus": "active"  
+    },
+    {
+      "id": 10,
+      "name": "سونیا اصفهانی",
+      "email": "sonia.isfahani@corp.com",
+      "password": "sonia123",
+      "roleId": "ContentCreator",
+      "phone": "09146666666",
+      "department": "محتوا",
+      "joinDate": "1402-05-10",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true, 
+      "workStatus": "active"
+    },
+    {
+      "id": 11,
+      "name": "حسن رسولی",
+      "email": "hassan.rasouli@corp.com",
+      "password": "hassan123",
+      "roleId": "DevOpsEngineer",
+      "phone": "09139999999",
+      "department": "سرورها",
+      "joinDate": "1402-01-30",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false,
+      "workStatus": "Fired"  
+    },
+    {
+      "id": 12,
+      "name": "شیرین محمودی",
+      "email": "shirin.mahmudi@corp.com",
+      "password": "shirin123",
+      "roleId": "MobileDeveloper",
+      "phone": "09140000000",
+      "department": "توسعه",
+      "joinDate": "1402-02-10",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false,
+      "workStatus": "on-leave"
+    },
+    {
+      "id": 13,
+      "name": "علی اکبر ملکی",
+      "email": "aliakbar.maleki@corp.com",
+      "password": "aliakbar123",
+      "roleId": "SalesManager",
+      "phone": "09141111111",
+      "department": "فروش",
+      "joinDate": "1401-08-05",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
+    },
+    {
+      "id": 14,
+      "name": "نیلوفر ایزدی",
+      "email": "nilofar.izadi@corp.com",
+      "password": "nilofar123",
+      "roleId": "MarketingManager",
+      "phone": "09142222222",
+      "department": "بازاریابی",
+      "joinDate": "1401-09-12",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
+    },
+    {
+      "id": 15,
+      "name": "میلاد عباسی",
+      "email": "milad.abbasi@corp.com",
+      "password": "milad123",
+      "roleId": "ScrumMaster",
+      "phone": "09143333333",
+      "department": "پروژه",
+      "joinDate": "1402-03-01",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
+    },
+    {
+      "id": 16,
+      "name": "زهره نژادی",
+      "email": "zahra.nejadi@corp.com",
+      "password": "zahra123",
+      "roleId": "CustomerSupport",
+      "phone": "09144444444",
+      "department": "پشتیبانی",
+      "joinDate": "1402-04-15",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true,
+      "workStatus": "active"
+    },
+    {
+      "id": 17,
+      "name": "کامران ظهیری",
+      "email": "kamran.zahiri@corp.com",
+      "password": "kamran123",
+      "roleId": "SystemArchitect",
+      "phone": "09145555555",
+      "department": "معماری",
+      "joinDate": "1400-10-20",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false,  
+      "workStatus": "active"
+    },
+    {
+      "id": 18,
+      "name": "احمد رضایی",
+      "email": "ahmad.rezaei@client.com",
+      "password": "ahmad123",
+      "roleId": "Client",
+      "phone": "09152345678",
+      "department": "کلاینت",
+      "joinDate": "1403-01-15",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true
+    },
+    {
+      "id": 19,
+      "name": "فاطمه کریمی",
+      "email": "fateme.karimi@client.com",
+      "password": "fateme123",
+      "roleId": "Client",
+      "phone": "09153456789",
+      "department": "کلاینت",
+      "joinDate": "1403-02-01",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true
+    },
+    {
+      "id": 20,
+      "name": "حسین احمدی",
+      "email": "hossein.ahmadi@client.com",
+      "password": "hossein123",
+      "roleId": "Client",
+      "phone": "09154567890",
+      "department": "کلاینت",
+      "joinDate": "1403-02-20",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true
+    },
+    {
+      "id": 21,
+      "name": "مینا صادقی",
+      "email": "mina.sadeghi@client.com",
+      "password": "mina123",
+      "roleId": "Client",
+      "phone": "09155678901",
+      "department": "کلاینت",
+      "joinDate": "1403-03-05",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": false
+    },
+    {
+      "id": 22,
+      "name": "پوریا نجفی",
+      "email": "pouria.najafi@client.com",
+      "password": "pouria123",
+      "roleId": "Client",
+      "phone": "09156789012",
+      "department": "کلاینت",
+      "joinDate": "1403-03-15",
+      "avatar": "/images/avatar/empolyes/salar.png",
+      "onlineStatus": true
+    }
   ],
-
+  "requests": [
+    {
+      "id": 1,
+      "type": "salaryIncrease",
+      "userId": 2,
+      "status": "pending",
+      "createdAt": "1405-12-28",
+      "details": {
+        "currentSalary": 12000000,
+        "requestedIncrease": 1500000,
+        "reason": "Performance bonus request"
+      }
+    },
+    {
+      "id": 2,
+      "type": "loanRequest",
+      "userId": 3,
+      "status": "pending",
+      "createdAt": "1405-12-28",
+      "details": {
+        "amount": 5000000,
+        "reason": "Personal emergency"
+      }
+    }
+  ],
   "projects": [
     {
       "id": 1,
       "title": "Company Website",
       "managerId": 2,
-      "status": "in-progress"
+      "status": "in-progress",
+      "budget": 15000,
+      "createdAt": "2024-01-10",
+      "dueDate": "2024-04-15",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": 18
     },
-    { "id": 2, "title": "Mobile App", "managerId": 2, "status": "planning" }
+    {
+      "id": 2,
+      "title": "Mobile App",
+      "managerId": 2,
+      "status": "on-hold",
+      "budget": 8000,
+      "createdAt": "2024-01-25",
+      "dueDate": "2024-05-30",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 3,
+      "title": "CRM System",
+      "managerId": 2,
+      "status": "in-progress",
+      "budget": 2000,
+      "createdAt": "2024-02-05",
+      "dueDate": "2024-04-20",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 4,
+      "title": "Marketing Website",
+      "managerId": 9,
+      "status": "completed",
+      "budget": 5000,
+      "createdAt": "2024-02-18",
+      "dueDate": "2024-05-01",
+      "department": "بازاریابی",
+      "approvalStatus": "approved",
+      "clientId": 19
+    },
+    {
+      "id": 5,
+      "title": "Mobile Game",
+      "managerId": 12,
+      "status": "on-hold",
+      "budget": 12000,
+      "createdAt": "2024-03-02",
+      "dueDate": "2024-08-15",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 6,
+      "title": "Internal Dashboard",
+      "managerId": 2,
+      "status": "in-progress",
+      "budget": 7000,
+      "createdAt": "2024-03-20",
+      "dueDate": "2024-06-10",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 7,
+      "title": "E-commerce Platform",
+      "managerId": 3,
+      "status": "in-progress",
+      "budget": 25000,
+      "createdAt": "2024-04-01",
+      "dueDate": "2024-10-01",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": 20
+    },
+    {
+      "id": 8,
+      "title": "HR Management System",
+      "managerId": 4,
+      "status": "completed",
+      "budget": 9000,
+      "createdAt": "2024-04-15",
+      "dueDate": "2024-08-10",
+      "department": "منابع انسانی",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 9,
+      "title": "Analytics Dashboard",
+      "managerId": 5,
+      "status": "in-progress",
+      "budget": 13000,
+      "createdAt": "2024-05-03",
+      "dueDate": "2024-09-05",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 10,
+      "title": "Blog Platform",
+      "managerId": 6,
+      "status": "cancelled",
+      "budget": 4000,
+      "createdAt": "2024-05-18",
+      "dueDate": "2024-07-30",
+      "department": "بازاریابی",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 11,
+      "title": "Video Streaming App",
+      "managerId": 7,
+      "status": "in-progress",
+      "budget": 22000,
+      "createdAt": "2024-06-01",
+      "dueDate": "2024-11-20",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": 7
+    },
+    {
+      "id": 12,
+      "title": "Booking System",
+      "managerId": 8,
+      "status": "on-hold",
+      "budget": 11000,
+      "createdAt": "2024-06-12",
+      "dueDate": "2024-09-25",
+      "department": "توسعه",
+      "approvalStatus": "pending",
+      "clientId": null
+    },
+    {
+      "id": 13,
+      "title": "Social Media App",
+      "managerId": 9,
+      "status": "completed",
+      "budget": 18000,
+      "createdAt": "2024-07-01",
+      "dueDate": "2024-12-01",
+      "department": "بازاریابی",
+      "approvalStatus": "approved",
+      "clientId": 21
+    },
+    {
+      "id": 14,
+      "title": "Inventory Management",
+      "managerId": 10,
+      "status": "in-progress",
+      "budget": 9500,
+      "createdAt": "2024-07-15",
+      "dueDate": "2024-10-30",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 15,
+      "title": "Finance Tracker",
+      "managerId": 11,
+      "status": "in-progress",
+      "budget": 10500,
+      "createdAt": "2024-08-02",
+      "dueDate": "2024-11-10",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 16,
+      "title": "Online Learning Platform",
+      "managerId": 12,
+      "status": "on-hold",
+      "budget": 16000,
+      "createdAt": "2024-08-20",
+      "dueDate": "2025-02-15",
+      "department": "توسعه",
+      "approvalStatus": "pending",
+      "clientId": null
+    },
+    {
+      "id": 17,
+      "title": "Task Management App",
+      "managerId": 3,
+      "status": "completed",
+      "budget": 6000,
+      "createdAt": "2024-09-01",
+      "dueDate": "2024-11-25",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": 22
+    },
+    {
+      "id": 18,
+      "title": "Customer Support Tool",
+      "managerId": 4,
+      "status": "in-progress",
+      "budget": 7500,
+      "createdAt": "2024-09-18",
+      "dueDate": "2024-12-20",
+      "department": "پشتیبانی",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 19,
+      "title": "Marketing Automation",
+      "managerId": 5,
+      "status": "in-progress",
+      "budget": 14000,
+      "createdAt": "2024-10-05",
+      "dueDate": "2025-01-30",
+      "department": "بازاریابی",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 20,
+      "title": "Data Warehouse",
+      "managerId": 6,
+      "status": "on-hold",
+      "budget": 21000,
+      "createdAt": "2024-10-20",
+      "dueDate": "2025-04-01",
+      "department": "توسعه",
+      "approvalStatus": "pending",
+      "clientId": null
+    },
+    {
+      "id": 21,
+      "title": "IoT Platform",
+      "managerId": 7,
+      "status": "in-progress",
+      "budget": 23000,
+      "createdAt": "2024-11-01",
+      "dueDate": "2025-05-10",
+      "department": "توسعه",
+      "approvalStatus": "pending",
+      "clientId": null
+    },
+    {
+      "id": 22,
+      "title": "SEO Tool",
+      "managerId": 11,
+      "status": "completed",
+      "budget": 4700,
+      "createdAt": "2024-11-15",
+      "dueDate": "2025-01-10",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 23,
+      "title": "Payment Gateway",
+      "managerId": 9,
+      "status": "in-progress",
+      "budget": 12500,
+      "createdAt": "2024-12-01",
+      "dueDate": "2025-03-15",
+      "department": "توسعه",
+      "approvalStatus": "approved",
+      "clientId": null
+    },
+    {
+      "id": 24,
+      "title": "Chat Application",
+      "managerId": 10,
+      "status": "on-hold",
+      "budget": 8500,
+      "createdAt": "2024-12-20",
+      "dueDate": "2025-03-30",
+      "department": "توسعه",
+      "approvalStatus": "pending",
+      "clientId": null
+    }
   ],
-
   "projectMembers": [
     { "id": 1, "projectId": 1, "userId": 2 },
     { "id": 2, "projectId": 1, "userId": 3 },
@@ -79,7 +940,6 @@
     { "id": 6, "projectId": 2, "userId": 3 },
     { "id": 7, "projectId": 2, "userId": 5 }
   ],
-
   "tasks": [
     {
       "id": 1,
@@ -117,7 +977,6 @@
       "status": "pending"
     }
   ],
-
   "dashboards": [
     {
       "roleId": "CEO",
@@ -149,7 +1008,6 @@
       "widgets": ["projectStatus", "deliveries", "invoices"]
     }
   ],
-
   "permissions": [
     { "roleId": "CEO", "access": ["all"] },
     {

@@ -1,33 +1,27 @@
 "use client";
 
-import { createContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
+import type { SessionUser } from "@/types/session";
 
-interface User {
-  id: string;
-  name: string;
-  email: string;
-  role: string;
+interface AuthContextValue {
+  user: SessionUser | null;
 }
 
-interface AuthContextType {
-  user: User | null;
-  setUser: (user: User | null) => void;
-  isLoading?: boolean;
-}
+const AuthContext = createContext<AuthContextValue>({ user: null });
 
-export const AuthContext = createContext<AuthContextType>({
-  user: null,
-  setUser: () => {},
-  isLoading: true,
-});
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+  const [user, setUser] = useState<SessionUser | null>(null);
 
-export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    fetch("/api/auth/me")
+      .then((res) => res.json())
+      .then((data) => setUser(data.user))
+      .catch(() => setUser(null));
+  }, []);
 
   return (
-    <AuthContext.Provider value={{ user, setUser, isLoading }}>
-      {children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
   );
-}
+};
+
+export const useAuth = () => useContext(AuthContext);
