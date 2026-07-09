@@ -9,7 +9,7 @@ export async function getEmployeeById(
   id: string | number,
 ): Promise<Employee | null> {
   const db = await getDB();
-  const emp = db.users.find((u) => String(u.id) === String(id));
+  const emp = (db.users as any[]).find((u: any) => String(u.id) === String(id));
   return (emp as Employee) ?? null;
 }
 

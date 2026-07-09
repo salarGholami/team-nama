@@ -3,30 +3,28 @@
 import useActionState from "@/lib/hooks/useActionState";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import {
-  updateEmployee,
-  type EmployeeActionState,
-} from "@/lib/actions/employees";
-import type { Employee } from "@/types/employee";
+
 import { Button } from "@/components/ui/button";
 import InputField from "@/components/ui/input-field";
+import { CustomerActionState, updateCustomer } from "@/lib/actions/customers";
+import { Customers } from "@/types/customers";
 
 interface Props {
-  employee: Employee;
+  customer: Customers;
 }
 
-export default function EmployeeEditForm({ employee }: Props) {
+export default function CustomerEditForm({ customer }: Props) {
   const router = useRouter();
 
   const [state, formAction, isPending] = useActionState<
-    EmployeeActionState | undefined,
+    CustomerActionState | undefined,
     FormData
-  >(updateEmployee, undefined);
+  >(updateCustomer, undefined);
 
   useEffect(() => {
     if (state?.success) {
-      router.push("/dashboard/ceo/users/employees");
-      router.refresh(); // برای به‌روزرسانی لیست بعد از ذخیره
+      router.push("/dashboard/ceo/users/customers");
+      router.refresh();
     }
   }, [state?.success, router]);
 
@@ -42,13 +40,13 @@ export default function EmployeeEditForm({ employee }: Props) {
       }}
       className="bg-white/5 p-6 rounded-2xl shadow-md space-y-6"
     >
-      <input type="hidden" name="id" value={employee.id} />
+      <input type="hidden" name="id" value={customer.id} />
 
       <div>
         <InputField
           label="نام کامل"
           name="name"
-          defaultValue={employee.name || ""}
+          defaultValue={customer.name || ""}
           required
         />
       </div>
@@ -58,7 +56,7 @@ export default function EmployeeEditForm({ employee }: Props) {
           label="ایمیل"
           name="email"
           type="email"
-          defaultValue={employee.email || ""}
+          defaultValue={customer.email || ""}
           required
         />
       </div>
@@ -67,7 +65,16 @@ export default function EmployeeEditForm({ employee }: Props) {
         <InputField
           label="شماره تلفن"
           name="phone"
-          defaultValue={employee.phone || ""}
+          defaultValue={customer.phone || ""}
+          placeholder="اختیاری"
+        />
+      </div>
+
+      <div>
+        <InputField
+          label="دپارتمان"
+          name="department"
+          defaultValue={customer.department || ""}
           placeholder="اختیاری"
         />
       </div>
