@@ -1,4 +1,5 @@
-export interface Employee {
+// types/employee.ts
+export interface Customers {
   id: number;
   name: string;
   email: string;
@@ -8,6 +9,5 @@ export interface Employee {
   joinDate: string;
   avatar: string;
   onlineStatus: boolean;
-  workStatus: "active" | "on-leave" | "Fired";
-  password?: string;
+  workStatus?: "active" | "on-leave" | "Fired";
 }

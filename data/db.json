@@ -1,32 +1,105 @@
 {
   "roles": [
-    { "id": "CEO", "title": "مدیرعامل" },
-    { "id": "CTO", "title": "مدیر فنی" },
-    { "id": "COO", "title": "مدیر عملیات" },
-    { "id": "CFO", "title": "مدیر مالی" },
-    { "id": "ProjectManager", "title": "مدیر پروژه" },
-    { "id": "ProductManager", "title": "مدیر محصول" },
-    { "id": "HRManager", "title": "مدیر منابع انسانی" },
-    { "id": "ScrumMaster", "title": "اسکرام مستر" },
-    { "id": "FrontendDeveloper", "title": "توسعه‌دهنده فرانت‌اند" },
-    { "id": "BackendDeveloper", "title": "توسعه‌دهنده بک‌اند" },
-    { "id": "MobileDeveloper", "title": "توسعه‌دهنده موبایل" },
-    { "id": "DevOpsEngineer", "title": "توسعه دهنده DevOps" },
-    { "id": "QAEngineer", "title": "تستر نرم‌افزار" },
-    { "id": "UIDesigner", "title": "طراح رابط کاربری" },
-    { "id": "SystemArchitect", "title": "معمار سیستم" },
-    { "id": "SalesManager", "title": "مدیر فروش" },
-    { "id": "MarketingManager", "title": "مدیر بازاریابی" },
-    { "id": "ContentCreator", "title": "تولیدکننده محتوا" },
-    { "id": "CustomerSuccessManager", "title": "مدیر موفقیت مشتری" },
-    { "id": "CustomerSupport", "title": "پشتیبانی مشتری" },
-    { "id": "TechnicalSupport", "title": "پشتیبانی فنی" },
-    { "id": "Client", "title": "مشتری" },
-    { "id": "Partner", "title": "همکار تجاری" }
+    {
+      "id": "CEO",
+      "title": "مدیرعامل"
+    },
+    {
+      "id": "CTO",
+      "title": "مدیر فنی"
+    },
+    {
+      "id": "COO",
+      "title": "مدیر عملیات"
+    },
+    {
+      "id": "CFO",
+      "title": "مدیر مالی"
+    },
+    {
+      "id": "ProjectManager",
+      "title": "مدیر پروژه"
+    },
+    {
+      "id": "ProductManager",
+      "title": "مدیر محصول"
+    },
+    {
+      "id": "HRManager",
+      "title": "مدیر منابع انسانی"
+    },
+    {
+      "id": "ScrumMaster",
+      "title": "اسکرام مستر"
+    },
+    {
+      "id": "FrontendDeveloper",
+      "title": "توسعه‌دهنده فرانت‌اند"
+    },
+    {
+      "id": "BackendDeveloper",
+      "title": "توسعه‌دهنده بک‌اند"
+    },
+    {
+      "id": "MobileDeveloper",
+      "title": "توسعه‌دهنده موبایل"
+    },
+    {
+      "id": "DevOpsEngineer",
+      "title": "توسعه دهنده DevOps"
+    },
+    {
+      "id": "QAEngineer",
+      "title": "تستر نرم‌افزار"
+    },
+    {
+      "id": "UIDesigner",
+      "title": "طراح رابط کاربری"
+    },
+    {
+      "id": "SystemArchitect",
+      "title": "معمار سیستم"
+    },
+    {
+      "id": "SalesManager",
+      "title": "مدیر فروش"
+    },
+    {
+      "id": "MarketingManager",
+      "title": "مدیر بازاریابی"
+    },
+    {
+      "id": "ContentCreator",
+      "title": "تولیدکننده محتوا"
+    },
+    {
+      "id": "CustomerSuccessManager",
+      "title": "مدیر موفقیت مشتری"
+    },
+    {
+      "id": "CustomerSupport",
+      "title": "پشتیبانی مشتری"
+    },
+    {
+      "id": "TechnicalSupport",
+      "title": "پشتیبانی فنی"
+    },
+    {
+      "id": "Client",
+      "title": "مشتری"
+    },
+    {
+      "id": "Partner",
+      "title": "همکار تجاری"
+    }
   ],
   "links": {
     "CEO": [
-      { "label": "داشبورد", "href": "/dashboard/ceo", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/ceo",
+        "icon": "Home"
+      },
       {
         "label": "همه کاربران",
         "icon": "Users",
@@ -76,7 +149,11 @@
       }
     ],
     "CTO": [
-      { "label": "داشبورد", "href": "/dashboard/cto", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/cto",
+        "icon": "Home"
+      },
       {
         "label": "معماری سیستم",
         "href": "/dashboard/cto/architecture",
@@ -94,7 +171,11 @@
       }
     ],
     "COO": [
-      { "label": "داشبورد", "href": "/dashboard/coo", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/coo",
+        "icon": "Home"
+      },
       {
         "label": "عملیات",
         "href": "/dashboard/coo/operations",
@@ -102,11 +183,23 @@
       }
     ],
     "CFO": [
-      { "label": "داشبورد", "href": "/dashboard/cfo", "icon": "Home" },
-      { "label": "مالی", "href": "/dashboard/cfo/finance", "icon": "Settings" }
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/cfo",
+        "icon": "Home"
+      },
+      {
+        "label": "مالی",
+        "href": "/dashboard/cfo/finance",
+        "icon": "Settings"
+      }
     ],
     "ProjectManager": [
-      { "label": "داشبورد", "href": "/dashboard/pm", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/pm",
+        "icon": "Home"
+      },
       {
         "label": "پروژه‌ها",
         "href": "/dashboard/pm/projects",
@@ -141,7 +234,11 @@
       }
     ],
     "HRManager": [
-      { "label": "داشبورد", "href": "/dashboard/hr", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/hr",
+        "icon": "Home"
+      },
       {
         "label": "کارمندان",
         "href": "/dashboard/hr/employees",
@@ -149,7 +246,11 @@
       }
     ],
     "ScrumMaster": [
-      { "label": "داشبورد", "href": "/dashboard/scrum-master", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/scrum-master",
+        "icon": "Home"
+      },
       {
         "label": "پروژه‌ها",
         "href": "/dashboard/scrum-master/projects",
@@ -162,7 +263,11 @@
       }
     ],
     "FrontendDeveloper": [
-      { "label": "داشبورد", "href": "/dashboard/frontend", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/frontend",
+        "icon": "Home"
+      },
       {
         "label": "وظایف من",
         "href": "/dashboard/frontend/tasks",
@@ -180,7 +285,11 @@
       }
     ],
     "BackendDeveloper": [
-      { "label": "داشبورد", "href": "/dashboard/backend", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/backend",
+        "icon": "Home"
+      },
       {
         "label": "وظایف من",
         "href": "/dashboard/backend/tasks",
@@ -198,7 +307,11 @@
       }
     ],
     "MobileDeveloper": [
-      { "label": "داشبورد", "href": "/dashboard/mobile", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/mobile",
+        "icon": "Home"
+      },
       {
         "label": "وظایف من",
         "href": "/dashboard/mobile/tasks",
@@ -206,7 +319,11 @@
       }
     ],
     "DevOpsEngineer": [
-      { "label": "داشبورد", "href": "/dashboard/devops", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/devops",
+        "icon": "Home"
+      },
       {
         "label": "سرورها",
         "href": "/dashboard/devops/servers",
@@ -214,13 +331,21 @@
       }
     ],
     "QAEngineer": [
-      { "label": "داشبورد", "href": "/dashboard/qa", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/qa",
+        "icon": "Home"
+      },
       {
         "label": "Test Cases",
         "href": "/dashboard/qa/test-cases",
         "icon": "FileText"
       },
-      { "label": "Bugs", "href": "/dashboard/qa/bugs", "icon": "BarChart3" },
+      {
+        "label": "Bugs",
+        "href": "/dashboard/qa/bugs",
+        "icon": "BarChart3"
+      },
       {
         "label": "Assignments",
         "href": "/dashboard/qa/assignments",
@@ -228,7 +353,11 @@
       }
     ],
     "UIDesigner": [
-      { "label": "داشبورد", "href": "/dashboard/ui-designer", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/ui-designer",
+        "icon": "Home"
+      },
       {
         "label": "Figma",
         "href": "/dashboard/ui-designer/figma-links",
@@ -246,7 +375,11 @@
       }
     ],
     "SystemArchitect": [
-      { "label": "داشبورد", "href": "/dashboard/architect", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/architect",
+        "icon": "Home"
+      },
       {
         "label": "معماری سیستم",
         "href": "/dashboard/architect/architecture",
@@ -254,7 +387,11 @@
       }
     ],
     "SalesManager": [
-      { "label": "داشبورد", "href": "/dashboard/sales", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/sales",
+        "icon": "Home"
+      },
       {
         "label": "پروژه‌ها",
         "href": "/dashboard/sales/projects",
@@ -262,7 +399,11 @@
       }
     ],
     "MarketingManager": [
-      { "label": "داشبورد", "href": "/dashboard/marketing", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/marketing",
+        "icon": "Home"
+      },
       {
         "label": "کمپین‌ها",
         "href": "/dashboard/marketing/campaigns",
@@ -270,7 +411,11 @@
       }
     ],
     "ContentCreator": [
-      { "label": "داشبورد", "href": "/dashboard/content", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/content",
+        "icon": "Home"
+      },
       {
         "label": "محتوا",
         "href": "/dashboard/content/projects",
@@ -314,7 +459,11 @@
       }
     ],
     "Client": [
-      { "label": "داشبورد", "href": "/dashboard/client", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/client",
+        "icon": "Home"
+      },
       {
         "label": "وضعیت پروژه‌ها",
         "href": "/dashboard/client/project-status",
@@ -327,7 +476,11 @@
       }
     ],
     "Partner": [
-      { "label": "داشبورد", "href": "/dashboard/partner", "icon": "Home" },
+      {
+        "label": "داشبورد",
+        "href": "/dashboard/partner",
+        "icon": "Home"
+      },
       {
         "label": "تحویل‌ها",
         "href": "/dashboard/partner/deliveries",
@@ -424,7 +577,8 @@
       "department": "کلاینت",
       "joinDate": "1402-03-20",
       "avatar": "/images/avatar/empolyes/salar.png",
-      "onlineStatus": false    },
+      "onlineStatus": false
+    },
     {
       "id": 8,
       "name": "محمد علی سلیمانی",
@@ -449,7 +603,7 @@
       "joinDate": "1401-07-22",
       "avatar": "/images/avatar/empolyes/salar.png",
       "onlineStatus": false,
-      "workStatus": "active"  
+      "workStatus": "active"
     },
     {
       "id": 10,
@@ -461,7 +615,7 @@
       "department": "محتوا",
       "joinDate": "1402-05-10",
       "avatar": "/images/avatar/empolyes/salar.png",
-      "onlineStatus": true, 
+      "onlineStatus": true,
       "workStatus": "active"
     },
     {
@@ -475,7 +629,7 @@
       "joinDate": "1402-01-30",
       "avatar": "/images/avatar/empolyes/salar.png",
       "onlineStatus": false,
-      "workStatus": "Fired"  
+      "workStatus": "Fired"
     },
     {
       "id": 12,
@@ -552,7 +706,7 @@
       "department": "معماری",
       "joinDate": "1400-10-20",
       "avatar": "/images/avatar/empolyes/salar.png",
-      "onlineStatus": false,  
+      "onlineStatus": false,
       "workStatus": "active"
     },
     {
@@ -614,6 +768,32 @@
       "joinDate": "1403-03-15",
       "avatar": "/images/avatar/empolyes/salar.png",
       "onlineStatus": true
+    },
+    {
+      "id": 1783559255043,
+      "name": "حسن غلامی",
+      "email": "salargholami021@gmail.com",
+      "phone": "09389525194",
+      "roleId": "Client",
+      "password": "",
+      "department": "کلاینت",
+      "joinDate": "2026-07-09T01:07:35.043Z",
+      "avatar": "",
+      "onlineStatus": true,
+      "workStatus": "active"
+    },
+    {
+      "id": 1783563027072,
+      "name": "احمد حیدری",
+      "email": "ahmadheydari@gmail.com",
+      "phone": "09214560393",
+      "roleId": "Client",
+      "password": "",
+      "department": "کلاینت",
+      "joinDate": "2026-07-09T02:10:27.072Z",
+      "avatar": "",
+      "onlineStatus": true,
+      "workStatus": "active"
     }
   ],
   "requests": [
@@ -932,13 +1112,41 @@
     }
   ],
   "projectMembers": [
-    { "id": 1, "projectId": 1, "userId": 2 },
-    { "id": 2, "projectId": 1, "userId": 3 },
-    { "id": 3, "projectId": 1, "userId": 4 },
-    { "id": 4, "projectId": 1, "userId": 5 },
-    { "id": 5, "projectId": 1, "userId": 6 },
-    { "id": 6, "projectId": 2, "userId": 3 },
-    { "id": 7, "projectId": 2, "userId": 5 }
+    {
+      "id": 1,
+      "projectId": 1,
+      "userId": 2
+    },
+    {
+      "id": 2,
+      "projectId": 1,
+      "userId": 3
+    },
+    {
+      "id": 3,
+      "projectId": 1,
+      "userId": 4
+    },
+    {
+      "id": 4,
+      "projectId": 1,
+      "userId": 5
+    },
+    {
+      "id": 5,
+      "projectId": 1,
+      "userId": 6
+    },
+    {
+      "id": 6,
+      "projectId": 2,
+      "userId": 3
+    },
+    {
+      "id": 7,
+      "projectId": 2,
+      "userId": 5
+    }
   ],
   "tasks": [
     {
@@ -980,47 +1188,223 @@
   "dashboards": [
     {
       "roleId": "CEO",
-      "widgets": ["stats", "allProjects", "employees", "finances"]
+      "widgets": [
+        "stats",
+        "allProjects",
+        "employees",
+        "finances"
+      ]
     },
     {
       "roleId": "CTO",
-      "widgets": ["architecture", "serverStatus", "techTeams"]
+      "widgets": [
+        "architecture",
+        "serverStatus",
+        "techTeams"
+      ]
     },
     {
       "roleId": "ProjectManager",
-      "widgets": ["projects", "tasks", "teamProgress"]
+      "widgets": [
+        "projects",
+        "tasks",
+        "teamProgress"
+      ]
     },
     {
       "roleId": "FrontendDeveloper",
-      "widgets": ["myTasks", "commits", "designFiles"]
+      "widgets": [
+        "myTasks",
+        "commits",
+        "designFiles"
+      ]
     },
     {
       "roleId": "BackendDeveloper",
-      "widgets": ["apiDocs", "myTasks", "serverLogs"]
+      "widgets": [
+        "apiDocs",
+        "myTasks",
+        "serverLogs"
+      ]
     },
     {
       "roleId": "UIDesigner",
-      "widgets": ["figmaLinks", "designReviews", "tasks"]
+      "widgets": [
+        "figmaLinks",
+        "designReviews",
+        "tasks"
+      ]
     },
-    { "roleId": "QAEngineer", "widgets": ["testCases", "bugs", "assignments"] },
+    {
+      "roleId": "QAEngineer",
+      "widgets": [
+        "testCases",
+        "bugs",
+        "assignments"
+      ]
+    },
     {
       "roleId": "Client",
-      "widgets": ["projectStatus", "deliveries", "invoices"]
+      "widgets": [
+        "projectStatus",
+        "deliveries",
+        "invoices"
+      ]
     }
   ],
   "permissions": [
-    { "roleId": "CEO", "access": ["all"] },
+    {
+      "roleId": "CEO",
+      "access": [
+        "all"
+      ]
+    },
     {
       "roleId": "CTO",
-      "access": ["servers", "architecture", "projects", "users"]
+      "access": [
+        "servers",
+        "architecture",
+        "projects",
+        "users"
+      ]
     },
-    { "roleId": "ProjectManager", "access": ["projects", "tasks", "team"] },
-    { "roleId": "ProductManager", "access": ["projects", "roadmap"] },
-    { "roleId": "FrontendDeveloper", "access": ["tasks", "projects"] },
-    { "roleId": "BackendDeveloper", "access": ["tasks", "projects", "api"] },
-    { "roleId": "UIDesigner", "access": ["designs", "tasks"] },
-    { "roleId": "QAEngineer", "access": ["bugs", "tasks"] },
-    { "roleId": "Client", "access": ["projectStatus", "invoices"] },
-    { "roleId": "Partner", "access": ["projects", "deliveries"] }
+    {
+      "roleId": "ProjectManager",
+      "access": [
+        "projects",
+        "tasks",
+        "team"
+      ]
+    },
+    {
+      "roleId": "ProductManager",
+      "access": [
+        "projects",
+        "roadmap"
+      ]
+    },
+    {
+      "roleId": "FrontendDeveloper",
+      "access": [
+        "tasks",
+        "projects"
+      ]
+    },
+    {
+      "roleId": "BackendDeveloper",
+      "access": [
+        "tasks",
+        "projects",
+        "api"
+      ]
+    },
+    {
+      "roleId": "UIDesigner",
+      "access": [
+        "designs",
+        "tasks"
+      ]
+    },
+    {
+      "roleId": "QAEngineer",
+      "access": [
+        "bugs",
+        "tasks"
+      ]
+    },
+    {
+      "roleId": "Client",
+      "access": [
+        "projectStatus",
+        "invoices"
+      ]
+    },
+    {
+      "roleId": "Partner",
+      "access": [
+        "projects",
+        "deliveries"
+      ]
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "userId": 7,
+      "companyName": "Company 1",
+      "industry": "Technology",
+      "contactPerson": "Omid",
+      "website": "https://company1.example",
+      "nationalId": "14000000001",
+      "economicCode": "41000000001",
+      "address": "تهران",
+      "status": "active",
+      "createdAt": "1402-03-20"
+    },
+    {
+      "id": 2,
+      "userId": 18,
+      "companyName": "Company 2",
+      "industry": "Healthcare",
+      "contactPerson": "احمد رضایی",
+      "website": "https://company2.example",
+      "nationalId": "14000000002",
+      "economicCode": "41000000002",
+      "address": "اصفهان",
+      "status": "active",
+      "createdAt": "1403-01-15"
+    },
+    {
+      "id": 3,
+      "userId": 19,
+      "companyName": "Company 3",
+      "industry": "E-Commerce",
+      "contactPerson": "فاطمه کریمی",
+      "website": "https://company3.example",
+      "nationalId": "14000000003",
+      "economicCode": "41000000003",
+      "address": "مشهد",
+      "status": "active",
+      "createdAt": "1403-02-01"
+    },
+    {
+      "id": 4,
+      "userId": 20,
+      "companyName": "Company 4",
+      "industry": "Finance",
+      "contactPerson": "حسین احمدی",
+      "website": "https://company4.example",
+      "nationalId": "14000000004",
+      "economicCode": "41000000004",
+      "address": "شیراز",
+      "status": "inactive",
+      "createdAt": "1403-02-20"
+    },
+    {
+      "id": 5,
+      "userId": 21,
+      "companyName": "Company 5",
+      "industry": "Education",
+      "contactPerson": "مینا صادقی",
+      "website": "https://company5.example",
+      "nationalId": "14000000005",
+      "economicCode": "41000000005",
+      "address": "تبریز",
+      "status": "active",
+      "createdAt": "1403-03-05"
+    },
+    {
+      "id": 6,
+      "userId": 22,
+      "companyName": "Company 6",
+      "industry": "Technology",
+      "contactPerson": "پوریا نجفی",
+      "website": "https://company6.example",
+      "nationalId": "14000000006",
+      "economicCode": "41000000006",
+      "address": "تهران",
+      "status": "active",
+      "createdAt": "1403-03-15"
+    }
   ]
 }

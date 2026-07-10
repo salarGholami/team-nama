@@ -23,11 +23,9 @@ export default async function CEODashboard() {
     year: "numeric",
   }).format(now);
 
-  /* =========================
-     Top 5 Employees (Random)
-  ========================= */
-  const eligibleEmployees = db.users.filter(
-    (u) => u.roleId !== "Client" && u.roleId !== "Partner",
+
+  const eligibleEmployees = (db.users as any[]).filter(
+    (u: any) => u.roleId !== "Client" && u.roleId !== "Partner",
   );
 
   // Shuffle Fisher-Yates
@@ -56,30 +54,35 @@ export default async function CEODashboard() {
       id: 2,
       title: "درآمد ماهانه",
       icon: "dollarSign",
-      money: db.projects.reduce((sum, p) => sum + (p.budget || 0), 0),
+      money: db.projects.reduce(
+        (sum: number, p: any) => sum + (p.budget || 0),
+        0,
+      ),
       changePercent: 12,
     },
     {
       id: 3,
       title: "پروژه‌های فعال",
       icon: "trendingUp",
-      activeProjects: db.projects.filter((p) => p.status === "in-progress")
-        .length,
+      activeProjects: (db.projects as any[]).filter(
+        (p: any) => p.status === "in-progress",
+      ).length,
       changePercent: 0,
     },
     {
       id: 4,
       title: "درخواست‌های در انتظار",
       icon: "fileText",
-      length: db.requests.filter((r) => r.status === "pending").length,
+      length: (db.requests as any[]).filter((r: any) => r.status === "pending")
+        .length,
     },
   ] as const;
 
   /* =========================
      Project Status
   ========================= */
-  const projectsStatus = db.projects.reduce(
-    (acc, p) => {
+  const projectsStatus = (db.projects as any[]).reduce(
+    (acc, p: any) => {
       if (p.status === "in-progress") acc["in-progress"] += 1;
       else if (p.status === "completed") acc.completed += 1;
       else if (p.status === "on-hold") acc["on-hold"] += 1;
@@ -98,11 +101,11 @@ export default async function CEODashboard() {
         month: "long",
       });
 
-      const income = db.projects
+      const income = (db.projects as any[])
         .filter(
-          (p) => new Date(p.createdAt).getMonth() === monthDate.getMonth(),
+          (p: any) => new Date(p.createdAt).getMonth() === monthDate.getMonth(),
         )
-        .reduce((sum, p) => sum + (p.budget || 0), 0);
+        .reduce((sum: number, p: any) => sum + (p.budget || 0), 0);
 
       const expense = income * 0.6;
 

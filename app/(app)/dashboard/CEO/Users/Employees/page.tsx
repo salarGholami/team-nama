@@ -11,17 +11,19 @@ export const dynamic = "force-dynamic";
 export default async function EmployeesPage() {
   const db = await getDB();
 
-  const employees = db.users.filter(
-    (user) => !["Client", "Partner"].includes(user.roleId),
+  const employees = (db.users as any[]).filter(
+    (user: any) => !["Client", "Partner"].includes(user.roleId),
   ) as Employee[];
 
   const roles = db.roles;
 
   const rolesMap = Object.fromEntries(
-    roles.map((r) => [r.id, r.title]),
+    (roles as any[]).map((r: any) => [r.id, r.title]),
   ) as Record<string, string>;
 
-  const departments = [...new Set(employees.map((u) => u.department))].sort();
+  const departments = [
+    ...new Set(employees.map((u: any) => u.department)),
+  ].sort();
 
   return (
     <div className="px-6 py-12 lg:px-10">
