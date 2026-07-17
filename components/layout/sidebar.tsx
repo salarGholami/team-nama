@@ -167,7 +167,7 @@ export default function Sidebar({ role }: SidebarProps) {
         initial={false}
         animate={{ width: collapsed ? 80 : 256 }}
         transition={{ duration: 0.25, ease: "easeInOut" }}
-        className="hidden lg:flex h-screen bg-primary-900 text-primary-300 flex-col border-l border-primary-800"
+        className="hidden lg:flex bg-primary-900 text-primary-300 flex-col border-l border-primary-800"
       >
         {/* Header */}
         <div className="flex items-center justify-between py-2 px-2 border-b border-primary-800">

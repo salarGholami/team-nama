@@ -87,7 +87,11 @@ const FinancialChart: FC<Props> = ({ data }) => {
               padding: "8px 12px",
             }}
             labelStyle={{ color: "var(--tooltip-text)", fontWeight: 600 }}
-            formatter={(v: number | undefined) => v?.toLocaleString() ?? ""}
+            formatter={(value: any) =>
+              typeof value === "number"
+                ? value.toLocaleString()
+                : String(value ?? "")
+            }
           />
           <Legend
             align="center"
