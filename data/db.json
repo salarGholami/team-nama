@@ -265,22 +265,22 @@
     "FrontendDeveloper": [
       {
         "label": "داشبورد",
-        "href": "/dashboard/frontend",
+        "href": "/dashboard/FrontendDeveloper",
         "icon": "Home"
       },
       {
         "label": "وظایف من",
-        "href": "/dashboard/frontend/tasks",
+        "href": "/dashboard/FrontendDeveloper/MyTasks",
         "icon": "FileText"
       },
       {
         "label": "کامیت‌ها",
-        "href": "/dashboard/frontend/commits",
+        "href": "/dashboard/FrontendDeveloper/Commits",
         "icon": "BarChart3"
       },
       {
         "label": "فایل‌های طراحی",
-        "href": "/dashboard/frontend/design-files",
+        "href": "/dashboard/FrontendDeveloper/DesignFiles",
         "icon": "Settings"
       }
     ],
@@ -1183,148 +1183,113 @@
       "projectId": 2,
       "assignedTo": 4,
       "status": "pending"
+    },
+    {
+      "id": 101,
+      "title": "طراحی کامپوننت اصلی داشبورد",
+      "projectId": 6,
+      "assignedTo": 3,
+      "status": "completed",
+      "dueDate": "1405-04-05"
+    },
+    {
+      "id": 102,
+      "title": "پیاده‌سازی Layout داشبورد با Modal",
+      "projectId": 6,
+      "assignedTo": 3,
+      "status": "in-progress",
+      "dueDate": "1405-04-10"
+    },
+    {
+      "id": 103,
+      "title": "به‌روزرسانی کامپوننت ButtonPrimary",
+      "projectId": 6,
+      "assignedTo": 3,
+      "status": "pending",
+      "dueDate": "1405-04-12"
     }
   ],
   "dashboards": [
     {
       "roleId": "CEO",
-      "widgets": [
-        "stats",
-        "allProjects",
-        "employees",
-        "finances"
-      ]
+      "widgets": ["stats", "allProjects", "employees", "finances"]
     },
     {
       "roleId": "CTO",
-      "widgets": [
-        "architecture",
-        "serverStatus",
-        "techTeams"
-      ]
+      "widgets": ["architecture", "serverStatus", "techTeams"]
     },
     {
       "roleId": "ProjectManager",
-      "widgets": [
-        "projects",
-        "tasks",
-        "teamProgress"
-      ]
+      "widgets": ["projects", "tasks", "teamProgress"]
     },
     {
       "roleId": "FrontendDeveloper",
       "widgets": [
         "myTasks",
         "commits",
-        "designFiles"
+        "designFiles",
+        "projectProgress",
+        "recentComponents",
+        "announcements"
       ]
     },
     {
       "roleId": "BackendDeveloper",
-      "widgets": [
-        "apiDocs",
-        "myTasks",
-        "serverLogs"
-      ]
+      "widgets": ["apiDocs", "myTasks", "serverLogs"]
     },
     {
       "roleId": "UIDesigner",
-      "widgets": [
-        "figmaLinks",
-        "designReviews",
-        "tasks"
-      ]
+      "widgets": ["figmaLinks", "designReviews", "tasks"]
     },
     {
       "roleId": "QAEngineer",
-      "widgets": [
-        "testCases",
-        "bugs",
-        "assignments"
-      ]
+      "widgets": ["testCases", "bugs", "assignments"]
     },
     {
       "roleId": "Client",
-      "widgets": [
-        "projectStatus",
-        "deliveries",
-        "invoices"
-      ]
+      "widgets": ["projectStatus", "deliveries", "invoices"]
     }
   ],
   "permissions": [
     {
       "roleId": "CEO",
-      "access": [
-        "all"
-      ]
+      "access": ["all"]
     },
     {
       "roleId": "CTO",
-      "access": [
-        "servers",
-        "architecture",
-        "projects",
-        "users"
-      ]
+      "access": ["servers", "architecture", "projects", "users"]
     },
     {
       "roleId": "ProjectManager",
-      "access": [
-        "projects",
-        "tasks",
-        "team"
-      ]
+      "access": ["projects", "tasks", "team"]
     },
     {
       "roleId": "ProductManager",
-      "access": [
-        "projects",
-        "roadmap"
-      ]
+      "access": ["projects", "roadmap"]
     },
     {
       "roleId": "FrontendDeveloper",
-      "access": [
-        "tasks",
-        "projects"
-      ]
+      "access": ["tasks", "projects"]
     },
     {
       "roleId": "BackendDeveloper",
-      "access": [
-        "tasks",
-        "projects",
-        "api"
-      ]
+      "access": ["tasks", "projects", "api"]
     },
     {
       "roleId": "UIDesigner",
-      "access": [
-        "designs",
-        "tasks"
-      ]
+      "access": ["designs", "tasks"]
     },
     {
       "roleId": "QAEngineer",
-      "access": [
-        "bugs",
-        "tasks"
-      ]
+      "access": ["bugs", "tasks"]
     },
     {
       "roleId": "Client",
-      "access": [
-        "projectStatus",
-        "invoices"
-      ]
+      "access": ["projectStatus", "invoices"]
     },
     {
       "roleId": "Partner",
-      "access": [
-        "projects",
-        "deliveries"
-      ]
+      "access": ["projects", "deliveries"]
     }
   ],
   "customers": [
@@ -1405,6 +1370,192 @@
       "address": "تهران",
       "status": "active",
       "createdAt": "1403-03-15"
+    }
+  ],
+  "frontendDashboard": {
+    "roleId": "FrontendDeveloper",
+    "stats": {
+      "tasksInProgress": 11,
+      "components": 28,
+      "designFiles": 37,
+      "completedTasks": 35
+    },
+    "projectProgress": {
+      "percentage": 72,
+      "design": 85,
+      "development": 70,
+      "testing": 60
+    },
+    "recentTasks": [
+      {
+        "id": 101,
+        "title": "طراحی کامپوننت اصلی داشبورد",
+        "status": "completed",
+        "dueDate": "1405-04-05",
+        "priority": "high",
+        "projectId": 6,
+        "assignedTo": 3
+      },
+      {
+        "id": 102,
+        "title": "پیاده‌سازی Layout داشبورد با Modal",
+        "status": "in-progress",
+        "dueDate": "1405-04-10",
+        "priority": "high",
+        "projectId": 6,
+        "assignedTo": 3
+      },
+      {
+        "id": 103,
+        "title": "به‌روزرسانی کامپوننت ButtonPrimary",
+        "status": "pending",
+        "dueDate": "1405-04-12",
+        "priority": "medium",
+        "projectId": 6,
+        "assignedTo": 3
+      },
+      {
+        "id": 104,
+        "title": "بهینه‌سازی Responsive Dashboard در موبایل",
+        "status": "in-progress",
+        "dueDate": "1405-04-15",
+        "priority": "high",
+        "projectId": 6,
+        "assignedTo": 3
+      },
+      {
+        "id": 105,
+        "title": "بررسی Performance کامپوننت‌های React",
+        "status": "pending",
+        "dueDate": "1405-04-18",
+        "priority": "medium",
+        "projectId": 6,
+        "assignedTo": 3
+      }
+    ],
+    "recentFiles": [
+      {
+        "id": 201,
+        "name": "ButtonPrimary.tsx",
+        "type": "TSX",
+        "updatedAt": "2 ساعت پیش",
+        "size": "12 KB"
+      },
+      {
+        "id": 202,
+        "name": "DashboardLayout.tsx",
+        "type": "TSX",
+        "updatedAt": "5 ساعت پیش",
+        "size": "45 KB"
+      },
+      {
+        "id": 203,
+        "name": "CardComponent.tsx",
+        "type": "TSX",
+        "updatedAt": "1 روز پیش",
+        "size": "28 KB"
+      },
+      {
+        "id": 204,
+        "name": "colors.ts",
+        "type": "TS",
+        "updatedAt": "2 روز پیش",
+        "size": "8 KB"
+      }
+    ],
+    "announcements": [
+      {
+        "id": 301,
+        "title": "کامپوننت جدید اضافه شد",
+        "description": "کامپوننت Modal با قابلیت موقعیت‌یابی",
+        "time": "2 ساعت پیش",
+        "type": "success"
+      },
+      {
+        "id": 302,
+        "title": "تسک شما به‌روزرسانی شد",
+        "description": "تسک \"داشبورد فرانت‌اند\" به مرحله توسعه منتقل شد",
+        "time": "5 ساعت پیش",
+        "type": "info"
+      }
+    ],
+    "activity": {
+      "periods": {
+        "currentWeek": [
+          { "day": "شنبه", "value": 18, "label": "هفته جاری" },
+          { "day": "یکشنبه", "value": 15 },
+          { "day": "دوشنبه", "value": 28 },
+          { "day": "سه‌شنبه", "value": 45 },
+          { "day": "چهارشنبه", "value": 32 },
+          { "day": "پنجشنبه", "value": 41 },
+          { "day": "جمعه", "value": 35 }
+        ],
+        "lastWeek": [
+          { "day": "شنبه", "value": 22 },
+          { "day": "یکشنبه", "value": 19 },
+          { "day": "دوشنبه", "value": 25 },
+          { "day": "سه‌شنبه", "value": 38 },
+          { "day": "چهارشنبه", "value": 29 },
+          { "day": "پنجشنبه", "value": 33 },
+          { "day": "جمعه", "value": 27 }
+        ],
+        "twoWeeksAgo": [
+          { "day": "شنبه", "value": 14 },
+          { "day": "یکشنبه", "value": 21 },
+          { "day": "دوشنبه", "value": 31 },
+          { "day": "سه‌شنبه", "value": 29 },
+          { "day": "چهارشنبه", "value": 35 },
+          { "day": "پنجشنبه", "value": 24 },
+          { "day": "جمعه", "value": 19 }
+        ],
+        "currentMonth": [
+          { "day": "هفته ۱", "value": 142 },
+          { "day": "هفته ۲", "value": 158 },
+          { "day": "هفته ۳", "value": 131 },
+          { "day": "هفته ۴", "value": 165 }
+        ],
+        "lastMonth": [
+          { "day": "هفته ۱", "value": 128 },
+          { "day": "هفته ۲", "value": 145 },
+          { "day": "هفته ۳", "value": 139 },
+          { "day": "هفته ۴", "value": 151 }
+        ]
+      }
+    }
+  },
+  "components": [
+    {
+      "id": 1,
+      "name": "ButtonPrimary",
+      "file": "ButtonPrimary.tsx",
+      "status": "completed",
+      "lastModified": "1405-04-03",
+      "ownerId": 3
+    },
+    {
+      "id": 2,
+      "name": "DashboardLayout",
+      "file": "DashboardLayout.tsx",
+      "status": "in-progress",
+      "lastModified": "1405-04-04",
+      "ownerId": 3
+    },
+    {
+      "id": 3,
+      "name": "CardComponent",
+      "file": "CardComponent.tsx",
+      "status": "completed",
+      "lastModified": "1405-04-02",
+      "ownerId": 3
+    }
+  ],
+  "designFiles": [
+    {
+      "id": 1,
+      "name": "Main Dashboard.fig",
+      "type": "Figma",
+      "updatedAt": "1405-04-02",
+      "ownerId": 3
     }
   ]
 }
