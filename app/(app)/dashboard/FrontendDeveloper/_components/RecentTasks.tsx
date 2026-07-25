@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { CircleCheckBig, Clock, Eye } from "lucide-react";
+import Link from "next/link";
 
 interface Task {
   id: number;
@@ -68,9 +69,12 @@ export default function RecentTasks({ tasks }: RecentTasksProps) {
       <div className="mb-6 flex items-center justify-between">
         <h3 className="text-lg font-semibold">تسک‌های اخیر</h3>
 
-        <Button className="flex items-center gap-1 text-sm text-primary-400 transition-colors hover:text-primary-100 border border-primary-700 hover:border-primary-500 rounded-lg">
+        <Link
+          href="/dashboard/FrontendDeveloper/MyTasks"
+          className="flex items-center justify-center gap-1 py-2 px-4 text-sm text-primary-400 transition-colors hover:text-primary-100 border border-primary-700 hover:border-primary-500 rounded-lg"
+        >
           مشاهده همه
-        </Button>
+        </Link>
       </div>
 
       <div className="space-y-3">

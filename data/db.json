@@ -2,95 +2,164 @@
   "roles": [
     {
       "id": "CEO",
-      "title": "مدیرعامل"
+      "title": "مدیرعامل",
+      "type": "management",
+      "level": 100,
+      "permissionGroupId": "executive"
     },
     {
       "id": "CTO",
-      "title": "مدیر فنی"
+      "title": "مدیر فنی",
+      "type": "management",
+      "level": 90,
+      "permissionGroupId": "technology"
     },
     {
       "id": "COO",
-      "title": "مدیر عملیات"
+      "title": "مدیر عملیات",
+      "type": "management",
+      "level": 90,
+      "permissionGroupId": "operations"
     },
     {
       "id": "CFO",
-      "title": "مدیر مالی"
+      "title": "مدیر مالی",
+      "type": "management",
+      "level": 90,
+      "permissionGroupId": "finance"
     },
     {
       "id": "ProjectManager",
-      "title": "مدیر پروژه"
+      "title": "مدیر پروژه",
+      "type": "management",
+      "level": 70,
+      "permissionGroupId": "project-management"
     },
     {
       "id": "ProductManager",
-      "title": "مدیر محصول"
+      "title": "مدیر محصول",
+      "type": "management",
+      "level": 70,
+      "permissionGroupId": "product"
     },
     {
       "id": "HRManager",
-      "title": "مدیر منابع انسانی"
+      "title": "مدیر منابع انسانی",
+      "type": "management",
+      "level": 70,
+      "permissionGroupId": "hr"
     },
     {
       "id": "ScrumMaster",
-      "title": "اسکرام مستر"
+      "title": "اسکرام مستر",
+      "type": "management",
+      "level": 60,
+      "permissionGroupId": "scrum"
     },
     {
       "id": "FrontendDeveloper",
-      "title": "توسعه‌دهنده فرانت‌اند"
+      "title": "توسعه‌دهنده فرانت‌اند",
+      "type": "developer",
+      "level": 40,
+      "permissionGroupId": "frontend"
     },
     {
       "id": "BackendDeveloper",
-      "title": "توسعه‌دهنده بک‌اند"
+      "title": "توسعه‌دهنده بک‌اند",
+      "type": "developer",
+      "level": 40,
+      "permissionGroupId": "backend"
     },
     {
       "id": "MobileDeveloper",
-      "title": "توسعه‌دهنده موبایل"
+      "title": "توسعه‌دهنده موبایل",
+      "type": "developer",
+      "level": 40,
+      "permissionGroupId": "mobile"
     },
     {
       "id": "DevOpsEngineer",
-      "title": "توسعه دهنده DevOps"
+      "title": "مهندس DevOps",
+      "type": "developer",
+      "level": 45,
+      "permissionGroupId": "devops"
     },
     {
       "id": "QAEngineer",
-      "title": "تستر نرم‌افزار"
+      "title": "تستر نرم‌افزار",
+      "type": "developer",
+      "level": 40,
+      "permissionGroupId": "qa"
     },
     {
       "id": "UIDesigner",
-      "title": "طراح رابط کاربری"
+      "title": "طراح رابط کاربری",
+      "type": "designer",
+      "level": 40,
+      "permissionGroupId": "design"
     },
     {
       "id": "SystemArchitect",
-      "title": "معمار سیستم"
+      "title": "معمار سیستم",
+      "type": "architecture",
+      "level": 80,
+      "permissionGroupId": "architecture"
     },
     {
       "id": "SalesManager",
-      "title": "مدیر فروش"
+      "title": "مدیر فروش",
+      "type": "business",
+      "level": 60,
+      "permissionGroupId": "sales"
     },
     {
       "id": "MarketingManager",
-      "title": "مدیر بازاریابی"
+      "title": "مدیر بازاریابی",
+      "type": "business",
+      "level": 60,
+      "permissionGroupId": "marketing"
     },
     {
       "id": "ContentCreator",
-      "title": "تولیدکننده محتوا"
+      "title": "تولیدکننده محتوا",
+      "type": "business",
+      "level": 30,
+      "permissionGroupId": "content"
     },
     {
       "id": "CustomerSuccessManager",
-      "title": "مدیر موفقیت مشتری"
+      "title": "مدیر موفقیت مشتری",
+      "type": "support",
+      "level": 50,
+      "permissionGroupId": "customer-success"
     },
     {
       "id": "CustomerSupport",
-      "title": "پشتیبانی مشتری"
+      "title": "پشتیبانی مشتری",
+      "type": "support",
+      "level": 30,
+      "permissionGroupId": "customer-support"
     },
     {
       "id": "TechnicalSupport",
-      "title": "پشتیبانی فنی"
+      "title": "پشتیبانی فنی",
+      "type": "support",
+      "level": 30,
+      "permissionGroupId": "technical-support"
     },
     {
       "id": "Client",
-      "title": "مشتری"
+      "title": "مشتری",
+      "type": "external",
+      "level": 10,
+      "permissionGroupId": "client"
     },
     {
       "id": "Partner",
-      "title": "همکار تجاری"
+      "title": "همکار تجاری",
+      "type": "external",
+      "level": 20,
+      "permissionGroupId": "partner"
     }
   ],
   "links": {
@@ -120,15 +189,15 @@
         "children": [
           {
             "label": "درخواست وام",
-            "href": "/dashboard/ceo/request/users/employees/loanRequest"
+            "href": "/dashboard/ceo/requests/loan"
           },
           {
             "label": "درخواست افزایش حقوق",
-            "href": "/dashboard/ceo/request/users/employees/salaryIncreaseRequset"
+            "href": "/dashboard/ceo/requests/salary-increase"
           },
           {
-            "label": "درخواست مرخصی ",
-            "href": "/dashboard/ceo/request/users/employees/leaveRequest"
+            "label": "درخواست مرخصی",
+            "href": "/dashboard/ceo/requests/leave"
           }
         ]
       },
@@ -138,8 +207,8 @@
         "icon": "BarChart3"
       },
       {
-        "label": "رول ها و دسترسی دادن",
-        "href": "/dashboard/ceo/roles&access",
+        "label": "رول ها و دسترسی ها",
+        "href": "/dashboard/ceo/roles-access",
         "icon": "UserRoundCog"
       },
       {
@@ -275,7 +344,7 @@
       },
       {
         "label": "کامیت‌ها",
-        "href": "/dashboard/FrontendDeveloper/Commits",
+        "href": "/dashboard/FrontendDeveloper/commits",
         "icon": "BarChart3"
       },
       {
@@ -498,7 +567,7 @@
       "phone": "09121234567",
       "department": "مدیریت",
       "joinDate": "1400-01-01",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/salar.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -511,7 +580,7 @@
       "phone": "09127654321",
       "department": "پروژه",
       "joinDate": "1401-03-15",
-      "avatar": "/images/avatar/empolyes/mina.png",
+      "avatar": "/images/avatars/employees/reza.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -524,7 +593,7 @@
       "phone": "09131111111",
       "department": "توسعه",
       "joinDate": "1401-06-20",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/ali.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -537,7 +606,7 @@
       "phone": "09132222222",
       "department": "طراحی",
       "joinDate": "1401-09-10",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/sara.png",
       "onlineStatus": false,
       "workStatus": "on-leave"
     },
@@ -550,7 +619,7 @@
       "phone": "09133333333",
       "department": "توسعه",
       "joinDate": "1402-01-05",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/nima.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -563,7 +632,7 @@
       "phone": "09134444444",
       "department": "تست",
       "joinDate": "1402-02-14",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/maryam.png",
       "onlineStatus": false,
       "workStatus": "active"
     },
@@ -576,8 +645,9 @@
       "phone": "09135555555",
       "department": "کلاینت",
       "joinDate": "1402-03-20",
-      "avatar": "/images/avatar/empolyes/salar.png",
-      "onlineStatus": false
+      "avatar": "/images/avatars/clients/omid.png",
+      "onlineStatus": false,
+      "workStatus": "active"
     },
     {
       "id": 8,
@@ -588,7 +658,7 @@
       "phone": "09137777777",
       "department": "فناوری",
       "joinDate": "1400-06-15",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/mohammad.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -601,7 +671,7 @@
       "phone": "09138888888",
       "department": "محصول",
       "joinDate": "1401-07-22",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/leila.png",
       "onlineStatus": false,
       "workStatus": "active"
     },
@@ -614,7 +684,7 @@
       "phone": "09146666666",
       "department": "محتوا",
       "joinDate": "1402-05-10",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/sonia.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -627,9 +697,9 @@
       "phone": "09139999999",
       "department": "سرورها",
       "joinDate": "1402-01-30",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/hassan.png",
       "onlineStatus": false,
-      "workStatus": "Fired"
+      "workStatus": "fired"
     },
     {
       "id": 12,
@@ -640,7 +710,7 @@
       "phone": "09140000000",
       "department": "توسعه",
       "joinDate": "1402-02-10",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/shirin.png",
       "onlineStatus": false,
       "workStatus": "on-leave"
     },
@@ -653,7 +723,7 @@
       "phone": "09141111111",
       "department": "فروش",
       "joinDate": "1401-08-05",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/aliakbar.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -666,7 +736,7 @@
       "phone": "09142222222",
       "department": "بازاریابی",
       "joinDate": "1401-09-12",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/nilofar.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -679,7 +749,7 @@
       "phone": "09143333333",
       "department": "پروژه",
       "joinDate": "1402-03-01",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/milad.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -692,7 +762,7 @@
       "phone": "09144444444",
       "department": "پشتیبانی",
       "joinDate": "1402-04-15",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/zahra.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -705,7 +775,7 @@
       "phone": "09145555555",
       "department": "معماری",
       "joinDate": "1400-10-20",
-      "avatar": "/images/avatar/empolyes/salar.png",
+      "avatar": "/images/avatars/employees/kamran.png",
       "onlineStatus": false,
       "workStatus": "active"
     },
@@ -718,8 +788,9 @@
       "phone": "09152345678",
       "department": "کلاینت",
       "joinDate": "1403-01-15",
-      "avatar": "/images/avatar/empolyes/salar.png",
-      "onlineStatus": true
+      "avatar": "/images/avatars/clients/ahmad.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 19,
@@ -730,8 +801,9 @@
       "phone": "09153456789",
       "department": "کلاینت",
       "joinDate": "1403-02-01",
-      "avatar": "/images/avatar/empolyes/salar.png",
-      "onlineStatus": true
+      "avatar": "/images/avatars/clients/fateme.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 20,
@@ -742,8 +814,9 @@
       "phone": "09154567890",
       "department": "کلاینت",
       "joinDate": "1403-02-20",
-      "avatar": "/images/avatar/empolyes/salar.png",
-      "onlineStatus": true
+      "avatar": "/images/avatars/clients/hossein.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 21,
@@ -754,8 +827,9 @@
       "phone": "09155678901",
       "department": "کلاینت",
       "joinDate": "1403-03-05",
-      "avatar": "/images/avatar/empolyes/salar.png",
-      "onlineStatus": false
+      "avatar": "/images/avatars/clients/mina.png",
+      "onlineStatus": false,
+      "workStatus": "active"
     },
     {
       "id": 22,
@@ -766,8 +840,9 @@
       "phone": "09156789012",
       "department": "کلاینت",
       "joinDate": "1403-03-15",
-      "avatar": "/images/avatar/empolyes/salar.png",
-      "onlineStatus": true
+      "avatar": "/images/avatars/clients/pouria.png",
+      "onlineStatus": true,
+      "workStatus": "active"
     },
     {
       "id": 1783559255043,
@@ -777,8 +852,8 @@
       "roleId": "Client",
       "password": "",
       "department": "کلاینت",
-      "joinDate": "2026-07-09T01:07:35.043Z",
-      "avatar": "",
+      "joinDate": "1405-04-18",
+      "avatar": "/images/avatars/clients/default.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -790,8 +865,8 @@
       "roleId": "Client",
       "password": "",
       "department": "کلاینت",
-      "joinDate": "2026-07-09T02:10:27.072Z",
-      "avatar": "",
+      "joinDate": "1405-04-18",
+      "avatar": "/images/avatars/clients/default.png",
       "onlineStatus": true,
       "workStatus": "active"
     }
@@ -828,8 +903,8 @@
       "managerId": 2,
       "status": "in-progress",
       "budget": 15000,
-      "createdAt": "2024-01-10",
-      "dueDate": "2024-04-15",
+      "createdAt": "1402-10-10",
+      "dueDate": "1403-01-15",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": 18
@@ -840,8 +915,8 @@
       "managerId": 2,
       "status": "on-hold",
       "budget": 8000,
-      "createdAt": "2024-01-25",
-      "dueDate": "2024-05-30",
+      "createdAt": "1402-10-25",
+      "dueDate": "1403-02-28",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": null
@@ -852,8 +927,8 @@
       "managerId": 2,
       "status": "in-progress",
       "budget": 2000,
-      "createdAt": "2024-02-05",
-      "dueDate": "2024-04-20",
+      "createdAt": "1402-11-05",
+      "dueDate": "1403-01-20",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": null
@@ -864,8 +939,8 @@
       "managerId": 9,
       "status": "completed",
       "budget": 5000,
-      "createdAt": "2024-02-18",
-      "dueDate": "2024-05-01",
+      "createdAt": "1402-11-18",
+      "dueDate": "1403-02-01",
       "department": "بازاریابی",
       "approvalStatus": "approved",
       "clientId": 19
@@ -876,8 +951,8 @@
       "managerId": 12,
       "status": "on-hold",
       "budget": 12000,
-      "createdAt": "2024-03-02",
-      "dueDate": "2024-08-15",
+      "createdAt": "1402-12-02",
+      "dueDate": "1403-05-15",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": null
@@ -888,8 +963,8 @@
       "managerId": 2,
       "status": "in-progress",
       "budget": 7000,
-      "createdAt": "2024-03-20",
-      "dueDate": "2024-06-10",
+      "createdAt": "1403-01-20",
+      "dueDate": "1403-04-10",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": null
@@ -900,8 +975,8 @@
       "managerId": 3,
       "status": "in-progress",
       "budget": 25000,
-      "createdAt": "2024-04-01",
-      "dueDate": "2024-10-01",
+      "createdAt": "1403-02-01",
+      "dueDate": "1403-08-01",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": 20
@@ -912,8 +987,8 @@
       "managerId": 4,
       "status": "completed",
       "budget": 9000,
-      "createdAt": "2024-04-15",
-      "dueDate": "2024-08-10",
+      "createdAt": "1403-02-15",
+      "dueDate": "1403-06-10",
       "department": "منابع انسانی",
       "approvalStatus": "approved",
       "clientId": null
@@ -924,8 +999,8 @@
       "managerId": 5,
       "status": "in-progress",
       "budget": 13000,
-      "createdAt": "2024-05-03",
-      "dueDate": "2024-09-05",
+      "createdAt": "1403-03-03",
+      "dueDate": "1403-07-05",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": null
@@ -936,8 +1011,8 @@
       "managerId": 6,
       "status": "cancelled",
       "budget": 4000,
-      "createdAt": "2024-05-18",
-      "dueDate": "2024-07-30",
+      "createdAt": "1403-03-18",
+      "dueDate": "1403-05-30",
       "department": "بازاریابی",
       "approvalStatus": "approved",
       "clientId": null
@@ -948,8 +1023,8 @@
       "managerId": 7,
       "status": "in-progress",
       "budget": 22000,
-      "createdAt": "2024-06-01",
-      "dueDate": "2024-11-20",
+      "createdAt": "1403-04-01",
+      "dueDate": "1403-09-20",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": 7
@@ -960,8 +1035,8 @@
       "managerId": 8,
       "status": "on-hold",
       "budget": 11000,
-      "createdAt": "2024-06-12",
-      "dueDate": "2024-09-25",
+      "createdAt": "1403-04-12",
+      "dueDate": "1403-07-25",
       "department": "توسعه",
       "approvalStatus": "pending",
       "clientId": null
@@ -972,8 +1047,8 @@
       "managerId": 9,
       "status": "completed",
       "budget": 18000,
-      "createdAt": "2024-07-01",
-      "dueDate": "2024-12-01",
+      "createdAt": "1403-05-01",
+      "dueDate": "1403-10-01",
       "department": "بازاریابی",
       "approvalStatus": "approved",
       "clientId": 21
@@ -984,8 +1059,8 @@
       "managerId": 10,
       "status": "in-progress",
       "budget": 9500,
-      "createdAt": "2024-07-15",
-      "dueDate": "2024-10-30",
+      "createdAt": "1403-05-15",
+      "dueDate": "1403-08-30",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": null
@@ -996,8 +1071,8 @@
       "managerId": 11,
       "status": "in-progress",
       "budget": 10500,
-      "createdAt": "2024-08-02",
-      "dueDate": "2024-11-10",
+      "createdAt": "1403-06-02",
+      "dueDate": "1403-09-10",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": null
@@ -1008,8 +1083,8 @@
       "managerId": 12,
       "status": "on-hold",
       "budget": 16000,
-      "createdAt": "2024-08-20",
-      "dueDate": "2025-02-15",
+      "createdAt": "1403-06-20",
+      "dueDate": "1404-10-15",
       "department": "توسعه",
       "approvalStatus": "pending",
       "clientId": null
@@ -1020,8 +1095,8 @@
       "managerId": 3,
       "status": "completed",
       "budget": 6000,
-      "createdAt": "2024-09-01",
-      "dueDate": "2024-11-25",
+      "createdAt": "1403-07-01",
+      "dueDate": "1403-09-25",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": 22
@@ -1032,8 +1107,8 @@
       "managerId": 4,
       "status": "in-progress",
       "budget": 7500,
-      "createdAt": "2024-09-18",
-      "dueDate": "2024-12-20",
+      "createdAt": "1403-07-18",
+      "dueDate": "1403-10-20",
       "department": "پشتیبانی",
       "approvalStatus": "approved",
       "clientId": null
@@ -1044,8 +1119,8 @@
       "managerId": 5,
       "status": "in-progress",
       "budget": 14000,
-      "createdAt": "2024-10-05",
-      "dueDate": "2025-01-30",
+      "createdAt": "1403-08-05",
+      "dueDate": "1403-11-30",
       "department": "بازاریابی",
       "approvalStatus": "approved",
       "clientId": null
@@ -1056,8 +1131,8 @@
       "managerId": 6,
       "status": "on-hold",
       "budget": 21000,
-      "createdAt": "2024-10-20",
-      "dueDate": "2025-04-01",
+      "createdAt": "1403-08-20",
+      "dueDate": "1404-02-01",
       "department": "توسعه",
       "approvalStatus": "pending",
       "clientId": null
@@ -1068,8 +1143,8 @@
       "managerId": 7,
       "status": "in-progress",
       "budget": 23000,
-      "createdAt": "2024-11-01",
-      "dueDate": "2025-05-10",
+      "createdAt": "1403-09-01",
+      "dueDate": "1404-03-10",
       "department": "توسعه",
       "approvalStatus": "pending",
       "clientId": null
@@ -1080,8 +1155,8 @@
       "managerId": 11,
       "status": "completed",
       "budget": 4700,
-      "createdAt": "2024-11-15",
-      "dueDate": "2025-01-10",
+      "createdAt": "1403-09-15",
+      "dueDate": "1403-11-10",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": null
@@ -1092,8 +1167,8 @@
       "managerId": 9,
       "status": "in-progress",
       "budget": 12500,
-      "createdAt": "2024-12-01",
-      "dueDate": "2025-03-15",
+      "createdAt": "1403-10-01",
+      "dueDate": "1404-01-15",
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": null
@@ -1104,8 +1179,8 @@
       "managerId": 10,
       "status": "on-hold",
       "budget": 8500,
-      "createdAt": "2024-12-20",
-      "dueDate": "2025-03-30",
+      "createdAt": "1403-10-20",
+      "dueDate": "1404-01-30",
       "department": "توسعه",
       "approvalStatus": "pending",
       "clientId": null
@@ -1250,46 +1325,222 @@
       "widgets": ["projectStatus", "deliveries", "invoices"]
     }
   ],
-  "permissions": [
+  "permissionGroups": [
     {
-      "roleId": "CEO",
-      "access": ["all"]
+      "id": "executive",
+      "name": "Executive",
+      "permissions": ["*"]
     },
     {
-      "roleId": "CTO",
-      "access": ["servers", "architecture", "projects", "users"]
+      "id": "technology",
+      "name": "Technology",
+      "permissions": [
+        "dashboard.read",
+        "users.read",
+        "projects.read",
+        "projects.update",
+        "architecture.read",
+        "architecture.update",
+        "servers.read",
+        "servers.update",
+        "teams.read",
+        "reports.read"
+      ]
     },
     {
-      "roleId": "ProjectManager",
-      "access": ["projects", "tasks", "team"]
+      "id": "operations",
+      "name": "Operations",
+      "permissions": [
+        "dashboard.read",
+        "operations.read",
+        "operations.update",
+        "projects.read",
+        "reports.read"
+      ]
     },
     {
-      "roleId": "ProductManager",
-      "access": ["projects", "roadmap"]
+      "id": "finance",
+      "name": "Finance",
+      "permissions": [
+        "dashboard.read",
+        "finance.read",
+        "finance.update",
+        "invoices.read",
+        "reports.read"
+      ]
     },
     {
-      "roleId": "FrontendDeveloper",
-      "access": ["tasks", "projects"]
+      "id": "project-management",
+      "name": "Project Management",
+      "permissions": [
+        "dashboard.read",
+        "projects.create",
+        "projects.read",
+        "projects.update",
+        "tasks.create",
+        "tasks.read",
+        "tasks.update",
+        "teams.read",
+        "reports.read"
+      ]
     },
     {
-      "roleId": "BackendDeveloper",
-      "access": ["tasks", "projects", "api"]
+      "id": "product",
+      "name": "Product",
+      "permissions": [
+        "dashboard.read",
+        "projects.read",
+        "roadmap.read",
+        "roadmap.update"
+      ]
     },
     {
-      "roleId": "UIDesigner",
-      "access": ["designs", "tasks"]
+      "id": "hr",
+      "name": "Human Resources",
+      "permissions": [
+        "dashboard.read",
+        "employees.read",
+        "employees.update",
+        "leave.read",
+        "salary.read"
+      ]
     },
     {
-      "roleId": "QAEngineer",
-      "access": ["bugs", "tasks"]
+      "id": "scrum",
+      "name": "Scrum",
+      "permissions": [
+        "dashboard.read",
+        "projects.read",
+        "tasks.read",
+        "tasks.update",
+        "sprints.read",
+        "sprints.update"
+      ]
     },
     {
-      "roleId": "Client",
-      "access": ["projectStatus", "invoices"]
+      "id": "frontend",
+      "name": "Frontend",
+      "permissions": [
+        "dashboard.read",
+        "projects.read",
+        "tasks.read",
+        "tasks.update",
+        "components.read",
+        "components.update",
+        "designFiles.read",
+        "commits.read"
+      ]
     },
     {
-      "roleId": "Partner",
-      "access": ["projects", "deliveries"]
+      "id": "backend",
+      "name": "Backend",
+      "permissions": [
+        "dashboard.read",
+        "projects.read",
+        "tasks.read",
+        "tasks.update",
+        "apis.read",
+        "apis.update",
+        "servers.read"
+      ]
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile",
+      "permissions": [
+        "dashboard.read",
+        "projects.read",
+        "tasks.read",
+        "tasks.update"
+      ]
+    },
+    {
+      "id": "devops",
+      "name": "DevOps",
+      "permissions": [
+        "dashboard.read",
+        "servers.read",
+        "servers.update",
+        "deployments.read",
+        "deployments.update"
+      ]
+    },
+    {
+      "id": "qa",
+      "name": "QA",
+      "permissions": [
+        "dashboard.read",
+        "tasks.read",
+        "bugs.read",
+        "bugs.update",
+        "testCases.read",
+        "testCases.update"
+      ]
+    },
+    {
+      "id": "design",
+      "name": "Design",
+      "permissions": [
+        "dashboard.read",
+        "tasks.read",
+        "designFiles.read",
+        "designFiles.update",
+        "figma.read"
+      ]
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture",
+      "permissions": [
+        "dashboard.read",
+        "architecture.read",
+        "architecture.update"
+      ]
+    },
+    {
+      "id": "sales",
+      "name": "Sales",
+      "permissions": ["dashboard.read", "projects.read", "customers.read"]
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing",
+      "permissions": ["dashboard.read", "campaigns.read", "campaigns.update"]
+    },
+    {
+      "id": "content",
+      "name": "Content",
+      "permissions": ["dashboard.read", "contents.read", "contents.update"]
+    },
+    {
+      "id": "customer-success",
+      "name": "Customer Success",
+      "permissions": ["dashboard.read", "customers.read", "projects.read"]
+    },
+    {
+      "id": "customer-support",
+      "name": "Customer Support",
+      "permissions": ["dashboard.read", "tickets.read", "tickets.update"]
+    },
+    {
+      "id": "technical-support",
+      "name": "Technical Support",
+      "permissions": [
+        "dashboard.read",
+        "tickets.read",
+        "tickets.update",
+        "servers.read"
+      ]
+    },
+    {
+      "id": "client",
+      "name": "Client",
+      "permissions": ["dashboard.read", "projects.read", "invoices.read"]
+    },
+    {
+      "id": "partner",
+      "name": "Partner",
+      "permissions": ["dashboard.read", "projects.read", "deliveries.read"]
     }
   ],
   "customers": [
@@ -1378,7 +1629,7 @@
       "tasksInProgress": 11,
       "components": 28,
       "designFiles": 37,
-      "completedTasks": 35
+      "completedTasks": 3
     },
     "projectProgress": {
       "percentage": 72,
