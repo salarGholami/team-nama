@@ -219,3 +219,12 @@ body {
 .svg-gradient svg {
   stroke: #34d399;
 }
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

@@ -24,8 +24,7 @@ export default function Select({
 }: Props) {
   return (
     <div className="flex flex-col gap-2">
-      <label className="text-sm font-medium">{label}</label>
-
+      {label && <label className="text-sm font-medium">{label}</label>}
       <div className="relative">
         {Icon && (
           <span className="pointer-events-none absolute start-5 top-1/2 -translate-y-1/2">
@@ -36,7 +35,7 @@ export default function Select({
         <select
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className={`w-full appearance-none rounded-md border border-primary-700 bg-primary-700/50 py-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 ${
+          className={`w-full appearance-none rounded-md border border-primary-600/30 bg-primary-700/30 py-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 ${
             Icon ? "ps-16 pe-16" : "ps-4 pe-8"
           }`}
         >
