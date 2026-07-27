@@ -567,7 +567,7 @@
       "phone": "09121234567",
       "department": "مدیریت",
       "joinDate": "1400-01-01",
-      "avatar": "/images/avatars/employees/salar.png",
+      "avatar": "/images/avatar/workers/CTO/salar.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -593,7 +593,7 @@
       "phone": "09131111111",
       "department": "توسعه",
       "joinDate": "1401-06-20",
-      "avatar": "/images/avatars/employees/ali.png",
+      "avatar": "/images/avatar/workers/FrontendDevelopers/ali.jpg",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -1733,71 +1733,526 @@
     "activity": {
       "periods": {
         "currentWeek": [
-          { "day": "شنبه", "value": 18, "label": "هفته جاری" },
-          { "day": "یکشنبه", "value": 15 },
-          { "day": "دوشنبه", "value": 28 },
-          { "day": "سه‌شنبه", "value": 45 },
-          { "day": "چهارشنبه", "value": 32 },
-          { "day": "پنجشنبه", "value": 41 },
-          { "day": "جمعه", "value": 35 }
+          {
+            "day": "شنبه",
+            "value": 18,
+            "label": "هفته جاری"
+          },
+          {
+            "day": "یکشنبه",
+            "value": 15
+          },
+          {
+            "day": "دوشنبه",
+            "value": 28
+          },
+          {
+            "day": "سه‌شنبه",
+            "value": 45
+          },
+          {
+            "day": "چهارشنبه",
+            "value": 32
+          },
+          {
+            "day": "پنجشنبه",
+            "value": 41
+          },
+          {
+            "day": "جمعه",
+            "value": 35
+          }
         ],
         "lastWeek": [
-          { "day": "شنبه", "value": 22 },
-          { "day": "یکشنبه", "value": 19 },
-          { "day": "دوشنبه", "value": 25 },
-          { "day": "سه‌شنبه", "value": 38 },
-          { "day": "چهارشنبه", "value": 29 },
-          { "day": "پنجشنبه", "value": 33 },
-          { "day": "جمعه", "value": 27 }
+          {
+            "day": "شنبه",
+            "value": 22
+          },
+          {
+            "day": "یکشنبه",
+            "value": 19
+          },
+          {
+            "day": "دوشنبه",
+            "value": 25
+          },
+          {
+            "day": "سه‌شنبه",
+            "value": 38
+          },
+          {
+            "day": "چهارشنبه",
+            "value": 29
+          },
+          {
+            "day": "پنجشنبه",
+            "value": 33
+          },
+          {
+            "day": "جمعه",
+            "value": 27
+          }
         ],
         "twoWeeksAgo": [
-          { "day": "شنبه", "value": 14 },
-          { "day": "یکشنبه", "value": 21 },
-          { "day": "دوشنبه", "value": 31 },
-          { "day": "سه‌شنبه", "value": 29 },
-          { "day": "چهارشنبه", "value": 35 },
-          { "day": "پنجشنبه", "value": 24 },
-          { "day": "جمعه", "value": 19 }
+          {
+            "day": "شنبه",
+            "value": 14
+          },
+          {
+            "day": "یکشنبه",
+            "value": 21
+          },
+          {
+            "day": "دوشنبه",
+            "value": 31
+          },
+          {
+            "day": "سه‌شنبه",
+            "value": 29
+          },
+          {
+            "day": "چهارشنبه",
+            "value": 35
+          },
+          {
+            "day": "پنجشنبه",
+            "value": 24
+          },
+          {
+            "day": "جمعه",
+            "value": 19
+          }
         ],
         "currentMonth": [
-          { "day": "هفته ۱", "value": 142 },
-          { "day": "هفته ۲", "value": 158 },
-          { "day": "هفته ۳", "value": 131 },
-          { "day": "هفته ۴", "value": 165 }
+          {
+            "day": "هفته ۱",
+            "value": 142
+          },
+          {
+            "day": "هفته ۲",
+            "value": 158
+          },
+          {
+            "day": "هفته ۳",
+            "value": 131
+          },
+          {
+            "day": "هفته ۴",
+            "value": 165
+          }
         ],
         "lastMonth": [
-          { "day": "هفته ۱", "value": 128 },
-          { "day": "هفته ۲", "value": 145 },
-          { "day": "هفته ۳", "value": 139 },
-          { "day": "هفته ۴", "value": 151 }
+          {
+            "day": "هفته ۱",
+            "value": 128
+          },
+          {
+            "day": "هفته ۲",
+            "value": 145
+          },
+          {
+            "day": "هفته ۳",
+            "value": 139
+          },
+          {
+            "day": "هفته ۴",
+            "value": 151
+          }
         ]
       }
     }
   },
-  "components": [
+  "commits": [
     {
       "id": 1,
-      "name": "ButtonPrimary",
-      "file": "ButtonPrimary.tsx",
-      "status": "completed",
-      "lastModified": "1405-04-03",
-      "ownerId": 3
+      "hash": "a3f8c21",
+      "message": "feat: اضافه کردن کامپوننت Modal با موقعیت‌یابی",
+      "branch": "feature/dashboard-modal",
+      "authorId": 3,
+      "date": "1405/04/18 - ۱۴:۳۰",
+      "filesChanged": 4,
+      "additions": 128,
+      "deletions": 12,
+      "status": "merged",
+      "projectId": 6
     },
     {
       "id": 2,
-      "name": "DashboardLayout",
-      "file": "DashboardLayout.tsx",
-      "status": "in-progress",
-      "lastModified": "1405-04-04",
-      "ownerId": 3
+      "hash": "b9e2d14",
+      "message": "fix: رفع باگ ریسپانسیو در موبایل",
+      "branch": "fix/responsive-dashboard",
+      "authorId": 3,
+      "date": "1405/04/17 - ۱۱:۱۵",
+      "filesChanged": 2,
+      "additions": 34,
+      "deletions": 18,
+      "status": "merged",
+      "projectId": 6
     },
     {
       "id": 3,
-      "name": "CardComponent",
-      "file": "CardComponent.tsx",
-      "status": "completed",
-      "lastModified": "1405-04-02",
-      "ownerId": 3
+      "hash": "c7a1f09",
+      "message": "refactor: بهینه‌سازی کامپوننت ButtonPrimary",
+      "branch": "refactor/button-primary",
+      "authorId": 3,
+      "date": "1405/04/16 - ۱۶:۴۵",
+      "filesChanged": 3,
+      "additions": 67,
+      "deletions": 41,
+      "status": "open",
+      "projectId": 6
+    },
+    {
+      "id": 4,
+      "hash": "d4e8b32",
+      "message": "style: بهبود ظاهر کارت‌های وظیفه",
+      "branch": "style/task-cards",
+      "authorId": 3,
+      "date": "1405/04/15 - ۰۹:۲۰",
+      "filesChanged": 5,
+      "additions": 89,
+      "deletions": 23,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 5,
+      "hash": "e1c9a77",
+      "message": "feat: پیاده‌سازی فیلتر و سورت در صفحه وظایف",
+      "branch": "feature/task-filters",
+      "authorId": 3,
+      "date": "1405/04/14 - ۱۳:۱۰",
+      "filesChanged": 6,
+      "additions": 156,
+      "deletions": 8,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 6,
+      "hash": "f6b3d88",
+      "message": "chore: آپدیت dependencies و رفع warningها",
+      "branch": "chore/deps-update",
+      "authorId": 3,
+      "date": "1405/04/13 - ۱۷:۰۰",
+      "filesChanged": 2,
+      "additions": 12,
+      "deletions": 9,
+      "status": "closed",
+      "projectId": 6
+    },
+    {
+      "id": 7,
+      "hash": "a1b2c3d",
+      "message": "feat: اضافه کردن احراز هویت و صفحات مربوطه",
+      "branch": "feature/auth",
+      "authorId": 3,
+      "date": "1405/04/12 - ۱۰:۲۴",
+      "filesChanged": 8,
+      "additions": 145,
+      "deletions": 23,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 8,
+      "hash": "e4f5g6h",
+      "message": "fix: رفع مشکل رندر در موبایل",
+      "branch": "fix/mobile-responsive",
+      "authorId": 3,
+      "date": "1405/04/11 - ۰۹:۱۵",
+      "filesChanged": 3,
+      "additions": 12,
+      "deletions": 4,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 9,
+      "hash": "i7j8k9l",
+      "message": "refactor: بهبود ساختار کامپوننت‌ها",
+      "branch": "refactor/components",
+      "authorId": 3,
+      "date": "1405/04/10 - ۰۸:۴۲",
+      "filesChanged": 7,
+      "additions": 89,
+      "deletions": 15,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 10,
+      "hash": "m1n2o3p",
+      "message": "feat: اضافه کردن فیلتر جستجو در داشبورد",
+      "branch": "feature/search-filter",
+      "authorId": 3,
+      "date": "1405/04/09 - ۱۸:۳۰",
+      "filesChanged": 4,
+      "additions": 34,
+      "deletions": 6,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 11,
+      "hash": "q4r5s6t",
+      "message": "style: استایل کارت‌های وظایف",
+      "branch": "style/task-cards",
+      "authorId": 3,
+      "date": "1405/04/08 - ۱۷:۱۰",
+      "filesChanged": 3,
+      "additions": 23,
+      "deletions": 2,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 12,
+      "hash": "u7v8w9x",
+      "message": "fix: رفع خطای محاسبه زمان انجام وظایف",
+      "branch": "fix/time-calculation",
+      "authorId": 3,
+      "date": "1405/04/07 - ۱۶:۰۵",
+      "filesChanged": 2,
+      "additions": 8,
+      "deletions": 1,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 13,
+      "hash": "y1z2a3b",
+      "message": "feat: پیاده‌سازی صفحه جزئیات پروژه",
+      "branch": "feature/project-details",
+      "authorId": 3,
+      "date": "1405/03/28 - ۱۴:۲۰",
+      "filesChanged": 5,
+      "additions": 112,
+      "deletions": 19,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 14,
+      "hash": "c4d5e6f",
+      "message": "refactor: جداسازی هوک‌های مشترک",
+      "branch": "refactor/shared-hooks",
+      "authorId": 3,
+      "date": "1405/03/25 - ۱۱:۴۵",
+      "filesChanged": 6,
+      "additions": 78,
+      "deletions": 45,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 15,
+      "hash": "g7h8i9j",
+      "message": "style: بهبود تم تاریک داشبورد",
+      "branch": "style/dark-theme",
+      "authorId": 3,
+      "date": "1405/03/20 - ۱۶:۳۰",
+      "filesChanged": 4,
+      "additions": 56,
+      "deletions": 12,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 16,
+      "hash": "k1l2m3n",
+      "message": "feat: اضافه کردن نوتیفیکیشن‌های لحظه‌ای",
+      "branch": "feature/realtime-notifications",
+      "authorId": 3,
+      "date": "1405/03/15 - ۱۰:۱۰",
+      "filesChanged": 7,
+      "additions": 134,
+      "deletions": 8,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 17,
+      "hash": "o4p5q6r",
+      "message": "fix: رفع مشکل اسکرول در لیست وظایف",
+      "branch": "fix/task-list-scroll",
+      "authorId": 3,
+      "date": "1405/03/10 - ۱۳:۲۵",
+      "filesChanged": 2,
+      "additions": 15,
+      "deletions": 7,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 18,
+      "hash": "s7t8u9v",
+      "message": "chore: به‌روزرسانی پکیج‌های React و Next",
+      "branch": "chore/update-deps",
+      "authorId": 3,
+      "date": "1405/02/28 - ۰۹:۴۰",
+      "filesChanged": 3,
+      "additions": 28,
+      "deletions": 22,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 19,
+      "hash": "w1x2y3z",
+      "message": "feat: پیاده‌سازی صفحه پروفایل کاربر",
+      "branch": "feature/user-profile",
+      "authorId": 3,
+      "date": "1405/02/20 - ۱۵:۱۵",
+      "filesChanged": 5,
+      "additions": 97,
+      "deletions": 14,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 20,
+      "hash": "a4b5c6d",
+      "message": "refactor: بهینه‌سازی رندر لیست‌های بزرگ",
+      "branch": "refactor/list-performance",
+      "authorId": 3,
+      "date": "1405/02/12 - ۱۲:۰۰",
+      "filesChanged": 4,
+      "additions": 63,
+      "deletions": 31,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 21,
+      "hash": "e7f8g9h",
+      "message": "style: طراحی مجدد هدر داشبورد",
+      "branch": "style/dashboard-header",
+      "authorId": 3,
+      "date": "1405/01/25 - ۱۴:۵۰",
+      "filesChanged": 3,
+      "additions": 41,
+      "deletions": 18,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 22,
+      "hash": "i1j2k3l",
+      "message": "feat: اضافه کردن سیستم تگ به وظایف",
+      "branch": "feature/task-tags",
+      "authorId": 3,
+      "date": "1405/01/15 - ۱۱:۲۰",
+      "filesChanged": 6,
+      "additions": 88,
+      "deletions": 9,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 23,
+      "hash": "m4n5o6p",
+      "message": "fix: رفع باگ نمایش تاریخ شمسی",
+      "branch": "fix/jalali-date",
+      "authorId": 3,
+      "date": "1404/12/20 - ۱۶:۴۰",
+      "filesChanged": 2,
+      "additions": 19,
+      "deletions": 5,
+      "status": "merged",
+      "projectId": 6
+    },
+    {
+      "id": 24,
+      "hash": "q7r8s9t",
+      "message": "feat: پیاده‌سازی داشبورد اولیه فرانت‌اند",
+      "branch": "feature/frontend-dashboard",
+      "authorId": 3,
+      "date": "1404/12/05 - ۱۰:۳۰",
+      "filesChanged": 9,
+      "additions": 210,
+      "deletions": 0,
+      "status": "merged",
+      "projectId": 6
+    }
+  ],
+  "commitComments": [
+    {
+      "id": 1784947731240,
+      "commitId": 1,
+      "userId": 3,
+      "text": "عالی شد",
+      "createdAt": "۱۴۰۵/۵/۳, ۶:۱۸:۵۰"
+    },
+    {
+      "id": 1,
+      "commitId": 1,
+      "userId": 3,
+      "text": "این کامپوننت خیلی خوب کار کرد، فقط باید تست موبایل رو کامل‌تر کنیم.",
+      "createdAt": "1405/04/18 - ۱۵:۱۰"
+    },
+    {
+      "id": 2,
+      "commitId": 3,
+      "userId": 3,
+      "text": "هنوز روی حالت dark mode مشکل داره، بعداً درستش می‌کنم.",
+      "createdAt": "1405/04/16 - ۱۷:۳۰"
+    },
+    {
+      "id": 3,
+      "commitId": 7,
+      "userId": 3,
+      "text": "سیستم احراز هویت دو مرحله‌ای با ایمیل و امکان بازیابی پیاده‌سازی شد.",
+      "createdAt": "1405/04/12 - ۱۱:۰۰"
+    },
+    {
+      "id": 4,
+      "commitId": 7,
+      "userId": 3,
+      "text": "بهتر است از useMemo برای این محاسبات استفاده شود تا رندرهای غیرضروری کم بشه.",
+      "createdAt": "1405/04/12 - ۱۲:۱۵"
+    },
+    {
+      "id": 5,
+      "commitId": 9,
+      "userId": 3,
+      "text": "ساختار کامپوننت‌ها خیلی تمیزتر شد.",
+      "createdAt": "1405/04/10 - ۰۹:۳۰"
+    },
+    {
+      "id": 6,
+      "commitId": 10,
+      "userId": 3,
+      "text": "فیلتر جستجو عالی کار می‌کنه.",
+      "createdAt": "1405/04/09 - ۱۹:۰۰"
+    },
+    {
+      "id": 7,
+      "commitId": 13,
+      "userId": 3,
+      "text": "صفحه جزئیات پروژه آماده است، فقط نیاز به تست داره.",
+      "createdAt": "1405/03/28 - ۱۵:۰۰"
+    },
+    {
+      "id": 8,
+      "commitId": 16,
+      "userId": 3,
+      "text": "نوتیفیکیشن‌ها با WebSocket وصل شدن.",
+      "createdAt": "1405/03/15 - ۱۱:۲۰"
+    },
+    {
+      "id": 9,
+      "commitId": 19,
+      "userId": 3,
+      "text": "پروفایل کاربر کامل شد.",
+      "createdAt": "1405/02/20 - ۱۶:۰۰"
+    },
+    {
+      "id": 10,
+      "commitId": 24,
+      "userId": 3,
+      "text": "نسخه اول داشبورد فرانت‌اند آماده شد 🎉",
+      "createdAt": "1404/12/05 - ۱۲:۰۰"
     }
   ],
   "designFiles": [
