@@ -39,6 +39,22 @@ export default function Sidebar({ role }: SidebarProps) {
   const normalize = (path: string) => path.replace(/\/+$/, "").toLowerCase();
 
   // ---------------------------
+  // جمع‌آوری همه hrefها برای تشخیص دقیق‌ترین match
+  // ---------------------------
+  const getAllHrefs = (items: NavItem[]): string[] => {
+    const result: string[] = [];
+    for (const item of items) {
+      if (item.href) result.push(normalize(item.href));
+      if (item.children?.length) {
+        result.push(...getAllHrefs(item.children));
+      }
+    }
+    return result;
+  };
+
+  const allHrefs = getAllHrefs(navItems);
+
+  // ---------------------------
   // ACTIVE DETECTION
   // ---------------------------
   const isItemActive = (item: NavItem): boolean => {
@@ -48,8 +64,23 @@ export default function Sidebar({ role }: SidebarProps) {
       return item.children.some(isItemActive);
     }
 
-    if (item.href) {
-      return current === normalize(item.href);
+    if (!item.href) return false;
+
+    const href = normalize(item.href);
+
+    // match دقیق
+    if (current === href) return true;
+
+    // مسیرهای تو در تو مثل /DesignFiles/1
+    if (current.startsWith(href + "/")) {
+      // اگر لینک دقیق‌تری وجود داشته باشه، این رو active نکن
+      const hasMoreSpecific = allHrefs.some(
+        (h) =>
+          h !== href &&
+          h.startsWith(href + "/") &&
+          (current === h || current.startsWith(h + "/")),
+      );
+      return !hasMoreSpecific;
     }
 
     return false;
@@ -131,7 +162,7 @@ export default function Sidebar({ role }: SidebarProps) {
       <Link
         key={item.href}
         href={item.href!}
-        onClick={() => setMobileOpen(false)} // <- بستن منو روی موبایل/تبلت
+        onClick={() => setMobileOpen(false)}
         className="relative block"
       >
         <motion.div
@@ -202,7 +233,6 @@ export default function Sidebar({ role }: SidebarProps) {
       <AnimatePresence>
         {mobileOpen && (
           <>
-            {/* Overlay */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.5 }}
@@ -211,7 +241,6 @@ export default function Sidebar({ role }: SidebarProps) {
               className="fixed inset-0 bg-black z-40"
             />
 
-            {/* Sidebar Panel */}
             <motion.aside
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}

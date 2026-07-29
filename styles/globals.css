@@ -217,7 +217,7 @@ body {
 }
 
 .svg-gradient svg {
-  stroke: #34d399;
+  stroke: rgb(52, 211, 153);
 }
 
 .scrollbar-none {
