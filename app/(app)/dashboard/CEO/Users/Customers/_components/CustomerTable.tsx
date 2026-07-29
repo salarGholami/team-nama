@@ -1,4 +1,3 @@
-// app\(app)\dashboard\ceo\users\customers\_components\CustomerTable.tsx
 "use client";
 
 import Avatar from "@/components/ui/avatar/Avatar";

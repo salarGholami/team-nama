@@ -606,7 +606,7 @@
       "phone": "09132222222",
       "department": "طراحی",
       "joinDate": "1401-09-10",
-      "avatar": "/images/avatars/employees/sara.png",
+      "avatar": "/images/avatar/workers/UIDesigner/Sara.jpg",
       "onlineStatus": false,
       "workStatus": "on-leave"
     },
@@ -869,6 +869,19 @@
       "avatar": "/images/avatars/clients/default.png",
       "onlineStatus": true,
       "workStatus": "active"
+    },
+    {
+      "id": 25,
+      "name": "الهام موسوی",
+      "email": "elham@corp.com",
+      "password": "elham123",
+      "roleId": "UIDesigner",
+      "phone": "09147778899",
+      "department": "طراحی",
+      "joinDate": "1402-04-12",
+      "avatar": "/images/avatar/workers/UIDesigner/Elham.jpg",
+      "onlineStatus": true,
+      "workStatus": "active"
     }
   ],
   "requests": [
@@ -907,7 +920,11 @@
       "dueDate": "1403-01-15",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": 18
+      "clientId": 18,
+      "relatedTaskIds": [1, 2, 3, 4],
+      "relatedMemberIds": [2, 3, 4, 5, 6],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 2,
@@ -919,7 +936,11 @@
       "dueDate": "1403-02-28",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [5],
+      "relatedMemberIds": [3, 5, 4, 2],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 3,
@@ -931,7 +952,11 @@
       "dueDate": "1403-01-20",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [2],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 4,
@@ -943,19 +968,27 @@
       "dueDate": "1403-02-01",
       "department": "بازاریابی",
       "approvalStatus": "approved",
-      "clientId": 19
+      "clientId": 19,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [9],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 5,
       "title": "Mobile Game",
-      "managerId": 12,
+      "managerId": 2,
       "status": "on-hold",
       "budget": 12000,
       "createdAt": "1402-12-02",
       "dueDate": "1403-05-15",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [2],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 6,
@@ -967,7 +1000,14 @@
       "dueDate": "1403-04-10",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [101, 102, 103],
+      "relatedMemberIds": [3, 2],
+      "relatedCommitIds": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24
+      ],
+      "relatedDesignFileIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     },
     {
       "id": 7,
@@ -979,7 +1019,11 @@
       "dueDate": "1403-08-01",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": 20
+      "clientId": 20,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [3],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 8,
@@ -991,7 +1035,11 @@
       "dueDate": "1403-06-10",
       "department": "منابع انسانی",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [4],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 9,
@@ -1003,7 +1051,11 @@
       "dueDate": "1403-07-05",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [5],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 10,
@@ -1015,19 +1067,27 @@
       "dueDate": "1403-05-30",
       "department": "بازاریابی",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [6],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 11,
       "title": "Video Streaming App",
-      "managerId": 7,
+      "managerId": 2,
       "status": "in-progress",
       "budget": 22000,
       "createdAt": "1403-04-01",
       "dueDate": "1403-09-20",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": 7
+      "clientId": 7,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [2],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 12,
@@ -1039,7 +1099,11 @@
       "dueDate": "1403-07-25",
       "department": "توسعه",
       "approvalStatus": "pending",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [8],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 13,
@@ -1051,19 +1115,27 @@
       "dueDate": "1403-10-01",
       "department": "بازاریابی",
       "approvalStatus": "approved",
-      "clientId": 21
+      "clientId": 21,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [9],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 14,
       "title": "Inventory Management",
-      "managerId": 10,
+      "managerId": 9,
       "status": "in-progress",
       "budget": 9500,
       "createdAt": "1403-05-15",
       "dueDate": "1403-08-30",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [9],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 15,
@@ -1075,19 +1147,27 @@
       "dueDate": "1403-09-10",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [11],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 16,
       "title": "Online Learning Platform",
-      "managerId": 12,
+      "managerId": 2,
       "status": "on-hold",
       "budget": 16000,
       "createdAt": "1403-06-20",
       "dueDate": "1404-10-15",
       "department": "توسعه",
       "approvalStatus": "pending",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [2],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 17,
@@ -1099,7 +1179,11 @@
       "dueDate": "1403-09-25",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": 22
+      "clientId": 22,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [3],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 18,
@@ -1111,7 +1195,11 @@
       "dueDate": "1403-10-20",
       "department": "پشتیبانی",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [4],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 19,
@@ -1123,7 +1211,11 @@
       "dueDate": "1403-11-30",
       "department": "بازاریابی",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [5],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 20,
@@ -1135,19 +1227,27 @@
       "dueDate": "1404-02-01",
       "department": "توسعه",
       "approvalStatus": "pending",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [6],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 21,
       "title": "IoT Platform",
-      "managerId": 7,
+      "managerId": 2,
       "status": "in-progress",
       "budget": 23000,
       "createdAt": "1403-09-01",
       "dueDate": "1404-03-10",
       "department": "توسعه",
       "approvalStatus": "pending",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [2],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 22,
@@ -1159,7 +1259,11 @@
       "dueDate": "1403-11-10",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [11],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 23,
@@ -1171,19 +1275,27 @@
       "dueDate": "1404-01-15",
       "department": "توسعه",
       "approvalStatus": "approved",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [9],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     },
     {
       "id": 24,
       "title": "Chat Application",
-      "managerId": 10,
+      "managerId": 9,
       "status": "on-hold",
       "budget": 8500,
       "createdAt": "1403-10-20",
       "dueDate": "1404-01-30",
       "department": "توسعه",
       "approvalStatus": "pending",
-      "clientId": null
+      "clientId": null,
+      "relatedTaskIds": [],
+      "relatedMemberIds": [9],
+      "relatedCommitIds": [],
+      "relatedDesignFileIds": []
     }
   ],
   "projectMembers": [
@@ -1221,6 +1333,131 @@
       "id": 7,
       "projectId": 2,
       "userId": 5
+    },
+    {
+      "id": 8,
+      "projectId": 2,
+      "userId": 4
+    },
+    {
+      "id": 9,
+      "projectId": 6,
+      "userId": 3
+    },
+    {
+      "id": 10,
+      "projectId": 2,
+      "userId": 2
+    },
+    {
+      "id": 11,
+      "projectId": 3,
+      "userId": 2
+    },
+    {
+      "id": 12,
+      "projectId": 4,
+      "userId": 9
+    },
+    {
+      "id": 13,
+      "projectId": 5,
+      "userId": 2
+    },
+    {
+      "id": 14,
+      "projectId": 6,
+      "userId": 2
+    },
+    {
+      "id": 15,
+      "projectId": 7,
+      "userId": 3
+    },
+    {
+      "id": 16,
+      "projectId": 8,
+      "userId": 4
+    },
+    {
+      "id": 17,
+      "projectId": 9,
+      "userId": 5
+    },
+    {
+      "id": 18,
+      "projectId": 10,
+      "userId": 6
+    },
+    {
+      "id": 19,
+      "projectId": 11,
+      "userId": 2
+    },
+    {
+      "id": 20,
+      "projectId": 12,
+      "userId": 8
+    },
+    {
+      "id": 21,
+      "projectId": 13,
+      "userId": 9
+    },
+    {
+      "id": 22,
+      "projectId": 14,
+      "userId": 9
+    },
+    {
+      "id": 23,
+      "projectId": 15,
+      "userId": 11
+    },
+    {
+      "id": 24,
+      "projectId": 16,
+      "userId": 2
+    },
+    {
+      "id": 25,
+      "projectId": 17,
+      "userId": 3
+    },
+    {
+      "id": 26,
+      "projectId": 18,
+      "userId": 4
+    },
+    {
+      "id": 27,
+      "projectId": 19,
+      "userId": 5
+    },
+    {
+      "id": 28,
+      "projectId": 20,
+      "userId": 6
+    },
+    {
+      "id": 29,
+      "projectId": 21,
+      "userId": 2
+    },
+    {
+      "id": 30,
+      "projectId": 22,
+      "userId": 11
+    },
+    {
+      "id": 31,
+      "projectId": 23,
+      "userId": 9
+    },
+    {
+      "id": 32,
+      "projectId": 24,
+      "userId": 9
     }
   ],
   "tasks": [
@@ -1323,6 +1560,66 @@
     {
       "roleId": "Client",
       "widgets": ["projectStatus", "deliveries", "invoices"]
+    },
+    {
+      "roleId": "ProductManager",
+      "widgets": ["projects", "roadmap"]
+    },
+    {
+      "roleId": "ScrumMaster",
+      "widgets": ["projects", "tasks", "sprints"]
+    },
+    {
+      "roleId": "MobileDeveloper",
+      "widgets": ["myTasks", "projectProgress"]
+    },
+    {
+      "roleId": "DevOpsEngineer",
+      "widgets": ["servers", "deployments"]
+    },
+    {
+      "roleId": "ContentCreator",
+      "widgets": ["contents", "projects"]
+    },
+    {
+      "roleId": "SalesManager",
+      "widgets": ["projects", "customers"]
+    },
+    {
+      "roleId": "MarketingManager",
+      "widgets": ["campaigns"]
+    },
+    {
+      "roleId": "CustomerSupport",
+      "widgets": ["tickets"]
+    },
+    {
+      "roleId": "SystemArchitect",
+      "widgets": ["architecture"]
+    },
+    {
+      "roleId": "COO",
+      "widgets": ["operations", "reports"]
+    },
+    {
+      "roleId": "CFO",
+      "widgets": ["finance", "reports"]
+    },
+    {
+      "roleId": "HRManager",
+      "widgets": ["employees", "leave"]
+    },
+    {
+      "roleId": "CustomerSuccessManager",
+      "widgets": ["customers", "projects"]
+    },
+    {
+      "roleId": "TechnicalSupport",
+      "widgets": ["tickets", "servers"]
+    },
+    {
+      "roleId": "Partner",
+      "widgets": ["deliveries", "projects"]
     }
   ],
   "permissionGroups": [
@@ -1874,7 +2171,13 @@
       "additions": 128,
       "deletions": 12,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 9,
+          "note": "پیاده‌سازی اولیه کامپوننت Modal با قابلیت موقعیت‌یابی"
+        }
+      ]
     },
     {
       "id": 2,
@@ -1887,7 +2190,17 @@
       "additions": 34,
       "deletions": 18,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 2,
+          "note": "رفع باگ ریسپانسیو داشبورد موبایل"
+        },
+        {
+          "designFileId": 1,
+          "note": "هماهنگی ریسپانسیو نسخه دسکتاپ با موبایل"
+        }
+      ]
     },
     {
       "id": 3,
@@ -1900,7 +2213,17 @@
       "additions": 67,
       "deletions": 41,
       "status": "open",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 3,
+          "note": "بهینه‌سازی ButtonPrimary در Design System"
+        },
+        {
+          "designFileId": 9,
+          "note": "هماهنگی ButtonPrimary با Modal"
+        }
+      ]
     },
     {
       "id": 4,
@@ -1913,7 +2236,13 @@
       "additions": 89,
       "deletions": 23,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 1,
+          "note": "بهبود ظاهر کارت‌های وظیفه در داشبورد اصلی"
+        }
+      ]
     },
     {
       "id": 5,
@@ -1926,7 +2255,13 @@
       "additions": 156,
       "deletions": 8,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 1,
+          "note": "پیاده‌سازی فیلتر و سورت وظایف در داشبورد"
+        }
+      ]
     },
     {
       "id": 6,
@@ -1939,7 +2274,13 @@
       "additions": 12,
       "deletions": 9,
       "status": "closed",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 3,
+          "note": "هماهنگی Design System بعد از آپدیت dependencies"
+        }
+      ]
     },
     {
       "id": 7,
@@ -1952,7 +2293,17 @@
       "additions": 145,
       "deletions": 23,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 5,
+          "note": "پیاده‌سازی صفحات احراز هویت مطابق طراحی صفحه ورود"
+        },
+        {
+          "designFileId": 4,
+          "note": "استفاده از کامپوننت‌های فرم در صفحه ورود"
+        }
+      ]
     },
     {
       "id": 8,
@@ -1965,7 +2316,13 @@
       "additions": 12,
       "deletions": 4,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 2,
+          "note": "رفع مشکل رندر موبایل در داشبورد"
+        }
+      ]
     },
     {
       "id": 9,
@@ -1978,7 +2335,13 @@
       "additions": 89,
       "deletions": 15,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 3,
+          "note": "بهبود ساختار کامپوننت‌ها بر اساس Design System"
+        }
+      ]
     },
     {
       "id": 10,
@@ -1991,7 +2354,13 @@
       "additions": 34,
       "deletions": 6,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 1,
+          "note": "اضافه کردن فیلتر جستجو در داشبورد اصلی"
+        }
+      ]
     },
     {
       "id": 11,
@@ -2004,7 +2373,13 @@
       "additions": 23,
       "deletions": 2,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 1,
+          "note": "استایل کارت‌های وظایف مطابق طراحی داشبورد"
+        }
+      ]
     },
     {
       "id": 12,
@@ -2017,7 +2392,13 @@
       "additions": 8,
       "deletions": 1,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 1,
+          "note": "رفع خطای محاسبه زمان انجام وظایف"
+        }
+      ]
     },
     {
       "id": 13,
@@ -2030,7 +2411,17 @@
       "additions": 112,
       "deletions": 19,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 11,
+          "note": "پیاده‌سازی صفحه جزئیات پروژه و Analytics"
+        },
+        {
+          "designFileId": 12,
+          "note": "استفاده از کامپوننت Charts در صفحه Analytics"
+        }
+      ]
     },
     {
       "id": 14,
@@ -2043,7 +2434,13 @@
       "additions": 78,
       "deletions": 45,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 3,
+          "note": "جداسازی هوک‌های مشترک بر اساس Design System"
+        }
+      ]
     },
     {
       "id": 15,
@@ -2056,7 +2453,17 @@
       "additions": 56,
       "deletions": 12,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 1,
+          "note": "بهبود تم تاریک داشبورد اصلی"
+        },
+        {
+          "designFileId": 3,
+          "note": "هماهنگی تم تاریک با Design System"
+        }
+      ]
     },
     {
       "id": 16,
@@ -2069,7 +2476,13 @@
       "additions": 134,
       "deletions": 8,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 7,
+          "note": "پیاده‌سازی سیستم نوتیفیکیشن لحظه‌ای"
+        }
+      ]
     },
     {
       "id": 17,
@@ -2082,7 +2495,13 @@
       "additions": 15,
       "deletions": 7,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 1,
+          "note": "رفع مشکل اسکرول لیست وظایف در داشبورد"
+        }
+      ]
     },
     {
       "id": 18,
@@ -2095,7 +2514,13 @@
       "additions": 28,
       "deletions": 22,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 3,
+          "note": "هماهنگی Design System بعد از به‌روزرسانی پکیج‌های React و Next"
+        }
+      ]
     },
     {
       "id": 19,
@@ -2108,7 +2533,17 @@
       "additions": 97,
       "deletions": 14,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 6,
+          "note": "پیاده‌سازی صفحه پروفایل کاربر"
+        },
+        {
+          "designFileId": 8,
+          "note": "هماهنگی تنظیمات حساب با صفحه پروفایل"
+        }
+      ]
     },
     {
       "id": 20,
@@ -2121,7 +2556,13 @@
       "additions": 63,
       "deletions": 31,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 10,
+          "note": "بهینه‌سازی رندر لیست‌های بزرگ (Data Table)"
+        }
+      ]
     },
     {
       "id": 21,
@@ -2134,7 +2575,13 @@
       "additions": 41,
       "deletions": 18,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 1,
+          "note": "طراحی مجدد هدر داشبورد اصلی"
+        }
+      ]
     },
     {
       "id": 22,
@@ -2147,7 +2594,13 @@
       "additions": 88,
       "deletions": 9,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 1,
+          "note": "اضافه کردن سیستم تگ به وظایف داشبورد"
+        }
+      ]
     },
     {
       "id": 23,
@@ -2160,7 +2613,13 @@
       "additions": 19,
       "deletions": 5,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 1,
+          "note": "رفع باگ نمایش تاریخ شمسی در داشبورد"
+        }
+      ]
     },
     {
       "id": 24,
@@ -2173,7 +2632,21 @@
       "additions": 210,
       "deletions": 0,
       "status": "merged",
-      "projectId": 6
+      "projectId": 6,
+      "relatedDesignFiles": [
+        {
+          "designFileId": 1,
+          "note": "پیاده‌سازی اولیه داشبورد فرانت‌اند (Desktop)"
+        },
+        {
+          "designFileId": 2,
+          "note": "پیاده‌سازی اولیه داشبورد فرانت‌اند (Mobile)"
+        },
+        {
+          "designFileId": 3,
+          "note": "راه‌اندازی اولیه Design System همراه با داشبورد"
+        }
+      ]
     }
   ],
   "commitComments": [
@@ -2258,10 +2731,810 @@
   "designFiles": [
     {
       "id": 1,
-      "name": "Main Dashboard.fig",
-      "type": "Figma",
-      "updatedAt": "1405-04-02",
-      "ownerId": 3
+      "projectId": 6,
+      "ownerId": 4,
+      "name": "داشبورد اصلی - Desktop",
+      "tool": "Figma",
+      "preview": "/images/design-files/dashboard-desktop.jpg",
+      "version": "v2.4",
+      "status": "ready",
+      "updatedAt": "1405-04-18",
+      "comments": 4,
+      "relatedCommits": [
+        {
+          "commitId": 2,
+          "note": "هماهنگی ریسپانسیو نسخه دسکتاپ با موبایل"
+        },
+        {
+          "commitId": 4,
+          "note": "بهبود ظاهر کارت‌های وظیفه در داشبورد اصلی"
+        },
+        {
+          "commitId": 5,
+          "note": "پیاده‌سازی فیلتر و سورت وظایف در داشبورد"
+        },
+        {
+          "commitId": 10,
+          "note": "اضافه کردن فیلتر جستجو در داشبورد اصلی"
+        },
+        {
+          "commitId": 11,
+          "note": "استایل کارت‌های وظایف مطابق طراحی داشبورد"
+        },
+        {
+          "commitId": 12,
+          "note": "رفع خطای محاسبه زمان انجام وظایف"
+        },
+        {
+          "commitId": 15,
+          "note": "بهبود تم تاریک داشبورد اصلی"
+        },
+        {
+          "commitId": 17,
+          "note": "رفع مشکل اسکرول لیست وظایف در داشبورد"
+        },
+        {
+          "commitId": 21,
+          "note": "طراحی مجدد هدر داشبورد اصلی"
+        },
+        {
+          "commitId": 22,
+          "note": "اضافه کردن سیستم تگ به وظایف داشبورد"
+        },
+        {
+          "commitId": 23,
+          "note": "رفع باگ نمایش تاریخ شمسی در داشبورد"
+        },
+        {
+          "commitId": 24,
+          "note": "پیاده‌سازی اولیه داشبورد فرانت‌اند (Desktop)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projectId": 6,
+      "ownerId": 25,
+      "name": "داشبورد اصلی - Mobile",
+      "tool": "Figma",
+      "preview": "/images/design-files/dashboard-mobile.jpg",
+      "version": "v2.3",
+      "status": "review",
+      "updatedAt": "1405-04-17",
+      "comments": 3,
+      "relatedCommits": [
+        {
+          "commitId": 2,
+          "note": "رفع باگ ریسپانسیو داشبورد موبایل"
+        },
+        {
+          "commitId": 8,
+          "note": "رفع مشکل رندر موبایل در داشبورد"
+        },
+        {
+          "commitId": 24,
+          "note": "پیاده‌سازی اولیه داشبورد فرانت‌اند (Mobile)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectId": 6,
+      "ownerId": 4,
+      "name": "سیستم طراحی (Design System)",
+      "tool": "Figma",
+      "preview": "/images/design-files/design-system.jpg",
+      "version": "v3.1",
+      "status": "ready",
+      "updatedAt": "1405-04-15",
+      "comments": 5,
+      "relatedCommits": [
+        {
+          "commitId": 3,
+          "note": "بهینه‌سازی ButtonPrimary در Design System"
+        },
+        {
+          "commitId": 9,
+          "note": "بهبود ساختار کامپوننت‌ها بر اساس Design System"
+        },
+        {
+          "commitId": 14,
+          "note": "جداسازی هوک‌های مشترک بر اساس Design System"
+        },
+        {
+          "commitId": 15,
+          "note": "هماهنگی تم تاریک با Design System"
+        },
+        {
+          "commitId": 24,
+          "note": "راه‌اندازی اولیه Design System همراه با داشبورد"
+        },
+        {
+          "commitId": 6,
+          "note": "هماهنگی Design System بعد از آپدیت dependencies"
+        },
+        {
+          "commitId": 18,
+          "note": "هماهنگی Design System بعد از به‌روزرسانی پکیج‌های React و Next"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectId": 6,
+      "ownerId": 25,
+      "name": "کامپوننت‌های فرم",
+      "tool": "Figma",
+      "preview": "/images/design-files/forms.jpg",
+      "version": "v1.8",
+      "status": "draft",
+      "updatedAt": "1405-04-13",
+      "comments": 3,
+      "relatedCommits": [
+        {
+          "commitId": 7,
+          "note": "استفاده از کامپوننت‌های فرم در صفحه ورود"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectId": 6,
+      "ownerId": 4,
+      "name": "صفحه ورود",
+      "tool": "Figma",
+      "preview": "/images/design-files/auth.jpg",
+      "version": "v1.5",
+      "status": "ready",
+      "updatedAt": "1405-04-12",
+      "comments": 4,
+      "relatedCommits": [
+        {
+          "commitId": 7,
+          "note": "پیاده‌سازی صفحات احراز هویت مطابق طراحی صفحه ورود"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "projectId": 6,
+      "ownerId": 25,
+      "name": "صفحه پروفایل کاربر",
+      "tool": "Figma",
+      "preview": "/images/design-files/profile.jpg",
+      "version": "v2.0",
+      "status": "review",
+      "updatedAt": "1405-04-11",
+      "comments": 4,
+      "relatedCommits": [
+        {
+          "commitId": 19,
+          "note": "پیاده‌سازی صفحه پروفایل کاربر"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "projectId": 6,
+      "ownerId": 4,
+      "name": "سیستم نوتیفیکیشن",
+      "tool": "Figma",
+      "preview": "/images/design-files/notifications.jpg",
+      "version": "v1.2",
+      "status": "draft",
+      "updatedAt": "1405-04-10",
+      "comments": 3,
+      "relatedCommits": [
+        {
+          "commitId": 16,
+          "note": "پیاده‌سازی سیستم نوتیفیکیشن لحظه‌ای"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "projectId": 6,
+      "ownerId": 25,
+      "name": "تنظیمات حساب",
+      "tool": "Figma",
+      "preview": "/images/design-files/settings.jpg",
+      "version": "v2.1",
+      "status": "ready",
+      "updatedAt": "1405-04-08",
+      "comments": 3,
+      "relatedCommits": [
+        {
+          "commitId": 19,
+          "note": "هماهنگی تنظیمات حساب با صفحه پروفایل"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "projectId": 6,
+      "ownerId": 4,
+      "name": "کامپوننت Modal",
+      "tool": "Figma",
+      "preview": "/images/design-files/modal.jpg",
+      "version": "v1.0",
+      "status": "review",
+      "updatedAt": "1405-04-06",
+      "comments": 5,
+      "relatedCommits": [
+        {
+          "commitId": 1,
+          "note": "پیاده‌سازی اولیه کامپوننت Modal با قابلیت موقعیت‌یابی"
+        },
+        {
+          "commitId": 3,
+          "note": "هماهنگی ButtonPrimary با Modal"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "projectId": 6,
+      "ownerId": 25,
+      "name": "کامپوننت Data Table",
+      "tool": "Figma",
+      "preview": "/images/design-files/table.jpg",
+      "version": "v2.7",
+      "status": "archived",
+      "updatedAt": "1405-03-28",
+      "comments": 2,
+      "relatedCommits": [
+        {
+          "commitId": 20,
+          "note": "بهینه‌سازی رندر لیست‌های بزرگ (Data Table)"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "projectId": 6,
+      "ownerId": 4,
+      "name": "داشبورد Analytics",
+      "tool": "Figma",
+      "preview": "/images/design-files/analytics.jpg",
+      "version": "v1.4",
+      "status": "ready",
+      "updatedAt": "1405-03-22",
+      "comments": 4,
+      "relatedCommits": [
+        {
+          "commitId": 13,
+          "note": "پیاده‌سازی صفحه جزئیات پروژه و Analytics"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "projectId": 6,
+      "ownerId": 25,
+      "name": "کامپوننت Charts",
+      "tool": "Figma",
+      "preview": "/images/design-files/charts.jpg",
+      "version": "v2.5",
+      "status": "review",
+      "updatedAt": "1405-03-18",
+      "comments": 5,
+      "relatedCommits": [
+        {
+          "commitId": 13,
+          "note": "استفاده از کامپوننت Charts در صفحه Analytics"
+        }
+      ]
+    }
+  ],
+  "designFileCommits": [
+    {
+      "id": 1,
+      "designFileId": 9,
+      "commitId": 1,
+      "note": "پیاده‌سازی اولیه کامپوننت Modal با قابلیت موقعیت‌یابی"
+    },
+    {
+      "id": 2,
+      "designFileId": 2,
+      "commitId": 2,
+      "note": "رفع باگ ریسپانسیو داشبورد موبایل"
+    },
+    {
+      "id": 3,
+      "designFileId": 1,
+      "commitId": 2,
+      "note": "هماهنگی ریسپانسیو نسخه دسکتاپ با موبایل"
+    },
+    {
+      "id": 4,
+      "designFileId": 3,
+      "commitId": 3,
+      "note": "بهینه‌سازی ButtonPrimary در Design System"
+    },
+    {
+      "id": 5,
+      "designFileId": 1,
+      "commitId": 4,
+      "note": "بهبود ظاهر کارت‌های وظیفه در داشبورد اصلی"
+    },
+    {
+      "id": 6,
+      "designFileId": 1,
+      "commitId": 5,
+      "note": "پیاده‌سازی فیلتر و سورت وظایف در داشبورد"
+    },
+    {
+      "id": 7,
+      "designFileId": 5,
+      "commitId": 7,
+      "note": "پیاده‌سازی صفحات احراز هویت مطابق طراحی صفحه ورود"
+    },
+    {
+      "id": 8,
+      "designFileId": 2,
+      "commitId": 8,
+      "note": "رفع مشکل رندر موبایل در داشبورد"
+    },
+    {
+      "id": 9,
+      "designFileId": 3,
+      "commitId": 9,
+      "note": "بهبود ساختار کامپوننت‌ها بر اساس Design System"
+    },
+    {
+      "id": 10,
+      "designFileId": 1,
+      "commitId": 10,
+      "note": "اضافه کردن فیلتر جستجو در داشبورد اصلی"
+    },
+    {
+      "id": 11,
+      "designFileId": 1,
+      "commitId": 11,
+      "note": "استایل کارت‌های وظایف مطابق طراحی داشبورد"
+    },
+    {
+      "id": 12,
+      "designFileId": 1,
+      "commitId": 12,
+      "note": "رفع خطای محاسبه زمان انجام وظایف"
+    },
+    {
+      "id": 13,
+      "designFileId": 11,
+      "commitId": 13,
+      "note": "پیاده‌سازی صفحه جزئیات پروژه و Analytics"
+    },
+    {
+      "id": 14,
+      "designFileId": 3,
+      "commitId": 14,
+      "note": "جداسازی هوک‌های مشترک بر اساس Design System"
+    },
+    {
+      "id": 15,
+      "designFileId": 1,
+      "commitId": 15,
+      "note": "بهبود تم تاریک داشبورد اصلی"
+    },
+    {
+      "id": 16,
+      "designFileId": 3,
+      "commitId": 15,
+      "note": "هماهنگی تم تاریک با Design System"
+    },
+    {
+      "id": 17,
+      "designFileId": 7,
+      "commitId": 16,
+      "note": "پیاده‌سازی سیستم نوتیفیکیشن لحظه‌ای"
+    },
+    {
+      "id": 18,
+      "designFileId": 1,
+      "commitId": 17,
+      "note": "رفع مشکل اسکرول لیست وظایف در داشبورد"
+    },
+    {
+      "id": 19,
+      "designFileId": 6,
+      "commitId": 19,
+      "note": "پیاده‌سازی صفحه پروفایل کاربر"
+    },
+    {
+      "id": 20,
+      "designFileId": 8,
+      "commitId": 19,
+      "note": "هماهنگی تنظیمات حساب با صفحه پروفایل"
+    },
+    {
+      "id": 21,
+      "designFileId": 10,
+      "commitId": 20,
+      "note": "بهینه‌سازی رندر لیست‌های بزرگ (Data Table)"
+    },
+    {
+      "id": 22,
+      "designFileId": 1,
+      "commitId": 21,
+      "note": "طراحی مجدد هدر داشبورد اصلی"
+    },
+    {
+      "id": 23,
+      "designFileId": 1,
+      "commitId": 22,
+      "note": "اضافه کردن سیستم تگ به وظایف داشبورد"
+    },
+    {
+      "id": 24,
+      "designFileId": 1,
+      "commitId": 23,
+      "note": "رفع باگ نمایش تاریخ شمسی در داشبورد"
+    },
+    {
+      "id": 25,
+      "designFileId": 1,
+      "commitId": 24,
+      "note": "پیاده‌سازی اولیه داشبورد فرانت‌اند (Desktop)"
+    },
+    {
+      "id": 26,
+      "designFileId": 2,
+      "commitId": 24,
+      "note": "پیاده‌سازی اولیه داشبورد فرانت‌اند (Mobile)"
+    },
+    {
+      "id": 27,
+      "designFileId": 4,
+      "commitId": 7,
+      "note": "استفاده از کامپوننت‌های فرم در صفحه ورود"
+    },
+    {
+      "id": 28,
+      "designFileId": 12,
+      "commitId": 13,
+      "note": "استفاده از کامپوننت Charts در صفحه Analytics"
+    },
+    {
+      "id": 29,
+      "designFileId": 3,
+      "commitId": 24,
+      "note": "راه‌اندازی اولیه Design System همراه با داشبورد"
+    },
+    {
+      "id": 30,
+      "designFileId": 9,
+      "commitId": 3,
+      "note": "هماهنگی ButtonPrimary با Modal"
+    },
+    {
+      "id": 31,
+      "designFileId": 3,
+      "commitId": 6,
+      "note": "هماهنگی Design System بعد از آپدیت dependencies"
+    },
+    {
+      "id": 32,
+      "designFileId": 3,
+      "commitId": 18,
+      "note": "هماهنگی Design System بعد از به‌روزرسانی پکیج‌های React و Next"
+    }
+  ],
+  "designFileComments": [
+    {
+      "id": 1,
+      "designFileId": 1,
+      "userId": 3,
+      "text": "طراحی دسکتاپ خیلی تمیز شده، فقط فاصله‌های padding رو یکم بیشتر کن.",
+      "createdAt": "1405/04/18 - ۱۵:۲۰"
+    },
+    {
+      "id": 2,
+      "designFileId": 1,
+      "userId": 4,
+      "text": "نسخه v2.4 آماده‌ست. می‌تونید توسعه رو شروع کنید.",
+      "createdAt": "1405/04/17 - ۱۱:۴۵"
+    },
+    {
+      "id": 3,
+      "designFileId": 1,
+      "userId": 2,
+      "text": "از نظر UX عالی به نظر می‌رسه، فقط روی حالت تاریک هم چک کنید.",
+      "createdAt": "1405/04/16 - ۰۹:۳۰"
+    },
+    {
+      "id": 4,
+      "designFileId": 1,
+      "userId": 3,
+      "text": "کارت‌های وظیفه خیلی بهتر شدن نسبت به نسخه قبلی.",
+      "createdAt": "1405/04/15 - ۱۴:۱۰"
+    },
+    {
+      "id": 5,
+      "designFileId": 2,
+      "userId": 3,
+      "text": "روی موبایل هنوز مشکل اسکرول افقی داریم.",
+      "createdAt": "1405/04/17 - ۱۲:۰۰"
+    },
+    {
+      "id": 6,
+      "designFileId": 2,
+      "userId": 25,
+      "text": "نسخه موبایل آپدیت شد، لطفاً دوباره تست کنید.",
+      "createdAt": "1405/04/16 - ۱۶:۲۰"
+    },
+    {
+      "id": 7,
+      "designFileId": 2,
+      "userId": 3,
+      "text": "فاصله دکمه‌ها در حالت portrait خیلی کمه.",
+      "createdAt": "1405/04/15 - ۱۰:۴۵"
+    },
+    {
+      "id": 8,
+      "designFileId": 3,
+      "userId": 3,
+      "text": "رنگ‌های primary و secondary خیلی هماهنگ شدن.",
+      "createdAt": "1405/04/15 - ۱۳:۰۰"
+    },
+    {
+      "id": 9,
+      "designFileId": 3,
+      "userId": 4,
+      "text": "کامپوننت ButtonPrimary آپدیت شد.",
+      "createdAt": "1405/04/14 - ۱۱:۲۰"
+    },
+    {
+      "id": 10,
+      "designFileId": 3,
+      "userId": 5,
+      "text": "از نظر consistency عالیه، می‌تونیم در کل پروژه استفاده کنیم.",
+      "createdAt": "1405/04/13 - ۱۵:۴۰"
+    },
+    {
+      "id": 11,
+      "designFileId": 3,
+      "userId": 3,
+      "text": "spacing scale رو یکم دقیق‌تر تعریف کنید.",
+      "createdAt": "1405/04/12 - ۰۹:۱۵"
+    },
+    {
+      "id": 12,
+      "designFileId": 3,
+      "userId": 4,
+      "text": "نسخه v3.1 منتشر شد.",
+      "createdAt": "1405/04/11 - ۱۷:۰۰"
+    },
+    {
+      "id": 13,
+      "designFileId": 4,
+      "userId": 3,
+      "text": "Input و Select هنوز نیاز به حالت error دارن.",
+      "createdAt": "1405/04/13 - ۱۴:۳۰"
+    },
+    {
+      "id": 14,
+      "designFileId": 4,
+      "userId": 25,
+      "text": "حالت‌های disabled و focus اضافه شدن.",
+      "createdAt": "1405/04/12 - ۱۰:۵۰"
+    },
+    {
+      "id": 15,
+      "designFileId": 4,
+      "userId": 3,
+      "text": "placeholderها یکم کمرنگ‌تر بشن بهتره.",
+      "createdAt": "1405/04/11 - ۱۶:۲۰"
+    },
+    {
+      "id": 16,
+      "designFileId": 5,
+      "userId": 3,
+      "text": "صفحه لاگین خیلی تمیز و مینیماله، عالی شد.",
+      "createdAt": "1405/04/12 - ۱۲:۴۰"
+    },
+    {
+      "id": 17,
+      "designFileId": 5,
+      "userId": 4,
+      "text": "فرم validation رو هم در نظر گرفتم.",
+      "createdAt": "1405/04/11 - ۰۹:۳۰"
+    },
+    {
+      "id": 18,
+      "designFileId": 5,
+      "userId": 2,
+      "text": "از نظر امنیت بصری خوب به نظر می‌رسه.",
+      "createdAt": "1405/04/10 - ۱۵:۱۵"
+    },
+    {
+      "id": 19,
+      "designFileId": 5,
+      "userId": 3,
+      "text": "دکمه ورود در حالت loading هم طراحی بشه.",
+      "createdAt": "1405/04/09 - ۱۱:۰۰"
+    },
+    {
+      "id": 20,
+      "designFileId": 6,
+      "userId": 3,
+      "text": "بخش آپلود آواتار هنوز نیاز به بهبود داره.",
+      "createdAt": "1405/04/11 - ۱۴:۲۰"
+    },
+    {
+      "id": 21,
+      "designFileId": 6,
+      "userId": 4,
+      "text": "نسخه review آماده است، نظراتتون رو بگین.",
+      "createdAt": "1405/04/10 - ۱۰:۴۵"
+    },
+    {
+      "id": 22,
+      "designFileId": 6,
+      "userId": 9,
+      "text": "اطلاعات شخصی و تنظیمات حساب خوب جدا شدن.",
+      "createdAt": "1405/04/09 - ۱۶:۳۰"
+    },
+    {
+      "id": 23,
+      "designFileId": 6,
+      "userId": 3,
+      "text": "در حالت موبایل سایدبار پروفایل مشکل داره.",
+      "createdAt": "1405/04/08 - ۱۲:۱۰"
+    },
+    {
+      "id": 24,
+      "designFileId": 7,
+      "userId": 3,
+      "text": "آیکون‌های نوتیفیکیشن خیلی قشنگ شدن.",
+      "createdAt": "1405/04/10 - ۱۳:۵۰"
+    },
+    {
+      "id": 25,
+      "designFileId": 7,
+      "userId": 4,
+      "text": "هنوز در مرحله draft هستیم، نظرات اولیه رو بگین.",
+      "createdAt": "1405/04/09 - ۱۱:۲۰"
+    },
+    {
+      "id": 26,
+      "designFileId": 7,
+      "userId": 3,
+      "text": "toast و dropdown notification جدا طراحی شدن؟",
+      "createdAt": "1405/04/08 - ۱۵:۴۰"
+    },
+    {
+      "id": 27,
+      "designFileId": 8,
+      "userId": 3,
+      "text": "صفحه تنظیمات خیلی منظم و دسته‌بندی شده است.",
+      "createdAt": "1405/04/08 - ۱۴:۰۰"
+    },
+    {
+      "id": 28,
+      "designFileId": 8,
+      "userId": 25,
+      "text": "بخش امنیت و تغییر رمز عبور اضافه شد.",
+      "createdAt": "1405/04/07 - ۱۰:۳۰"
+    },
+    {
+      "id": 29,
+      "designFileId": 8,
+      "userId": 2,
+      "text": "از نظر UX خوبه، فقط جستجو داخل تنظیمات می‌تونه مفید باشه.",
+      "createdAt": "1405/04/06 - ۱۶:۱۵"
+    },
+    {
+      "id": 30,
+      "designFileId": 9,
+      "userId": 5,
+      "text": "مودال موقعیت‌یابی عالی کار می‌کنه.",
+      "createdAt": "1405/04/06 - ۱۵:۲۰"
+    },
+    {
+      "id": 31,
+      "designFileId": 9,
+      "userId": 3,
+      "text": "لطفاً حالت dark رو هم چک کنید.",
+      "createdAt": "1405/04/05 - ۱۲:۴۰"
+    },
+    {
+      "id": 32,
+      "designFileId": 9,
+      "userId": 4,
+      "text": "نسخه اولیه Modal با ۴ موقعیت آماده شد.",
+      "createdAt": "1405/04/04 - ۱۰:۱۵"
+    },
+    {
+      "id": 33,
+      "designFileId": 9,
+      "userId": 3,
+      "text": "انیمیشن باز و بسته شدن رو یکم نرم‌تر کنید.",
+      "createdAt": "1405/04/03 - ۱۴:۵۰"
+    },
+    {
+      "id": 34,
+      "designFileId": 9,
+      "userId": 4,
+      "text": "backdrop و z-index هم در نظر گرفته شده.",
+      "createdAt": "1405/04/02 - ۰۹:۳۰"
+    },
+    {
+      "id": 35,
+      "designFileId": 10,
+      "userId": 3,
+      "text": "این نسخه archive شده، دیگه استفاده نمی‌کنیم.",
+      "createdAt": "1405/03/28 - ۱۱:۰۰"
+    },
+    {
+      "id": 36,
+      "designFileId": 10,
+      "userId": 25,
+      "text": "جدول جدید در Design System جایگزین شد.",
+      "createdAt": "1405/03/27 - ۱۵:۴۰"
+    },
+    {
+      "id": 37,
+      "designFileId": 11,
+      "userId": 3,
+      "text": "چارت‌ها خیلی خوانا شدن.",
+      "createdAt": "1405/03/22 - ۱۴:۲۰"
+    },
+    {
+      "id": 38,
+      "designFileId": 11,
+      "userId": 5,
+      "text": "از نظر data visualization عالیه.",
+      "createdAt": "1405/03/21 - ۱۰:۵۰"
+    },
+    {
+      "id": 39,
+      "designFileId": 11,
+      "userId": 4,
+      "text": "فیلترهای زمانی اضافه شدن.",
+      "createdAt": "1405/03/20 - ۱۶:۳۰"
+    },
+    {
+      "id": 40,
+      "designFileId": 11,
+      "userId": 3,
+      "text": "رنگ‌بندی سری‌ها با Design System هماهنگ بشه.",
+      "createdAt": "1405/03/19 - ۱۲:۱۵"
+    },
+    {
+      "id": 41,
+      "designFileId": 12,
+      "userId": 3,
+      "text": "Line و Bar chart عالی کار می‌کنن.",
+      "createdAt": "1405/03/18 - ۱۵:۰۰"
+    },
+    {
+      "id": 42,
+      "designFileId": 12,
+      "userId": 25,
+      "text": "نسخه review، لطفاً بازخورد بدین.",
+      "createdAt": "1405/03/17 - ۱۱:۴۰"
+    },
+    {
+      "id": 43,
+      "designFileId": 12,
+      "userId": 5,
+      "text": "Tooltip و legend رو هم چک کنید.",
+      "createdAt": "1405/03/16 - ۱۴:۲۰"
+    },
+    {
+      "id": 44,
+      "designFileId": 12,
+      "userId": 3,
+      "text": "در حالت dark mode رنگ‌ها کمی کنتراست کم دارن.",
+      "createdAt": "1405/03/15 - ۰۹:۵۰"
+    },
+    {
+      "id": 45,
+      "designFileId": 12,
+      "userId": 4,
+      "text": "پشتیبانی از RTL اضافه شد.",
+      "createdAt": "1405/03/14 - ۱۶:۱۰"
     }
   ]
 }

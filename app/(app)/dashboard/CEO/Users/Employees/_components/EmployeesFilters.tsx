@@ -1,10 +1,9 @@
-// app\(app)\dashboard\ceo\users\employees\_components\EmployeesFilters.tsx
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Search, RotateCcw } from "lucide-react";
-import EmployeeCard from "./EmployeeCard";
 import EmployeesTable from "./EmployeesTable";
+import Pagination from "@/components/ui/Pagination";
 import type { Employee } from "@/types/employee";
 
 interface Props {
@@ -13,6 +12,8 @@ interface Props {
   initialDepartments: string[];
   initialRoles: { id: string; title: string }[];
 }
+
+const PAGE_SIZE = 5;
 
 export default function EmployeesFilters({
   employees,
@@ -24,6 +25,7 @@ export default function EmployeesFilters({
   const [department, setDepartment] = useState("");
   const [role, setRole] = useState("");
   const [sortAsc, setSortAsc] = useState(true);
+  const [page, setPage] = useState(1);
 
   const filteredEmployees = useMemo(() => {
     let result = [...employees];
@@ -62,11 +64,35 @@ export default function EmployeesFilters({
     return result;
   }, [employees, search, department, role, sortAsc]);
 
+  useEffect(() => {
+    setPage(1);
+  }, [search, department, role, sortAsc]);
+
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredEmployees.length / PAGE_SIZE),
+  );
+
+  useEffect(() => {
+    if (page > totalPages) {
+      setPage(totalPages);
+    }
+  }, [page, totalPages]);
+
+  const paginatedEmployees = useMemo(() => {
+    const start = (page - 1) * PAGE_SIZE;
+    return filteredEmployees.slice(start, start + PAGE_SIZE);
+  }, [filteredEmployees, page]);
+
+  const from = filteredEmployees.length === 0 ? 0 : (page - 1) * PAGE_SIZE + 1;
+  const to = Math.min(page * PAGE_SIZE, filteredEmployees.length);
+
   const resetFilters = () => {
     setSearch("");
     setDepartment("");
     setRole("");
     setSortAsc(true);
+    setPage(1);
   };
 
   return (
@@ -81,7 +107,7 @@ export default function EmployeesFilters({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="جستجو..."
-              className="w-full rounded-2xl bg-primary-600/30 px-5 py-3 pr-12 text-sm  placeholder-primary-500 ring-1 ring-white/10 transition focus:ring-2 focus:ring-primary-700"
+              className="w-full rounded-2xl bg-primary-600/30 px-5 py-3 pr-12 text-sm placeholder-primary-500 ring-1 ring-white/10 transition focus:ring-2 focus:ring-primary-700"
             />
           </div>
 
@@ -117,6 +143,7 @@ export default function EmployeesFilters({
 
           {/* Sort */}
           <button
+            type="button"
             onClick={() => setSortAsc((prev) => !prev)}
             className="rounded-2xl gradient-bg-glasses px-5 py-3 text-sm font-bold transition hover:bg-primary-500 active:scale-[0.98]"
           >
@@ -125,6 +152,7 @@ export default function EmployeesFilters({
         </div>
 
         <button
+          type="button"
           onClick={resetFilters}
           className="flex w-full items-center justify-center gap-2 rounded-2xl border border-primary-100/30 px-6 py-3 text-sm text-primary-300 transition hover:bg-white/[0.05] lg:w-auto"
         >
@@ -133,15 +161,42 @@ export default function EmployeesFilters({
         </button>
       </div>
 
-      {/* Desktop Table */}
-      <div className="">
-        <EmployeesTable employees={filteredEmployees} rolesMap={rolesMap} />
-      </div>
-
-      {filteredEmployees.length === 0 && (
+      {/* Table + Pagination */}
+      {filteredEmployees.length === 0 ? (
         <div className="rounded-2xl bg-primary-600/30 py-16 text-center text-zinc-500 ring-1 ring-white/10">
           هیچ کارمندی یافت نشد
         </div>
+      ) : (
+        <>
+          <div>
+            <EmployeesTable
+              employees={paginatedEmployees}
+              rolesMap={rolesMap}
+            />
+          </div>
+
+          <div className="flex flex-col items-center justify-between gap-4 border-t border-primary-600/20 pt-6 sm:flex-row">
+            <p className="text-sm text-primary-400">
+              نمایش{" "}
+              <span className="font-medium text-primary-300">
+                {from}–{to}
+              </span>{" "}
+              از{" "}
+              <span className="font-medium text-primary-300">
+                {filteredEmployees.length}
+              </span>{" "}
+              کارمند
+            </p>
+
+            {totalPages > 1 && (
+              <Pagination
+                currentPage={page}
+                totalPages={totalPages}
+                onPageChange={setPage}
+              />
+            )}
+          </div>
+        </>
       )}
     </div>
   );
