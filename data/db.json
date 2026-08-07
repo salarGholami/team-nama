@@ -189,15 +189,15 @@
         "children": [
           {
             "label": "درخواست وام",
-            "href": "/dashboard/ceo/requests/loan"
+            "href": "/dashboard/ceo/requests/Users/Employees/LoanRequest"
           },
           {
             "label": "درخواست افزایش حقوق",
-            "href": "/dashboard/ceo/requests/salary-increase"
+            "href": "/dashboard/ceo/requests/Users/Employees/SalaryIncreaseRequset"
           },
           {
             "label": "درخواست مرخصی",
-            "href": "/dashboard/ceo/requests/leave"
+            "href": "/dashboard/ceo/requests/Users/Employees/LeaveRequest"
           }
         ]
       },
@@ -266,22 +266,22 @@
     "ProjectManager": [
       {
         "label": "داشبورد",
-        "href": "/dashboard/pm",
+        "href": "/dashboard/ProjectManager",
         "icon": "Home"
       },
       {
         "label": "پروژه‌ها",
-        "href": "/dashboard/pm/projects",
+        "href": "/dashboard/ProjectManager/Projects",
         "icon": "FileText"
       },
       {
         "label": "وظایف تیم",
-        "href": "/dashboard/pm/tasks",
+        "href": "/dashboard/ProjectManager/Tasks",
         "icon": "FileText"
       },
       {
         "label": "پیشرفت تیم",
-        "href": "/dashboard/pm/team-progress",
+        "href": "/dashboard/ProjectManager/TeamProgress",
         "icon": "BarChart3"
       }
     ],
@@ -567,7 +567,7 @@
       "phone": "09121234567",
       "department": "مدیریت",
       "joinDate": "1400-01-01",
-      "avatar": "/images/avatar/workers/CTO/salar.png",
+      "avatar": "/images/avatar/workers/CEO/salar.png",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -580,7 +580,7 @@
       "phone": "09127654321",
       "department": "پروژه",
       "joinDate": "1401-03-15",
-      "avatar": "/images/avatars/employees/reza.png",
+      "avatar": "/images/avatar/workers/ProjectManager/Reza.jpg",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -619,7 +619,7 @@
       "phone": "09133333333",
       "department": "توسعه",
       "joinDate": "1402-01-05",
-      "avatar": "/images/avatars/employees/nima.png",
+      "avatar": "/images/avatar/workers/BackendDevelopers/Nima.jpg",
       "onlineStatus": true,
       "workStatus": "active"
     },
@@ -632,156 +632,158 @@
       "phone": "09134444444",
       "department": "تست",
       "joinDate": "1402-02-14",
-      "avatar": "/images/avatars/employees/maryam.png",
+      "avatar": "/images/avatar/workers/QAEngineer/Maryam.jpg",
       "onlineStatus": false,
       "workStatus": "active"
     },
     {
       "id": 7,
-      "name": "Omid",
+      "name": "Omid heydari",
       "email": "omid@client.com",
       "password": "omid123",
       "roleId": "Client",
       "phone": "09135555555",
       "department": "کلاینت",
       "joinDate": "1402-03-20",
-      "avatar": "/images/avatars/clients/omid.png",
+      "avatar": "/images/avatar/Client/omid.jpg",
       "onlineStatus": false,
       "workStatus": "active"
     },
     {
       "id": 8,
-      "name": "محمد علی سلیمانی",
+      "name": "mohammad",
       "email": "m.soleimani@corp.com",
       "password": "mohammad123",
       "roleId": "CTO",
       "phone": "09137777777",
       "department": "فناوری",
       "joinDate": "1400-06-15",
-      "avatar": "/images/avatars/employees/mohammad.png",
+      "avatar": "/images/avatar/workers/CTO/mohammad.jpg",
       "onlineStatus": true,
       "workStatus": "active"
     },
     {
       "id": 9,
-      "name": "لیلا قاسمی",
+      "name": "leila",
       "email": "leila.ghasemi@corp.com",
       "password": "leila123",
       "roleId": "ProductManager",
       "phone": "09138888888",
       "department": "محصول",
       "joinDate": "1401-07-22",
-      "avatar": "/images/avatars/employees/leila.png",
+      "avatar": "/images/avatar/workers/ProductManager/leila.jpg",
       "onlineStatus": false,
       "workStatus": "active"
     },
     {
       "id": 10,
-      "name": "سونیا اصفهانی",
+      "name": "sonia",
       "email": "sonia.isfahani@corp.com",
       "password": "sonia123",
       "roleId": "ContentCreator",
       "phone": "09146666666",
       "department": "محتوا",
       "joinDate": "1402-05-10",
-      "avatar": "/images/avatars/employees/sonia.png",
+      "avatar": "/images/avatar/workers/ContentCreator/sonia.jpg",
       "onlineStatus": true,
       "workStatus": "active"
     },
     {
       "id": 11,
-      "name": "حسن رسولی",
+      "name": "hassan",
       "email": "hassan.rasouli@corp.com",
       "password": "hassan123",
       "roleId": "DevOpsEngineer",
       "phone": "09139999999",
       "department": "سرورها",
       "joinDate": "1402-01-30",
-      "avatar": "/images/avatars/employees/hassan.png",
+      "avatar": "/images/avatar/workers/DevOpsEngineer/hassan.jpg",
       "onlineStatus": false,
       "workStatus": "fired"
     },
     {
       "id": 12,
-      "name": "شیرین محمودی",
+      "name": "shirin",
       "email": "shirin.mahmudi@corp.com",
       "password": "shirin123",
       "roleId": "MobileDeveloper",
       "phone": "09140000000",
       "department": "توسعه",
       "joinDate": "1402-02-10",
-      "avatar": "/images/avatars/employees/shirin.png",
+      "avatar": "/images/avatar/workers/MobileDeveloper/shirin.jpg",
+
       "onlineStatus": false,
       "workStatus": "on-leave"
     },
     {
       "id": 13,
-      "name": "علی اکبر ملکی",
+      "name": "aliakbar",
       "email": "aliakbar.maleki@corp.com",
       "password": "aliakbar123",
       "roleId": "SalesManager",
       "phone": "09141111111",
       "department": "فروش",
       "joinDate": "1401-08-05",
-      "avatar": "/images/avatars/employees/aliakbar.png",
+      "avatar": "/images/avatar/workers/SalesManager/aliakbar.jpg",
       "onlineStatus": true,
       "workStatus": "active"
     },
     {
       "id": 14,
-      "name": "نیلوفر ایزدی",
+      "name": "nilofar",
       "email": "nilofar.izadi@corp.com",
       "password": "nilofar123",
       "roleId": "MarketingManager",
       "phone": "09142222222",
       "department": "بازاریابی",
       "joinDate": "1401-09-12",
-      "avatar": "/images/avatars/employees/nilofar.png",
+      "avatar": "/images/avatar/workers/MarketingManager/nilofar.jpg",
+
       "onlineStatus": true,
       "workStatus": "active"
     },
     {
       "id": 15,
-      "name": "میلاد عباسی",
+      "name": "milad",
       "email": "milad.abbasi@corp.com",
       "password": "milad123",
       "roleId": "ScrumMaster",
       "phone": "09143333333",
       "department": "پروژه",
       "joinDate": "1402-03-01",
-      "avatar": "/images/avatars/employees/milad.png",
+      "avatar": "/images/avatar/workers/ScrumMaster/milad.jpg",
       "onlineStatus": true,
       "workStatus": "active"
     },
     {
       "id": 16,
-      "name": "زهره نژادی",
+      "name": "zahra",
       "email": "zahra.nejadi@corp.com",
       "password": "zahra123",
       "roleId": "CustomerSupport",
       "phone": "09144444444",
       "department": "پشتیبانی",
       "joinDate": "1402-04-15",
-      "avatar": "/images/avatars/employees/zahra.png",
+      "avatar": "/images/avatar/workers/CustomerSupport/zahra.jpg",
       "onlineStatus": true,
       "workStatus": "active"
     },
     {
       "id": 17,
-      "name": "کامران ظهیری",
+      "name": "kamran",
       "email": "kamran.zahiri@corp.com",
       "password": "kamran123",
       "roleId": "SystemArchitect",
       "phone": "09145555555",
       "department": "معماری",
       "joinDate": "1400-10-20",
-      "avatar": "/images/avatars/employees/kamran.png",
+      "avatar": "/images/avatar/workers/SystemArchitect/kamran.jpg",
       "onlineStatus": false,
       "workStatus": "active"
     },
     {
       "id": 18,
-      "name": "احمد رضایی",
+      "name": "ahmad rezaei",
       "email": "ahmad.rezaei@client.com",
       "password": "ahmad123",
       "roleId": "Client",
@@ -794,7 +796,7 @@
     },
     {
       "id": 19,
-      "name": "فاطمه کریمی",
+      "name": "fateme karimi",
       "email": "fateme.karimi@client.com",
       "password": "fateme123",
       "roleId": "Client",
@@ -807,7 +809,7 @@
     },
     {
       "id": 20,
-      "name": "حسین احمدی",
+      "name": "hossein ahmadi",
       "email": "hossein.ahmadi@client.com",
       "password": "hossein123",
       "roleId": "Client",
@@ -820,7 +822,7 @@
     },
     {
       "id": 21,
-      "name": "مینا صادقی",
+      "name": "mina sadeghi",
       "email": "mina.sadeghi@client.com",
       "password": "mina123",
       "roleId": "Client",
@@ -833,7 +835,7 @@
     },
     {
       "id": 22,
-      "name": "پوریا نجفی",
+      "name": "pouria najafi",
       "email": "pouria.najafi@client.com",
       "password": "pouria123",
       "roleId": "Client",
@@ -845,9 +847,9 @@
       "workStatus": "active"
     },
     {
-      "id": 1783559255043,
-      "name": "حسن غلامی",
-      "email": "salargholami021@gmail.com",
+      "id": 23,
+      "name": "hasangholami",
+      "email": "hasangholami0@gmail.com",
       "phone": "09389525194",
       "roleId": "Client",
       "password": "",
@@ -858,8 +860,8 @@
       "workStatus": "active"
     },
     {
-      "id": 1783563027072,
-      "name": "احمد حیدری",
+      "id": 24,
+      "name": "ahmadheydari",
       "email": "ahmadheydari@gmail.com",
       "phone": "09214560393",
       "roleId": "Client",
@@ -872,7 +874,7 @@
     },
     {
       "id": 25,
-      "name": "الهام موسوی",
+      "name": "elham mousavi",
       "email": "elham@corp.com",
       "password": "elham123",
       "roleId": "UIDesigner",
@@ -921,7 +923,7 @@
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": 18,
-      "relatedTaskIds": [1, 2, 3, 4],
+      "relatedTaskIds": [1, 2, 3, 4, 6, 7, 8],
       "relatedMemberIds": [2, 3, 4, 5, 6],
       "relatedCommitIds": [],
       "relatedDesignFileIds": []
@@ -937,7 +939,7 @@
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": null,
-      "relatedTaskIds": [5],
+      "relatedTaskIds": [5, 9, 10, 11],
       "relatedMemberIds": [3, 5, 4, 2],
       "relatedCommitIds": [],
       "relatedDesignFileIds": []
@@ -953,7 +955,7 @@
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": null,
-      "relatedTaskIds": [],
+      "relatedTaskIds": [12, 13, 14],
       "relatedMemberIds": [2],
       "relatedCommitIds": [],
       "relatedDesignFileIds": []
@@ -1001,7 +1003,7 @@
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": null,
-      "relatedTaskIds": [101, 102, 103],
+      "relatedTaskIds": [101, 102, 103, 106, 107, 108],
       "relatedMemberIds": [3, 2],
       "relatedCommitIds": [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -1020,7 +1022,7 @@
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": 20,
-      "relatedTaskIds": [],
+      "relatedTaskIds": [15, 16, 17],
       "relatedMemberIds": [3],
       "relatedCommitIds": [],
       "relatedDesignFileIds": []
@@ -1084,7 +1086,7 @@
       "department": "توسعه",
       "approvalStatus": "approved",
       "clientId": 7,
-      "relatedTaskIds": [],
+      "relatedTaskIds": [18, 19],
       "relatedMemberIds": [2],
       "relatedCommitIds": [],
       "relatedDesignFileIds": []
@@ -1164,7 +1166,7 @@
       "department": "توسعه",
       "approvalStatus": "pending",
       "clientId": null,
-      "relatedTaskIds": [],
+      "relatedTaskIds": [20],
       "relatedMemberIds": [2],
       "relatedCommitIds": [],
       "relatedDesignFileIds": []
@@ -1244,7 +1246,7 @@
       "department": "توسعه",
       "approvalStatus": "pending",
       "clientId": null,
-      "relatedTaskIds": [],
+      "relatedTaskIds": [21],
       "relatedMemberIds": [2],
       "relatedCommitIds": [],
       "relatedDesignFileIds": []
@@ -1466,35 +1468,45 @@
       "title": "Design Landing Page",
       "projectId": 1,
       "assignedTo": 4,
-      "status": "in-progress"
+      "status": "in-progress",
+      "progress": 50,
+      "priority": "medium"
     },
     {
       "id": 2,
       "title": "Implement UI",
       "projectId": 1,
       "assignedTo": 3,
-      "status": "pending"
+      "status": "pending",
+      "progress": 0,
+      "priority": "medium"
     },
     {
       "id": 3,
       "title": "Setup API",
       "projectId": 1,
       "assignedTo": 5,
-      "status": "in-progress"
+      "status": "in-progress",
+      "progress": 50,
+      "priority": "medium"
     },
     {
       "id": 4,
       "title": "Test Landing Page",
       "projectId": 1,
       "assignedTo": 6,
-      "status": "pending"
+      "status": "pending",
+      "progress": 0,
+      "priority": "medium"
     },
     {
       "id": 5,
       "title": "Design Mobile UI",
       "projectId": 2,
       "assignedTo": 4,
-      "status": "pending"
+      "status": "pending",
+      "progress": 0,
+      "priority": "medium"
     },
     {
       "id": 101,
@@ -1502,7 +1514,9 @@
       "projectId": 6,
       "assignedTo": 3,
       "status": "completed",
-      "dueDate": "1405-04-05"
+      "dueDate": "1405-04-05",
+      "progress": 100,
+      "priority": "medium"
     },
     {
       "id": 102,
@@ -1510,7 +1524,9 @@
       "projectId": 6,
       "assignedTo": 3,
       "status": "in-progress",
-      "dueDate": "1405-04-10"
+      "dueDate": "1405-04-10",
+      "progress": 50,
+      "priority": "medium"
     },
     {
       "id": 103,
@@ -1518,7 +1534,199 @@
       "projectId": 6,
       "assignedTo": 3,
       "status": "pending",
-      "dueDate": "1405-04-12"
+      "dueDate": "1405-04-12",
+      "progress": 0,
+      "priority": "medium"
+    },
+    {
+      "id": 6,
+      "title": "طراحی صفحه درباره ما",
+      "projectId": 1,
+      "assignedTo": 4,
+      "status": "completed",
+      "priority": "medium",
+      "dueDate": "1403-01-05",
+      "progress": 100
+    },
+    {
+      "id": 7,
+      "title": "پیاده‌سازی صفحه تماس",
+      "projectId": 1,
+      "assignedTo": 3,
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "1403-01-10",
+      "progress": 65
+    },
+    {
+      "id": 8,
+      "title": "تست نهایی و دیپلوی",
+      "projectId": 1,
+      "assignedTo": 6,
+      "status": "pending",
+      "priority": "high",
+      "dueDate": "1403-01-14",
+      "progress": 0
+    },
+    {
+      "id": 9,
+      "title": "طراحی UI موبایل",
+      "projectId": 2,
+      "assignedTo": 4,
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "1403-02-10",
+      "progress": 40
+    },
+    {
+      "id": 10,
+      "title": "پیاده‌سازی ناوبری اپ",
+      "projectId": 2,
+      "assignedTo": 12,
+      "status": "pending",
+      "priority": "medium",
+      "dueDate": "1403-02-20",
+      "progress": 0
+    },
+    {
+      "id": 11,
+      "title": "یکپارچه‌سازی API موبایل",
+      "projectId": 2,
+      "assignedTo": 5,
+      "status": "pending",
+      "priority": "high",
+      "dueDate": "1403-02-25",
+      "progress": 0
+    },
+    {
+      "id": 12,
+      "title": "تحلیل نیازمندی‌های CRM",
+      "projectId": 3,
+      "assignedTo": 2,
+      "status": "completed",
+      "priority": "high",
+      "dueDate": "1402-12-20",
+      "progress": 100
+    },
+    {
+      "id": 13,
+      "title": "طراحی دیتابیس مشتریان",
+      "projectId": 3,
+      "assignedTo": 5,
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "1403-01-15",
+      "progress": 70
+    },
+    {
+      "id": 14,
+      "title": "پیاده‌سازی ماژول لید",
+      "projectId": 3,
+      "assignedTo": 3,
+      "status": "pending",
+      "priority": "medium",
+      "dueDate": "1403-01-25",
+      "progress": 0
+    },
+    {
+      "id": 106,
+      "title": "پیاده‌سازی ویجت آمار پروژه",
+      "projectId": 6,
+      "assignedTo": 3,
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "1405-04-20",
+      "progress": 55
+    },
+    {
+      "id": 107,
+      "title": "تست یکپارچگی داشبورد",
+      "projectId": 6,
+      "assignedTo": 6,
+      "status": "pending",
+      "priority": "medium",
+      "dueDate": "1405-04-25",
+      "progress": 0
+    },
+    {
+      "id": 108,
+      "title": "مستندسازی API داشبورد",
+      "projectId": 6,
+      "assignedTo": 5,
+      "status": "pending",
+      "priority": "low",
+      "dueDate": "1405-04-28",
+      "progress": 0
+    },
+    {
+      "id": 15,
+      "title": "طراحی صفحه محصول",
+      "projectId": 7,
+      "assignedTo": 4,
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "1403-03-15",
+      "progress": 60
+    },
+    {
+      "id": 16,
+      "title": "پیاده‌سازی سبد خرید",
+      "projectId": 7,
+      "assignedTo": 3,
+      "status": "pending",
+      "priority": "high",
+      "dueDate": "1403-04-01",
+      "progress": 0
+    },
+    {
+      "id": 17,
+      "title": "یکپارچه‌سازی درگاه پرداخت",
+      "projectId": 7,
+      "assignedTo": 5,
+      "status": "pending",
+      "priority": "critical",
+      "dueDate": "1403-05-01",
+      "progress": 0
+    },
+    {
+      "id": 18,
+      "title": "طراحی پلیر ویدیو",
+      "projectId": 11,
+      "assignedTo": 4,
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "1403-06-01",
+      "progress": 35
+    },
+    {
+      "id": 19,
+      "title": "پیاده‌سازی استریمینگ",
+      "projectId": 11,
+      "assignedTo": 5,
+      "status": "pending",
+      "priority": "high",
+      "dueDate": "1403-07-15",
+      "progress": 0
+    },
+    {
+      "id": 20,
+      "title": "طراحی صفحه دوره",
+      "projectId": 16,
+      "assignedTo": 4,
+      "status": "pending",
+      "priority": "medium",
+      "dueDate": "1403-08-01",
+      "progress": 0
+    },
+    {
+      "id": 21,
+      "title": "تحلیل معماری IoT",
+      "projectId": 21,
+      "assignedTo": 17,
+      "status": "in-progress",
+      "priority": "high",
+      "dueDate": "1403-10-01",
+      "progress": 45
     }
   ],
   "dashboards": [
@@ -3536,5 +3744,495 @@
       "text": "پشتیبانی از RTL اضافه شد.",
       "createdAt": "1405/03/14 - ۱۶:۱۰"
     }
-  ]
+  ],
+  "projectManagerDashboard": {
+    "roleId": "ProjectManager",
+    "stats": {
+      "totalProjects": 24,
+      "activeProjects": 12,
+      "onHoldProjects": 6,
+      "completedProjects": 5,
+      "cancelledProjects": 1,
+      "totalTasks": 27,
+      "tasksInProgress": 10,
+      "tasksPending": 14,
+      "tasksCompleted": 3,
+      "teamMembers": 8,
+      "overdueTasks": 2,
+      "pendingApprovals": 4,
+      "totalBudget": 285700,
+      "usedBudget": 142000
+    },
+    "projectOverview": [
+      {
+        "id": 1,
+        "title": "Company Website",
+        "status": "in-progress",
+        "progress": 68,
+        "budget": 15000,
+        "spent": 9800,
+        "dueDate": "1403-01-15",
+        "managerId": 2,
+        "clientId": 18,
+        "memberCount": 5,
+        "taskCount": 7,
+        "completedTasks": 2,
+        "priority": "high",
+        "department": "توسعه"
+      },
+      {
+        "id": 2,
+        "title": "Mobile App",
+        "status": "on-hold",
+        "progress": 22,
+        "budget": 8000,
+        "spent": 2100,
+        "dueDate": "1403-02-28",
+        "managerId": 2,
+        "clientId": null,
+        "memberCount": 4,
+        "taskCount": 4,
+        "completedTasks": 0,
+        "priority": "medium",
+        "department": "توسعه"
+      },
+      {
+        "id": 3,
+        "title": "CRM System",
+        "status": "in-progress",
+        "progress": 45,
+        "budget": 2000,
+        "spent": 850,
+        "dueDate": "1403-01-20",
+        "managerId": 2,
+        "clientId": null,
+        "memberCount": 1,
+        "taskCount": 3,
+        "completedTasks": 1,
+        "priority": "high",
+        "department": "توسعه"
+      },
+      {
+        "id": 6,
+        "title": "Internal Dashboard",
+        "status": "in-progress",
+        "progress": 72,
+        "budget": 7000,
+        "spent": 5200,
+        "dueDate": "1403-04-10",
+        "managerId": 2,
+        "clientId": null,
+        "memberCount": 2,
+        "taskCount": 6,
+        "completedTasks": 1,
+        "priority": "high",
+        "department": "توسعه"
+      },
+      {
+        "id": 7,
+        "title": "E-commerce Platform",
+        "status": "in-progress",
+        "progress": 35,
+        "budget": 25000,
+        "spent": 8900,
+        "dueDate": "1403-08-01",
+        "managerId": 3,
+        "clientId": 20,
+        "memberCount": 1,
+        "taskCount": 3,
+        "completedTasks": 0,
+        "priority": "critical",
+        "department": "توسعه"
+      },
+      {
+        "id": 11,
+        "title": "Video Streaming App",
+        "status": "in-progress",
+        "progress": 28,
+        "budget": 22000,
+        "spent": 6100,
+        "dueDate": "1403-09-20",
+        "managerId": 2,
+        "clientId": 7,
+        "memberCount": 1,
+        "taskCount": 2,
+        "completedTasks": 0,
+        "priority": "high",
+        "department": "توسعه"
+      },
+      {
+        "id": 16,
+        "title": "Online Learning Platform",
+        "status": "on-hold",
+        "progress": 5,
+        "budget": 16000,
+        "spent": 0,
+        "dueDate": "1404-10-15",
+        "managerId": 2,
+        "clientId": null,
+        "memberCount": 1,
+        "taskCount": 1,
+        "completedTasks": 0,
+        "priority": "low",
+        "department": "توسعه"
+      },
+      {
+        "id": 21,
+        "title": "IoT Platform",
+        "status": "in-progress",
+        "progress": 18,
+        "budget": 23000,
+        "spent": 3200,
+        "dueDate": "1404-03-10",
+        "managerId": 2,
+        "clientId": null,
+        "memberCount": 1,
+        "taskCount": 1,
+        "completedTasks": 0,
+        "priority": "medium",
+        "department": "توسعه"
+      }
+    ],
+    "teamProgress": [
+      {
+        "userId": 3,
+        "name": "Ali",
+        "roleId": "FrontendDeveloper",
+        "avatar": "/images/avatar/workers/FrontendDevelopers/ali.jpg",
+        "tasksAssigned": 9,
+        "tasksCompleted": 2,
+        "tasksInProgress": 4,
+        "completionRate": 22,
+        "onlineStatus": true,
+        "workStatus": "active"
+      },
+      {
+        "userId": 4,
+        "name": "Sara",
+        "roleId": "UIDesigner",
+        "avatar": "/images/avatar/workers/UIDesigner/Sara.jpg",
+        "tasksAssigned": 6,
+        "tasksCompleted": 1,
+        "tasksInProgress": 3,
+        "completionRate": 17,
+        "onlineStatus": false,
+        "workStatus": "on-leave"
+      },
+      {
+        "userId": 5,
+        "name": "Nima",
+        "roleId": "BackendDeveloper",
+        "avatar": "/images/avatar/workers/BackendDevelopers/Nima.jpg",
+        "tasksAssigned": 5,
+        "tasksCompleted": 0,
+        "tasksInProgress": 2,
+        "completionRate": 0,
+        "onlineStatus": true,
+        "workStatus": "active"
+      },
+      {
+        "userId": 6,
+        "name": "Maryam",
+        "roleId": "QAEngineer",
+        "avatar": "/images/avatar/workers/QAEngineer/Maryam.jpg",
+        "tasksAssigned": 3,
+        "tasksCompleted": 0,
+        "tasksInProgress": 0,
+        "completionRate": 0,
+        "onlineStatus": false,
+        "workStatus": "active"
+      },
+      {
+        "userId": 12,
+        "name": "شیرین محمودی",
+        "roleId": "MobileDeveloper",
+        "avatar": "/images/avatar/workers/MobileDeveloper/shirin.jpg",
+        "tasksAssigned": 1,
+        "tasksCompleted": 0,
+        "tasksInProgress": 0,
+        "completionRate": 0,
+        "onlineStatus": false,
+        "workStatus": "on-leave"
+      },
+      {
+        "userId": 17,
+        "name": "کامران ظهیری",
+        "roleId": "SystemArchitect",
+        "avatar": "/images/avatar/workers/SystemArchitect/kamran.jpg",
+        "tasksAssigned": 1,
+        "tasksCompleted": 0,
+        "tasksInProgress": 1,
+        "completionRate": 0,
+        "onlineStatus": false,
+        "workStatus": "active"
+      }
+    ],
+    "recentTasks": [
+      {
+        "id": 106,
+        "title": "پیاده‌سازی ویجت آمار پروژه",
+        "status": "in-progress",
+        "priority": "high",
+        "dueDate": "1405-04-20",
+        "projectId": 6,
+        "projectTitle": "Internal Dashboard",
+        "assignedTo": 3,
+        "assigneeName": "Ali",
+        "progress": 55
+      },
+      {
+        "id": 102,
+        "title": "پیاده‌سازی Layout داشبورد با Modal",
+        "status": "in-progress",
+        "priority": "high",
+        "dueDate": "1405-04-10",
+        "projectId": 6,
+        "projectTitle": "Internal Dashboard",
+        "assignedTo": 3,
+        "assigneeName": "Ali",
+        "progress": 70
+      },
+      {
+        "id": 7,
+        "title": "پیاده‌سازی صفحه تماس",
+        "status": "in-progress",
+        "priority": "high",
+        "dueDate": "1403-01-10",
+        "projectId": 1,
+        "projectTitle": "Company Website",
+        "assignedTo": 3,
+        "assigneeName": "Ali",
+        "progress": 65
+      },
+      {
+        "id": 13,
+        "title": "طراحی دیتابیس مشتریان",
+        "status": "in-progress",
+        "priority": "high",
+        "dueDate": "1403-01-15",
+        "projectId": 3,
+        "projectTitle": "CRM System",
+        "assignedTo": 5,
+        "assigneeName": "Nima",
+        "progress": 70
+      },
+      {
+        "id": 15,
+        "title": "طراحی صفحه محصول",
+        "status": "in-progress",
+        "priority": "high",
+        "dueDate": "1403-03-15",
+        "projectId": 7,
+        "projectTitle": "E-commerce Platform",
+        "assignedTo": 4,
+        "assigneeName": "Sara",
+        "progress": 60
+      },
+      {
+        "id": 9,
+        "title": "طراحی UI موبایل",
+        "status": "in-progress",
+        "priority": "high",
+        "dueDate": "1403-02-10",
+        "projectId": 2,
+        "projectTitle": "Mobile App",
+        "assignedTo": 4,
+        "assigneeName": "Sara",
+        "progress": 40
+      },
+      {
+        "id": 103,
+        "title": "به‌روزرسانی کامپوننت ButtonPrimary",
+        "status": "pending",
+        "priority": "medium",
+        "dueDate": "1405-04-12",
+        "projectId": 6,
+        "projectTitle": "Internal Dashboard",
+        "assignedTo": 3,
+        "assigneeName": "Ali",
+        "progress": 0
+      },
+      {
+        "id": 8,
+        "title": "تست نهایی و دیپلوی",
+        "status": "pending",
+        "priority": "high",
+        "dueDate": "1403-01-14",
+        "projectId": 1,
+        "projectTitle": "Company Website",
+        "assignedTo": 6,
+        "assigneeName": "Maryam",
+        "progress": 0
+      }
+    ],
+    "upcomingDeadlines": [
+      {
+        "projectId": 1,
+        "title": "Company Website",
+        "dueDate": "1403-01-15",
+        "daysLeft": 5,
+        "status": "in-progress",
+        "progress": 68
+      },
+      {
+        "projectId": 3,
+        "title": "CRM System",
+        "dueDate": "1403-01-20",
+        "daysLeft": 10,
+        "status": "in-progress",
+        "progress": 45
+      },
+      {
+        "projectId": 2,
+        "title": "Mobile App",
+        "dueDate": "1403-02-28",
+        "daysLeft": 49,
+        "status": "on-hold",
+        "progress": 22
+      },
+      {
+        "projectId": 6,
+        "title": "Internal Dashboard",
+        "dueDate": "1403-04-10",
+        "daysLeft": 90,
+        "status": "in-progress",
+        "progress": 72
+      }
+    ],
+    "activity": {
+      "periods": {
+        "currentWeek": [
+          {
+            "day": "شنبه",
+            "value": 12,
+            "label": "هفته جاری"
+          },
+          {
+            "day": "یکشنبه",
+            "value": 18
+          },
+          {
+            "day": "دوشنبه",
+            "value": 22
+          },
+          {
+            "day": "سه‌شنبه",
+            "value": 15
+          },
+          {
+            "day": "چهارشنبه",
+            "value": 27
+          },
+          {
+            "day": "پنجشنبه",
+            "value": 19
+          },
+          {
+            "day": "جمعه",
+            "value": 8
+          }
+        ],
+        "lastWeek": [
+          {
+            "day": "شنبه",
+            "value": 14
+          },
+          {
+            "day": "یکشنبه",
+            "value": 11
+          },
+          {
+            "day": "دوشنبه",
+            "value": 20
+          },
+          {
+            "day": "سه‌شنبه",
+            "value": 16
+          },
+          {
+            "day": "چهارشنبه",
+            "value": 24
+          },
+          {
+            "day": "پنجشنبه",
+            "value": 13
+          },
+          {
+            "day": "جمعه",
+            "value": 6
+          }
+        ],
+        "currentMonth": [
+          {
+            "day": "هفته ۱",
+            "value": 85
+          },
+          {
+            "day": "هفته ۲",
+            "value": 92
+          },
+          {
+            "day": "هفته ۳",
+            "value": 78
+          },
+          {
+            "day": "هفته ۴",
+            "value": 104
+          }
+        ]
+      }
+    },
+    "announcements": [
+      {
+        "id": 401,
+        "title": "پروژه Company Website نزدیک به ددلاین",
+        "description": "۵ روز تا موعد تحویل باقی مانده است. تسک‌های باقی‌مانده را اولویت‌بندی کنید.",
+        "time": "۳ ساعت پیش",
+        "type": "warning"
+      },
+      {
+        "id": 402,
+        "title": "تسک جدید اختصاص داده شد",
+        "description": "ویجت آمار پروژه به علی اختصاص یافت.",
+        "time": "۵ ساعت پیش",
+        "type": "info"
+      },
+      {
+        "id": 403,
+        "title": "تایید بودجه پروژه IoT",
+        "description": "درخواست بودجه اولیه پروژه IoT Platform در انتظار تایید CFO است.",
+        "time": "۱ روز پیش",
+        "type": "info"
+      }
+    ],
+    "risks": [
+      {
+        "id": 1,
+        "projectId": 1,
+        "title": "تاخیر در تست نهایی",
+        "severity": "high",
+        "impact": "high",
+        "status": "open",
+        "description": "QA هنوز تسک تست را شروع نکرده و ددلاین نزدیک است."
+      },
+      {
+        "id": 2,
+        "projectId": 7,
+        "title": "وابستگی به درگاه پرداخت",
+        "severity": "medium",
+        "impact": "critical",
+        "status": "open",
+        "description": "یکپارچه‌سازی درگاه هنوز شروع نشده و مسیر بحرانی پروژه است."
+      },
+      {
+        "id": 3,
+        "projectId": 2,
+        "title": "عضو تیم در مرخصی",
+        "severity": "medium",
+        "impact": "medium",
+        "status": "mitigated",
+        "description": "شیرین محمودی در مرخصی است؛ تسک موبایل ممکن است تاخیر داشته باشد."
+      }
+    ]
+  }
 }
