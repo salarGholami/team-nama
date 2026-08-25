@@ -16,6 +16,9 @@
 
 ## 📖 Overview
 
+<img width="1346" height="767" alt="image" src="https://github.com/user-attachments/assets/85545c84-ab47-4928-af56-3c7e5ccae200" />
+
+
 **Team Nama** is not just another admin dashboard. It is a comprehensive front-end application designed to demonstrate how a large-scale **Enterprise Front-End** can be structured, developed, and maintained using modern best practices.
 
 The platform simulates real-world workflows including:
@@ -228,11 +231,6 @@ Feel free to check the [issues page](https://github.com/salarGholami/team-nama/i
 
 ---
 
-## 📄 License
-
-This project is developed for **educational purposes**, skill improvement, and as a **portfolio project**.
-
----
 
 ## 👤 Author
 
@@ -243,7 +241,15 @@ This project is developed for **educational purposes**, skill improvement, and a
 
 ---
 
+
+## ⭐ Support
+
+If you find this project useful or interesting, consider giving it a ⭐ star on GitHub.
+
+Your support helps this project grow and motivates further improvements.
+
+---
+
 <div align="center">
   <strong>Built with ❤️ using modern Front-End best practices</strong>
 </div>
-```
