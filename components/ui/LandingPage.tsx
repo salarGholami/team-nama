@@ -19,6 +19,7 @@ import GradientOverlay from "../layout/GradientOverlay";
 import { Button } from "./button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 // Hero Cards
 const cards = [
@@ -136,6 +137,7 @@ export default function LandingPage() {
 
   useEffect(() => {
     const i = setInterval(() => setActive((v) => (v + 1) % cards.length), 2500);
+
     return () => clearInterval(i);
   }, []);
 
@@ -159,6 +161,7 @@ export default function LandingPage() {
               <h1 className="text-4xl font-extrabold md:text-5xl">
                 تحول دیجیتال با
               </h1>
+
               <h2 className="text-5xl md:text-6xl font-extrabold gradient-text">
                 تکنولوژی نوین
               </h2>
@@ -176,6 +179,7 @@ export default function LandingPage() {
               >
                 شروع کنید
               </Button>
+
               <Button className="rounded-xl border border-primary-400 px-6 py-3 font-semibold text-primary-200 hover:bg-white/5">
                 بیشتر بدانید
               </Button>
@@ -186,23 +190,28 @@ export default function LandingPage() {
           <div className="hidden md:grid grid-cols-2 gap-4">
             {cards.map((card, idx) => {
               const isHot = idx === active;
+
               return (
                 <motion.div
                   key={card.id}
                   animate={
                     isHot ? { scale: 1.08, rotate: 2 } : { scale: 1, rotate: 0 }
                   }
-                  transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                  className={`relative flex items-center gap-3 p-4 rounded-xl border backdrop-blur-xl cursor-pointer transition-all
-                    ${
-                      isHot
-                        ? "gradient-bg-glasses border-[rgba(0,255,200,0.6)] text-white shadow-[0_0_40px_rgba(0,255,200,0.25)]"
-                        : "bg-primary-800 border-white/10 text-primary-100"
-                    }`}
+                  transition={{
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 15,
+                  }}
+                  className={`relative flex items-center gap-3 p-4 rounded-xl border backdrop-blur-xl cursor-pointer transition-all ${
+                    isHot
+                      ? "gradient-bg-glasses border-[rgba(0,255,200,0.6)] text-white shadow-[0_0_40px_rgba(0,255,200,0.25)]"
+                      : "bg-primary-800 border-white/10 text-primary-100"
+                  }`}
                 >
                   <span className="p-2 rounded-full transition-colors gradient-bg text-primary-900">
                     {card.icon}
                   </span>
+
                   <span className="font-semibold">{card.label}</span>
                 </motion.div>
               );
@@ -215,6 +224,7 @@ export default function LandingPage() {
       <section className="relative z-10 flex mb-32">
         <div className="mx-auto max-w-7xl px-4 text-center">
           <h3 className="text-4xl font-extrabold mb-3">خدمات ما</h3>
+
           <p className="text-primary-300 max-w-2xl mx-auto mb-16">
             ارائه کامل‌ترین خدمات توسعه نرم‌افزار با بهره‌گیری از جدیدترین
             تکنولوژی‌ها
@@ -225,9 +235,8 @@ export default function LandingPage() {
               <motion.div
                 key={s.id}
                 whileHover={{ scale: 1.05 }}
-                className="flex flex-col items-start gap-2 p-4 rounded-xl cursor-pointer transition-all border border-white/10 bg-primary-700/50 "
+                className="flex flex-col items-start gap-2 p-4 rounded-xl cursor-pointer transition-all border border-white/10 bg-primary-700/50"
               >
-                {/* Icon with global gradient class */}
                 <div
                   className={`w-16 h-16 mb-2 text-white rounded-lg flex items-center justify-center icon-gradient-${s.id}`}
                 >
@@ -235,7 +244,9 @@ export default function LandingPage() {
                 </div>
 
                 <h4 className="text-xl font-bold">{s.title}</h4>
+
                 <p className="text-primary-200 flex text-start">{s.desc}</p>
+
                 <span className="text-sm flex gap-1 justify-center items-center text-blue-400 mt-2 cursor-pointer">
                   اطلاعات بیشتر
                   <span>
@@ -254,6 +265,7 @@ export default function LandingPage() {
           <h3 className="text-4xl font-extrabold mb-3 w-full text-center">
             چرا ما را انتخاب کنید؟
           </h3>
+
           <p className="text-primary-300 max-w-2xl mx-auto mb-16 w-full text-center">
             مزایای همکاری با تیم متخصص و حرفه‌ای ما
           </p>
@@ -264,15 +276,13 @@ export default function LandingPage() {
                 key={s.id}
                 className="flex flex-col items-center gap-2 px-4 py-2 rounded-xl transition-all"
               >
-                {/* Icon with global gradient class */}
-                <div
-                  className={`w-20 h-20 mb-2 text-white rounded-lg flex items-center justify-center icon-glasses`}
-                >
+                <div className="w-20 h-20 mb-2 text-white rounded-lg flex items-center justify-center icon-glasses">
                   {s.icon}
                 </div>
 
                 <div className="flex flex-col items-center justify-center mt-2 gap-2">
                   <h4 className="text-xl font-bold">{s.title}</h4>
+
                   <p className="text-primary-200 flex text-center">{s.desc}</p>
                 </div>
               </motion.div>
@@ -281,58 +291,70 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* comment client */}
+      {/* COMMENT CLIENT */}
       <section className="relative z-10 py-32">
         <div className="mx-auto max-w-7xl px-6">
           <h3 className="text-4xl font-extrabold mb-3 text-center">
             نظر مشتریان ما
           </h3>
+
           <p className="text-primary-300 max-w-2xl mx-auto mb-16 text-center">
             تجربه همکاری با تیم ما از نگاه کسانی که واقعاً از خدمات ما استفاده
             کرده‌اند
           </p>
 
-          <Swiper
-            modules={[Autoplay]}
-            autoplay={{ delay: 4500, disableOnInteraction: false }}
-            loop
-            spaceBetween={24}
-            slidesPerView={1}
-            breakpoints={{
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-          >
-            {testimonials.map((t, i) => (
-              <SwiperSlide key={i} className="pb-8">
-                <div className="h-full">
-                  <div className="flex flex-col h-full rounded-2xl bg-primary-700/50 border border-white/10 p-8 shadow-xl">
-                    {/* header */}
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 shrink-0 rounded-full bg-gradient-to-br from-indigo-500/40 to-purple-500/40 flex items-center justify-center text-lg font-bold">
-                        {t.name.charAt(0)}
+          {/* Swiper Container */}
+          <div className="w-full overflow-hidden">
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 4500,
+                disableOnInteraction: false,
+              }}
+              loop
+              spaceBetween={24}
+              slidesPerView={1}
+              className="w-full min-w-0"
+              breakpoints={{
+                768: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                },
+              }}
+            >
+              {testimonials.map((t, i) => (
+                <SwiperSlide key={i} className="pb-8">
+                  <div className="h-full">
+                    <div className="flex flex-col h-full rounded-2xl bg-primary-700/50 border border-white/10 p-8 shadow-xl">
+                      {/* header */}
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="w-12 h-12 shrink-0 rounded-full bg-gradient-to-br from-indigo-500/40 to-purple-500/40 flex items-center justify-center text-lg font-bold">
+                          {t.name.charAt(0)}
+                        </div>
+
+                        <div>
+                          <p className="font-semibold">{t.name}</p>
+                          <p className="text-sm">{t.role}</p>
+                        </div>
                       </div>
 
-                      <div>
-                        <p className="font-semibold">{t.name}</p>
-                        <p className="text-sm">{t.role}</p>
+                      {/* stars */}
+                      <div className="flex gap-1 text-yellow-400 mb-4">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <Star key={i} size={16} fill="currentColor" />
+                        ))}
                       </div>
-                    </div>
 
-                    {/* stars */}
-                    <div className="flex gap-1 text-yellow-400 mb-4">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <Star key={i} size={16} fill="currentColor" />
-                      ))}
+                      {/* text */}
+                      <p className="leading-relaxed flex-1">“{t.text}”</p>
                     </div>
-
-                    {/* text */}
-                    <p className="leading-relaxed flex-1">“{t.text}”</p>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </section>
     </div>
