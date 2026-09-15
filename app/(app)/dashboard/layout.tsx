@@ -37,10 +37,10 @@ export default async function DashboardLayout({
   }
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen w-full min-w-0 overflow-x-hidden">
       {/* Sidebar نقش و لینک‌ها را از db.json می‌گیرد */}
       <Sidebar role={role} />
-      <main className="flex-1">
+      <main className="min-w-0 flex-1 overflow-x-hidden">
         <Header />
         {children}
       </main>

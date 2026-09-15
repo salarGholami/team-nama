@@ -99,6 +99,11 @@ body {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+
+  /* Prevent accidental horizontal page scrolling caused by
+     oversized/fixed decorative or responsive elements. */
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .gradient-text {

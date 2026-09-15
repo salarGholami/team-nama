@@ -2,8 +2,8 @@ import { AppProviders } from "@/providers/AppProviders";
 import "../styles/globals.css";
 
 export const metadata = {
-  title: "نام سیستم شما",
-  description: "توضیح مختصر سیستم",
+  title: "team-nama",
+  description: "a mangement system for office",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
-      <body className="min-h-screen bg-background text-foreground">
+      <body className="min-h-screen w-full max-w-full overflow-x-hidden bg-background text-foreground">
         <AppProviders>{children}</AppProviders>
       </body>
     </html>
